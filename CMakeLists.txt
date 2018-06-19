@@ -22,7 +22,7 @@ find_program(INTLTOOL_MERGE intltool-merge)
 find_program(INTLTOOL_EXTRACT intltool-extract)
 
 option(INSTALL_TESTS "Install the tests on make install" off)
-option(CLICK_MODE "Installs to a contained location" on)
+option(CLICK_MODE "Installs to a contained location" off)
 
 set(CAMERA_APP camera-app)
 set(AUTOPILOT_DIR camera_app)

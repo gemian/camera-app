@@ -18,9 +18,9 @@ import QtQuick 2.4
 import QtQuick.Window 2.2
 import QtMultimedia 5.0
 import Ubuntu.Components 1.3
-import Ubuntu.Unity.Action 1.1 as UnityActions
-import UserMetrics 0.1
-import Ubuntu.Content 1.3
+//import Ubuntu.Unity.Action 1.1 as UnityActions
+//import UserMetrics 0.1
+//import Ubuntu.Content 1.3
 import CameraApp 0.1
 
 Window {
@@ -50,7 +50,7 @@ Window {
             main.visibility = preFullScreenVisibility;
         }
     }
-
+/*
     UnityActions.ActionManager {
         actions: [
             UnityActions.Action {
@@ -80,7 +80,7 @@ Window {
             Qt.quit()
         }
     }
-
+*/
     Component.onCompleted: {
         i18n.domain = "camera-app";
         main.show();
@@ -339,8 +339,8 @@ Window {
         var item;
         var items = [];
         for (var i=0; i<urls.length; i++) {
-            item = contentItemComponent.createObject(main.transfer, {"url": urls[i]});
-            items.push(item);
+//            item = contentItemComponent.createObject(main.transfer, {"url": urls[i]});
+//            items.push(item);
         }
         main.transfer.items = items;
         main.transfer.state = ContentTransfer.Charged;
@@ -351,7 +351,7 @@ Window {
         main.transfer.state = ContentTransfer.Aborted;
         main.transfer = null;
     }
-
+/*
     Component {
         id: contentItemComponent
         ContentItem {
@@ -393,4 +393,5 @@ Window {
         domain: "camera-app"
         minimum: 0.0
     }
+    */
 }
