@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2018-08-19 01:00+0000\n"
-"Last-Translator: Ernesst <slash.tux@gmail.com>\n"
+"PO-Revision-Date: 2019-01-07 04:58+0000\n"
+"Last-Translator: Anne Onyme <anneonyme017@netcourrier.com>\n"
 "Language-Team: French <https://translate.ubports.com/projects/ubports/"
 "camera-app/fr/>\n"
 "Language: fr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2.20\n"
+"X-Generator: Weblate 3.1.1\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: ../AdvancedOptions.qml:16
@@ -164,7 +164,7 @@ msgstr "Opacité"
 
 #: ../DeleteDialog.qml:24
 msgid "Delete media?"
-msgstr "Supprimer le média ?"
+msgstr "Supprimer le fichier ?"
 
 #: ../DeleteDialog.qml:34 ../PhotogridView.qml:56 ../SlideshowView.qml:75
 msgid "Delete"
@@ -178,7 +178,7 @@ msgstr "Annuler"
 
 #: ../GalleryView.qml:200
 msgid "No media available."
-msgstr "Aucun média disponible."
+msgstr "Aucun fichier disponible."
 
 #: ../GalleryView.qml:235
 msgid "Scanning for content..."
@@ -214,7 +214,7 @@ msgstr "Aider à traduire"
 
 #: ../MediaInfoPopover.qml:25
 msgid "Media Information"
-msgstr "Informations sur le média"
+msgstr "Informations sur le fichier"
 
 #: ../MediaInfoPopover.qml:30
 #, qt-format
