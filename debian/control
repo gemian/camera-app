@@ -25,6 +25,7 @@ Build-Depends: cmake,
 #               libusermetricsinput1-dev,
                gettext,
 #               dh-translations,
+               intltool,
                xvfb,
 Standards-Version: 3.9.8
 Homepage: https://launchpad.net/camera-app
