@@ -1,3 +1,8 @@
+pulseaudio (3.0.1+gemian) stretch; urgency=medium
+
+  * Added to gemian
+
+ -- Adam Boardman <adamboardman@gmail.com>  Sun, 20 Jan 2019 15:03:48 +0000
 
 camera-app (3.0.1+ubports) vivid; urgency=medium
 
