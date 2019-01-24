@@ -47,7 +47,7 @@ msgstr "den Tag als Nummer mit führender Null (01 bis 31)"
 
 #: ../AdvancedOptions.qml:129
 msgid "the abbreviated localized day name (e.g. 'Mon' to 'Sun')."
-msgstr "den abgekürzten, lokalisierten Tagesnamen („Mo“ bis „So“).\n"
+msgstr "den abgekürzten, lokalisierten Tagesnamen („Mo“ bis „So“)."
 
 #: ../AdvancedOptions.qml:130
 msgid "the long localized day name (e.g. 'Monday' to 'Sunday')."
