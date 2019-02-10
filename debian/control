@@ -35,7 +35,7 @@ Vcs-Bzr: https://code.launchpad.net/~phablet-team/camera-app/trunk
 
 Package: camera-app
 Architecture: any
-Depends: cameraplugin-aal [armel armhf],
+Depends: cameraplugin-aal [armel armhf arm64],
          libqt5multimedia5,
          qml-module-qtquick2,
          qml-module-qtmultimedia | qml-module-qtmultimedia-gles,
@@ -57,7 +57,7 @@ Package: camera-app-autopilot
 # architecture is not "all", as we set the fake plugin as dependency
 Architecture: i386 amd64 armhf
 Depends: camera-app (>= ${binary:Version}),
-         cameraplugin-fake [!armel !armhf],
+         cameraplugin-fake [!armel !armhf !arm64],
          libautopilot-qt (>= 1.4),
          libqt5test5,
          libqt5widgets5,
