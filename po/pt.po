@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2018-11-18 18:13+0000\n"
-"Last-Translator: Ivo Xavier <ivofernandes12@gmail.com>\n"
+"PO-Revision-Date: 2019-02-21 18:32+0000\n"
+"Last-Translator: Alexandre de Paula Bastos <xandebastos@yahoo.com.br>\n"
 "Language-Team: Portuguese <https://translate.ubports.com/projects/ubports/"
 "camera-app/pt/>\n"
 "Language: pt\n"
@@ -43,12 +43,11 @@ msgstr "o dia como número sem um zero inicial (1 a 31)"
 
 #: ../AdvancedOptions.qml:128
 msgid "the day as number with a leading zero (01 to 31)"
-msgstr "o dia como número com um zero inicial (01 a 31)"
+msgstr "o dia como número com um zero a esquerda (01 a 31)"
 
 #: ../AdvancedOptions.qml:129
 msgid "the abbreviated localized day name (e.g. 'Mon' to 'Sun')."
-msgstr ""
-"o nome do dia localizado abreviado (por exemplo, \"seg\" para \"dom\")."
+msgstr "o nome do dia da semana abreviado (ex, \"Seg\" para \"Dom\")."
 
 #: ../AdvancedOptions.qml:130
 msgid "the long localized day name (e.g. 'Monday' to 'Sunday')."

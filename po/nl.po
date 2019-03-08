@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2018-11-11 09:51+0000\n"
-"Last-Translator: Sander <sander.k1007@kpnmail.nl>\n"
+"PO-Revision-Date: 2019-02-21 18:31+0000\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <https://translate.ubports.com/projects/ubports/"
 "camera-app/nl/>\n"
 "Language: nl\n"
@@ -26,7 +26,7 @@ msgstr "Instellingen"
 
 #: ../AdvancedOptions.qml:48
 msgid "Add date stamp on captured images"
-msgstr "Voeg datumstempel toe aan foto's"
+msgstr "Datumstempel plaatsen op gemaakte foto's"
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: ../AdvancedOptions.qml:70
@@ -35,7 +35,7 @@ msgstr "Formatteren"
 
 #: ../AdvancedOptions.qml:122
 msgid "Date formatting keywords"
-msgstr "Datum formaat sleutelwoorden"
+msgstr "Datumopmaak - Sleutelwoorden"
 
 #: ../AdvancedOptions.qml:127
 msgid "the day as number without a leading zero (1 to 31)"
@@ -47,7 +47,7 @@ msgstr "de dag als getal met een voorloopnul (01 tot 31)"
 
 #: ../AdvancedOptions.qml:129
 msgid "the abbreviated localized day name (e.g. 'Mon' to 'Sun')."
-msgstr "de afgekorte gelokaliseerde dagnaam (bijvoorbeeld 'Maan' tot 'Zon')."
+msgstr "de afgekorte gelokaliseerde dagnaam (bijvoorbeeld 'Ma' tot 'Zo')."
 
 #: ../AdvancedOptions.qml:130
 msgid "the long localized day name (e.g. 'Monday' to 'Sunday')."
@@ -87,23 +87,20 @@ msgstr ""
 #: ../AdvancedOptions.qml:137
 msgid "the hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)"
 msgstr ""
-"het uur zonder voorloopnul (0 tot 23 of 1 tot 12 wanneer AM/PM wordt getoond)"
+"het uur zonder voorloopnul (0 tot 23 of 1 tot 12 als AM/PM wordt getoond)"
 
 #: ../AdvancedOptions.qml:138
 msgid "the hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)"
 msgstr ""
-"het uur met een voorloopnul (00 tot 23 of 01 tot 12 wanneer AM/PM wordt "
-"getoond)"
+"het uur met een voorloopnul (00 tot 23 of 01 tot 12 als AM/PM wordt getoond)"
 
 #: ../AdvancedOptions.qml:139
 msgid "the hour without a leading zero (0 to 23, even with AM/PM display)"
-msgstr ""
-"het uur zonder voorloopnul (0 tot 23, zelfs wanneer AM/PM wordt getoond)"
+msgstr "het uur zonder voorloopnul (0 tot 23, zelfs als AM/PM wordt getoond)"
 
 #: ../AdvancedOptions.qml:140
 msgid "the hour with a leading zero (00 to 23, even with AM/PM display)"
-msgstr ""
-"het uur met een voorloopnul (00 tot 23, zelfs wanneer AM/PM wordt getoond)"
+msgstr "het uur met een voorloopnul (00 tot 23, zelfs als AM/PM wordt getoond)"
 
 #: ../AdvancedOptions.qml:141
 msgid "the minute without a leading zero (0 to 59)"
@@ -131,11 +128,11 @@ msgstr "de milliseconden met voorloopnullen (000 tot 999)"
 
 #: ../AdvancedOptions.qml:147
 msgid "use AM/PM display. AP will be replaced by either 'AM' or 'PM'."
-msgstr "toon AM/PM. AP zal vervangen worden door 'AM' of 'PM'."
+msgstr "toon AM/PM. AP wordt vervangen door 'AM' of 'PM'."
 
 #: ../AdvancedOptions.qml:148
 msgid "use am/pm display. ap will be replaced by either 'am' or 'pm'."
-msgstr "toon am/pm. ap zal vervangen worden door 'am' of 'pm'."
+msgstr "toon am/pm. ap wordt vervangen door 'am' of 'pm'."
 
 #: ../AdvancedOptions.qml:149
 msgid "the timezone (for example 'CEST')"
@@ -143,7 +140,7 @@ msgstr "de tijdzone (bijvoorbeeld 'CEST')"
 
 #: ../AdvancedOptions.qml:158
 msgid "Add to Format"
-msgstr "Voeg toe aan Formaat"
+msgstr "Toevoegen aan opmaak"
 
 #. TRANSLATORS: this refers to the color of date stamp added to captured images
 #: ../AdvancedOptions.qml:189
@@ -158,7 +155,7 @@ msgstr "Uitlijning"
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: ../AdvancedOptions.qml:303
 msgid "Opacity"
-msgstr "Zichtbaarheid"
+msgstr "Doorzichtigheid"
 
 #: ../DeleteDialog.qml:24
 msgid "Delete media?"
@@ -172,7 +169,7 @@ msgstr "Verwijderen"
 #: ../ViewFinderOverlay.qml:1136 ../ViewFinderOverlay.qml:1175
 #: ../ViewFinderView.qml:494
 msgid "Cancel"
-msgstr "Annuleren"
+msgstr "Afbreken"
 
 #: ../GalleryView.qml:200
 msgid "No media available."
@@ -180,7 +177,7 @@ msgstr "Geen media beschikbaar."
 
 #: ../GalleryView.qml:235
 msgid "Scanning for content..."
-msgstr "Aan het scannen op inhoud…"
+msgstr "Bezig met doorzoeken op inhoud…"
 
 #: ../GalleryViewHeader.qml:82 ../SlideshowView.qml:45
 msgid "Select"
@@ -188,7 +185,7 @@ msgstr "Selecteren"
 
 #: ../GalleryViewHeader.qml:83
 msgid "Edit Photo"
-msgstr "Bewerk foto"
+msgstr "Foto bewerken"
 
 #: ../GalleryViewHeader.qml:83
 msgid "Photo Roll"
@@ -200,19 +197,19 @@ msgstr "Over"
 
 #: ../Information.qml:82
 msgid "Get the source"
-msgstr "Broncode"
+msgstr "Broncode verkrijgen"
 
 #: ../Information.qml:83
 msgid "Report issues"
-msgstr "Meld problemen"
+msgstr "Problemen melden"
 
 #: ../Information.qml:84
 msgid "Help translate"
-msgstr "Help vertalen"
+msgstr "Helpen met vertalen"
 
 #: ../MediaInfoPopover.qml:25
 msgid "Media Information"
-msgstr "Media Informatie"
+msgstr "Media-informatie"
 
 #: ../MediaInfoPopover.qml:30
 #, qt-format
@@ -236,12 +233,11 @@ msgstr "Hoogte : %1"
 
 #: ../NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
-msgstr ""
-"Geen opslagruimte meer op apparaat, maak ruimte vrij om door te kunnen gaan."
+msgstr "Geen ruimte meer op apparaat; maak ruimte vrij om door te gaan."
 
 #: ../PhotoRollHint.qml:69
 msgid "Swipe left for photo roll"
-msgstr "Veeg naar links voor fotorol"
+msgstr "Veeg naar links om de fotorol te openen"
 
 #: ../PhotogridView.qml:42 ../SlideshowView.qml:60
 msgid "Share"
@@ -253,7 +249,7 @@ msgstr "Galerij"
 
 #: ../SlideshowView.qml:68
 msgid "Image Info"
-msgstr "Afbeelding Informatie"
+msgstr "Afbeeldingsinformatie"
 
 #: ../SlideshowView.qml:86
 msgid "Edit"
@@ -265,11 +261,11 @@ msgstr "Terug naar Fotorol"
 
 #: ../UnableShareDialog.qml:25
 msgid "Unable to share"
-msgstr "Niet mogelijk om te delen"
+msgstr "Delen niet mogelijk"
 
 #: ../UnableShareDialog.qml:26
 msgid "Unable to share photos and videos at the same time"
-msgstr "Niet mogelijk om tegelijkertijd foto's en video's te delen"
+msgstr "Het tegelijkertijd delen van foto's en video's is niet mogelijk"
 
 #: ../UnableShareDialog.qml:30
 msgid "Ok"
@@ -296,7 +292,7 @@ msgstr "Uit"
 
 #: ../ViewFinderOverlay.qml:395
 msgid "Auto"
-msgstr "Autom."
+msgstr "Automatisch"
 
 #: ../ViewFinderOverlay.qml:432
 msgid "HDR"
@@ -316,15 +312,15 @@ msgstr "Goede kwaliteit"
 
 #: ../ViewFinderOverlay.qml:498
 msgid "High Quality"
-msgstr "Hoge Kwaliteit"
+msgstr "Hoge kwaliteit"
 
 #: ../ViewFinderOverlay.qml:503
 msgid "Normal Quality"
-msgstr "Standaard kwaliteit"
+msgstr "Standaardkwaliteit"
 
 #: ../ViewFinderOverlay.qml:508
 msgid "Basic Quality"
-msgstr "Basiskwaliteit"
+msgstr "Matige kwaliteit"
 
 #. TRANSLATORS: this will be displayed on an small button so for it to fit it should be less then 3 characters long.
 #: ../ViewFinderOverlay.qml:541
@@ -337,7 +333,7 @@ msgstr "Opslaan op SD-kaart"
 
 #: ../ViewFinderOverlay.qml:554
 msgid "Save internally"
-msgstr "Intern opslaan"
+msgstr "Lokaal opslaan"
 
 #: ../ViewFinderOverlay.qml:594
 msgid "Vibrate"
@@ -352,8 +348,8 @@ msgid ""
 "You are running out of storage space. To continue without interruptions, "
 "free up storage space now."
 msgstr ""
-"U heeft nog maar weinig opslagruimte beschikbaar. Om zonder problemen door "
-"te kunnen gaan, dient u nu opslagruimte vrij te maken."
+"Er is nog weinig opslagruimte beschikbaar. Maak ruimte vrij om probleemloos "
+"door te kunnen werken."
 
 #: ../ViewFinderOverlay.qml:1133
 msgid "External storage not writeable"
@@ -365,13 +361,13 @@ msgid ""
 "eject and insert it again might solve the issue, or you might need to format "
 "it."
 msgstr ""
-"Het lijkt er op dat het niet mogelijk is om uw externe opslag te "
-"beschrijven. Het ontkoppelen en opnieuw aankoppelen kan het probleem "
-"mogelijk verhelpen, of u moet de opslag mogelijk formatteren."
+"Het lijkt er op dat het niet mogelijk is je uw externe opslag te "
+"beschrijven. Dit kun je wellicht oplossen door de opslag te ontkoppelen en "
+"opnieuw aan te koppelen of door de opslag te formatteren."
 
 #: ../ViewFinderOverlay.qml:1172
 msgid "Cannot access camera"
-msgstr "Kan geen toegang krijgen tot de camera"
+msgstr "Kan geen toegang krijgen tot camera"
 
 #: ../ViewFinderOverlay.qml:1173
 msgid ""
@@ -380,15 +376,15 @@ msgid ""
 "\n"
 "If granting permission does not resolve this problem, reboot your device."
 msgstr ""
-"Camera app heeft geen toestemming tot toegang tot de camera hardware of er "
-"is een andere fout opgetreden.\n"
+"De Camera-app is niet gemachtigd om de camerahardware te mogen gebruiken of "
+"er is een andere fout opgetreden.\n"
 "\n"
-"Als het verlenen van toestemming dit probleem niet oplost, start uw telefoon "
-"opnieuw op."
+"Als het verlenen van de juiste machtiging dit probleem niet oplost, start "
+"dan je apparaat opnieuw op."
 
 #: ../ViewFinderOverlay.qml:1182
 msgid "Edit Permissions"
-msgstr "Bewerk machtigingen"
+msgstr "Machtigingen aanpassen"
 
 #: ../ViewFinderView.qml:485
 msgid "Capture failed"
@@ -399,16 +395,16 @@ msgid ""
 "Replacing your external media, formatting it, or restarting the device might "
 "fix the problem."
 msgstr ""
-"Het probleem kan wellicht verholpen worden door uw externe media te "
-"vervangen, te formatteren of uw apparaat opnieuw op te starten."
+"Dit kun je wellicht oplossen door je externe opslag te vervangen of "
+"formatteren of door apparaat opnieuw op te starten."
 
 #: ../ViewFinderView.qml:491
 msgid "Restarting your device might fix the problem."
-msgstr "Uw apparaat herstarten kan het probleem verhelpen."
+msgstr "Dit kun je wellicht oplossen door je apparaat opnieuw op te starten."
 
 #: ../camera-app.qml:57
 msgid "Flash"
-msgstr "Flitsen"
+msgstr "Flits"
 
 #: ../camera-app.qml:58
 msgid "Light;Dark"
@@ -416,7 +412,7 @@ msgstr "Licht;Donker"
 
 #: ../camera-app.qml:61
 msgid "Flip Camera"
-msgstr "Camera omdraaien"
+msgstr "Andere camera gebruiken"
 
 #: ../camera-app.qml:62
 msgid "Front Facing;Back Facing"
@@ -428,7 +424,7 @@ msgstr "Sluiter"
 
 #: ../camera-app.qml:66
 msgid "Take a Photo;Snap;Record"
-msgstr "Foto nemen;Klikken;Opnemen"
+msgstr "Foto maken;Vastleggen;Opnemen"
 
 #: ../camera-app.qml:69
 msgid "Mode"
@@ -436,7 +432,7 @@ msgstr "Modus"
 
 #: ../camera-app.qml:70
 msgid "Stills;Video"
-msgstr "Stillen;Video"
+msgstr "Still;Video"
 
 #: ../camera-app.qml:74
 msgid "White Balance"
@@ -449,20 +445,20 @@ msgstr "Belichtingsomstandigheden;Overdag;Bewolkt;Binnen"
 #: ../camera-app.qml:380
 #, qt-format
 msgid "<b>%1</b> photos taken today"
-msgstr "<b>%1</b> foto's genomen vandaag"
+msgstr "Je hebt vandaag <b>%1</b> foto's gemaakt"
 
 #: ../camera-app.qml:381
 msgid "No photos taken today"
-msgstr "Geen foto's genomen vandaag"
+msgstr "Je hebt vandaag geen foto's gemaakt"
 
 #: ../camera-app.qml:391
 #, qt-format
 msgid "<b>%1</b> videos recorded today"
-msgstr "<b>%1</b> video's opgenomen vandaag"
+msgstr "Je hebt vandaag <b>%1</b> video's opgenomen"
 
 #: ../camera-app.qml:392
 msgid "No videos recorded today"
-msgstr "Geen video's opgenomen vandaag"
+msgstr "Je hebt vandaag geen video's opgenomen"
 
 #: camera-app.desktop.in.in.h:1
 msgid "Camera"
@@ -474,9 +470,7 @@ msgstr "Camera-app"
 
 #: camera-app.desktop.in.in.h:3
 msgid "Photos;Videos;Capture;Shoot;Snapshot;Record"
-msgstr ""
-"Photos;Videos;Capture;Shoot;Snapshot;Record;Foto's;Video´s;Opname;Gedraaid;"
-"Kiekje;Opnemen"
+msgstr "Foto's;Video´s;Opname;Gedraaid;Kiekje;Opnemen"
 
 #~ msgid "Version %1"
 #~ msgstr "Versie %1"
