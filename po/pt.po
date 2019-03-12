@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2019-02-21 18:32+0000\n"
-"Last-Translator: Alexandre de Paula Bastos <xandebastos@yahoo.com.br>\n"
+"PO-Revision-Date: 2019-03-17 00:00+0000\n"
+"Last-Translator: Rúben Carneiro <rubencarneiro01@gmail.com>\n"
 "Language-Team: Portuguese <https://translate.ubports.com/projects/ubports/"
 "camera-app/pt/>\n"
 "Language: pt\n"
@@ -418,7 +418,7 @@ msgstr "Capa frontal;Capa traseira"
 
 #: ../camera-app.qml:65
 msgid "Shutter"
-msgstr "Shutter"
+msgstr "Obturador"
 
 #: ../camera-app.qml:66
 msgid "Take a Photo;Snap;Record"
