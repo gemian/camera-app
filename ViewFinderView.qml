@@ -263,7 +263,7 @@ FocusScope {
             Component.onCompleted: {
                 // Set orientation only at startup because later on Screen.primaryOrientation
                 // may change.
-                orientation = Screen.primaryOrientation === Qt.PortraitOrientation  ? -90 : 0;
+                orientation = 180;
                 viewFinderOverlay.sensorOrientation = orientation;
             }
 
@@ -271,7 +271,7 @@ FocusScope {
                 origin.x: viewFinder.width / 2
                 origin.y: viewFinder.height / 2
                 axis.x: 0; axis.y: 1; axis.z: 0
-                angle: application.desktopMode ? 180 : 0
+                angle: 0
             }
         }
 
