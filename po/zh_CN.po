@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2019-02-11 20:28+0000\n"
-"Last-Translator: Hugh Y <hugh_yan@live.com>\n"
+"PO-Revision-Date: 2019-04-23 19:04+0000\n"
+"Last-Translator: tongsj2333 <hh23333@foxmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.ubports.com/projects/"
 "ubports/camera-app/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -128,11 +128,12 @@ msgstr "使用am/pm显示。ap将被am或pm取代。"
 
 #: ../AdvancedOptions.qml:149
 msgid "the timezone (for example 'CEST')"
-msgstr ""
+msgstr "时区（例如‘CEST’）"
 
 #: ../AdvancedOptions.qml:158
+#, fuzzy
 msgid "Add to Format"
-msgstr ""
+msgstr "添加格式"
 
 #. TRANSLATORS: this refers to the color of date stamp added to captured images
 #: ../AdvancedOptions.qml:189
@@ -303,7 +304,6 @@ msgid "Fine Quality"
 msgstr "高品质"
 
 #: ../ViewFinderOverlay.qml:498
-#, fuzzy
 msgid "High Quality"
 msgstr "高品质"
 
