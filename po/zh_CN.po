@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
 "PO-Revision-Date: 2019-04-23 19:04+0000\n"
-"Last-Translator: tongsj2333 <hh23333@foxmail.com>\n"
+"Last-Translator: 谭永乐 <tanyongle0633@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.ubports.com/projects/"
 "ubports/camera-app/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -131,9 +131,8 @@ msgid "the timezone (for example 'CEST')"
 msgstr "时区（例如‘CEST’）"
 
 #: ../AdvancedOptions.qml:158
-#, fuzzy
 msgid "Add to Format"
-msgstr "添加格式"
+msgstr "添加到格式"
 
 #. TRANSLATORS: this refers to the color of date stamp added to captured images
 #: ../AdvancedOptions.qml:189
