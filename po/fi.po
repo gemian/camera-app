@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2018-11-18 18:13+0000\n"
+"PO-Revision-Date: 2019-04-29 19:03+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://translate.ubports.com/projects/ubports/"
 "camera-app/fi/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 3.6\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: ../AdvancedOptions.qml:16
@@ -143,12 +143,12 @@ msgstr "Väri"
 #. TRANSLATORS: this refers to the alignment of date stamp within captured images (bottom left, top right,etc..)
 #: ../AdvancedOptions.qml:257
 msgid "Alignment"
-msgstr ""
+msgstr "Kohdistus"
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: ../AdvancedOptions.qml:303
 msgid "Opacity"
-msgstr ""
+msgstr "Peittokyky"
 
 #: ../DeleteDialog.qml:24
 msgid "Delete media?"
@@ -162,7 +162,7 @@ msgstr "Poista"
 #: ../ViewFinderOverlay.qml:1136 ../ViewFinderOverlay.qml:1175
 #: ../ViewFinderView.qml:494
 msgid "Cancel"
-msgstr "Peruuta"
+msgstr "Peru"
 
 #: ../GalleryView.qml:200
 msgid "No media available."
