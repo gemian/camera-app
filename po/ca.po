@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2019-02-17 00:00+0000\n"
+"PO-Revision-Date: 2019-05-03 21:02+0000\n"
 "Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
 "Language-Team: Catalan <https://translate.ubports.com/projects/ubports/"
 "camera-app/ca/>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 3.6.1\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: ../AdvancedOptions.qml:16
 msgid "Settings"
-msgstr "Paràmetres"
+msgstr "Configuració"
 
 #: ../AdvancedOptions.qml:48
 msgid "Add date stamp on captured images"
@@ -158,13 +158,13 @@ msgstr "Voleu suprimir-ho?"
 
 #: ../DeleteDialog.qml:34 ../PhotogridView.qml:56 ../SlideshowView.qml:75
 msgid "Delete"
-msgstr "Suprimeix"
+msgstr "Elimina"
 
 #: ../DeleteDialog.qml:40 ../ViewFinderOverlay.qml:1122
 #: ../ViewFinderOverlay.qml:1136 ../ViewFinderOverlay.qml:1175
 #: ../ViewFinderView.qml:494
 msgid "Cancel"
-msgstr "Cancel·lar"
+msgstr "Cancel·la"
 
 #: ../GalleryView.qml:200
 msgid "No media available."
@@ -192,7 +192,7 @@ msgstr "Quant a"
 
 #: ../Information.qml:82
 msgid "Get the source"
-msgstr "Obtingueu el codi font"
+msgstr "Aconseguiu el codi font"
 
 #: ../Information.qml:83
 msgid "Report issues"
