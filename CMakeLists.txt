@@ -110,8 +110,14 @@ file(GLOB QML_JS_FILES *.qml *.js *.png)
 install(FILES ${QML_JS_FILES}
     DESTINATION ${CAMERA_APP_DIR}
     )
+set(QML_DIR qml)
+install(DIRECTORY ${QML_DIR}
+    DESTINATION ${CAMERA_APP_DIR}
+    )
+
 
 set(ASSETS_DIR assets)
+
 
 install(DIRECTORY ${ASSETS_DIR}
     DESTINATION ${CAMERA_APP_DIR}

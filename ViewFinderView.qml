@@ -20,8 +20,10 @@ import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 import QtMultimedia 5.0
 import CameraApp 0.1
-import QtGraphicalEffects 1.0
+//import QtGraphicalEffects 1.0
 import Ubuntu.Content 1.3
+
+import "qml/Viewfinder"
 
 FocusScope {
     id: viewFinderView
@@ -155,7 +157,7 @@ FocusScope {
     Item {
         id: viewFinderSwitcher
         anchors.fill: parent
-        visible: !viewFinderSwitcherBlurred.visible
+        visible: true //!viewFinderSwitcherBlurred.visible
 
         ShaderEffectSource {
             id: viewFinderGrab
@@ -292,133 +294,31 @@ FocusScope {
             viewFinderOrientation: viewFinder.orientation
         }
 
-        Item {
-            id: gridlines
-            objectName: "gridlines"
-            anchors.horizontalCenter: parent.horizontalCenter
-            width: viewFinderGeometry.width
+		Loader {
+			anchors.horizontalCenter: parent.horizontalCenter
+			width: viewFinderGeometry.width
             height: viewFinderGeometry.height
-            visible: viewFinderOverlay.settings != undefined && viewFinderOverlay.settings.gridEnabled
+			visible: viewFinderOverlay.settings != undefined && viewFinderOverlay.settings.gridEnabled
+			source:"qml/Viewfinder/GridLines.qml"
+			asynchronous:true
+		}
 
-            property color color: Qt.rgba(0.8, 0.8, 0.8, 0.8)
-            property real thickness: units.dp(1)
+		Connections {
+			target: viewFinderView
+			onInViewChanged: if (!viewFinderView.inView) viewFinderOverlay.controls.cancelTimedShoot()
+		}
 
-            Rectangle {
-                y: parent.height / 3
-                width: parent.width
-                height: gridlines.thickness
-                color: gridlines.color
-            }
+		TimedShootFeedback {
+			id: timedShootFeedback
+			anchors.fill: parent
+		}
 
-            Rectangle {
-                y: 2 * parent.height / 3
-                width: parent.width
-                height: gridlines.thickness
-                color: gridlines.color
-            }
+		ShootFeedback {
+			id: shootFeedback
+			anchors.fill: parent
+		}
+	}
 
-            Rectangle {
-                x: parent.width / 3
-                width: gridlines.thickness
-                height: parent.height
-                color: gridlines.color
-            }
-
-            Rectangle {
-                x: 2 * parent.width / 3
-                width: gridlines.thickness
-                height: parent.height
-                color: gridlines.color
-            }
-        }
-
-        Connections {
-            target: viewFinderView
-            onInViewChanged: if (!viewFinderView.inView) viewFinderOverlay.controls.cancelTimedShoot()
-        }
-
-        OrientationHelper {
-            id: timedShootFeedback
-            anchors.fill: parent
-
-            function start() {
-            }
-
-            function stop() {
-                remainingSecsLabel.text = "";
-            }
-
-            function showRemainingSecs(secs) {
-                remainingSecsLabel.text = secs;
-                remainingSecsLabel.opacity = 1.0;
-                remainingSecsLabelAnimation.restart();
-            }
-
-            Label {
-                id: remainingSecsLabel
-                anchors.fill: parent
-                font.pixelSize: units.gu(6)
-                font.bold: true
-                color: "white"
-                style: Text.Outline;
-                styleColor: "black"
-                verticalAlignment: Text.AlignVCenter
-                horizontalAlignment: Text.AlignHCenter
-                visible: opacity != 0.0
-                opacity: 0.0
-
-                OpacityAnimator {
-                    id: remainingSecsLabelAnimation
-                    target: remainingSecsLabel
-                    from: 1.0
-                    to: 0.0
-                    duration: 750
-                    easing: UbuntuAnimation.StandardEasing
-                }
-            }
-
-            // tapping anywhere on the screen while a timed shoot is ongoing cancels it
-            MouseArea {
-                anchors.fill: parent
-                onClicked: viewFinderOverlay.controls.cancelTimedShoot()
-                enabled: remainingSecsLabel.visible
-            }
-        }
-
-        Rectangle {
-            id: shootFeedback
-            anchors.fill: parent
-            color: "black"
-            visible: opacity != 0.0
-            opacity: 0.0
-
-            function start() {
-                shootFeedback.opacity = 1.0;
-                shootFeedbackAnimation.restart();
-            }
-
-            OpacityAnimator {
-                id: shootFeedbackAnimation
-                target: shootFeedback
-                from: 1.0
-                to: 0.0
-                duration: UbuntuAnimation.SnapDuration
-                easing: UbuntuAnimation.StandardEasing
-            }
-        }
-    }
-
-    FastBlur {
-        id: viewFinderSwitcherBlurred
-        anchors.fill: viewFinderSwitcher
-        property real finalRadius: 64
-        property real finalOpacity: 0.7
-        radius: photoRollHint.visible ? finalRadius : viewFinderOverlay.revealProgress * finalRadius
-        opacity: photoRollHint.visible ? finalOpacity : (1.0 - viewFinderOverlay.revealProgress) * finalOpacity + finalOpacity
-        source: viewFinderSwitcher !== null ? viewFinderSwitcher : null
-        visible: radius !== 0
-        Behavior on radius { UbuntuNumberAnimation { duration: UbuntuAnimation.SnapDuration} }
-    }
 
     PhotoRollHint {
         id: photoRollHint
@@ -432,10 +332,12 @@ FocusScope {
         }
     }
 
+
     ViewFinderOverlayLoader {
         id: viewFinderOverlay
 
         anchors.fill: parent
+        asynchronous:true
         camera: camera
         opacity: status == Loader.Ready && overlayVisible && !photoRollHint.enabled ? 1.0 : 0.0
         readyForCapture: main.contentExportMode &&
@@ -457,25 +359,38 @@ FocusScope {
         }
     }
 
-    ViewFinderExportConfirmation {
-        id: viewFinderExportConfirmation
-        anchors.fill: parent
+    Loader {
+		id: viewFinderExportConfirmationLoader
+		asynchronous:true
+		anchors.fill: parent
+		sourceComponent:viewFinderExportConfirmationComp
+		onLoaded: {
+			item.id = "viewFinderExportConfirmation"
+		}
+	}
 
-        isVideo: main.transfer && main.transfer.contentType == ContentType.Videos
-        viewFinderGeometry: viewFinderGeometry
+	Component {
+		id: viewFinderExportConfirmationComp
+		ViewFinderExportConfirmation {
+			id: viewFinderExportConfirmation
+			anchors.fill: parent
 
-        onShowRequested: {
-            viewFinder.visible = false;
-            viewFinderOverlay.visible = false;
-            visible = true;
-        }
+			isVideo: main.transfer && main.transfer.contentType == ContentType.Videos
+			viewFinderGeometry: viewFinderGeometry
 
-        onHideRequested: {
-            viewFinder.visible = true;
-            viewFinderOverlay.visible = true;
-            visible = false;
-        }
-    }
+			onShowRequested: {
+				viewFinder.visible = false;
+				viewFinderOverlay.visible = false;
+				visible = true;
+			}
+
+			onHideRequested: {
+				viewFinder.visible = true;
+				viewFinderOverlay.visible = true;
+				visible = false;
+			}
+		}
+	}
 
     Component {
          id: captureFailedDialogComponent
