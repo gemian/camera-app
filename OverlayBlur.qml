@@ -15,7 +15,6 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
 import QtGraphicalEffects 1.0
 
 FastBlur {
@@ -29,10 +28,6 @@ FastBlur {
     property alias recursive: overlayBlurShader.recursive
 
     anchors.fill: anchorTo ? anchorTo : overlayItem
-
-    Behavior on opacity {UbuntuNumberAnimation {} }
-    Behavior on radius {UbuntuNumberAnimation {} }
-
 
     QtObject {
         id:_internal
