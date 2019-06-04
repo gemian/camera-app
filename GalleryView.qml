@@ -114,6 +114,19 @@ Item {
             onToggleHeader: header.toggle()
         }
 
+        OverlayBlur {
+            visible: galleryView.gridMode && appSettings.blurEffects
+            backgroundItem:  photogridView
+            overlayItem: header
+        }
+
+        OverlayBlur {
+            visible: !galleryView.gridMode && appSettings.blurEffects
+            backgroundItem: slideshowView
+            overlayItem: header
+        }
+
+
         // FIXME: it would be better to use the standard header from the toolkit
         GalleryViewHeader {
             id: header

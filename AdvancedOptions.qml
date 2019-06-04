@@ -319,7 +319,19 @@ Page {
                     }
                 }
             }
-
+            ListItem {
+                ListItemLayout {
+                    id: blurEffectSwitch
+                    title.text: i18n.tr("Blurred Overlay")
+                    title.color: "white"
+                    Switch {
+                        SlotsLayout.position: SlotsLayout.Last
+                        checked: appSettings.blurEffects
+                        onClicked: appSettings.blurEffects = checked
+                    }
+                }
+            }
         }
     }
+
 }

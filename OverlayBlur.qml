@@ -20,19 +20,79 @@ import QtGraphicalEffects 1.0
 
 FastBlur {
     id: overlayBlurEffect
+
     property var overlayItem
     property var backgroundItem
+    property alias live: overlayBlurShader.live
+    property var offset: Qt.point(0,0)
+    property var  anchorTo: null
+    property alias recursive: overlayBlurShader.recursive
 
-    anchors.fill: overlayItem
+    anchors.fill: anchorTo ? anchorTo : overlayItem
 
-    radius: units.gu(2)
+    Behavior on opacity {UbuntuNumberAnimation {} }
+    Behavior on radius {UbuntuNumberAnimation {} }
+
+
+    QtObject {
+        id:_internal
+        property var overlayItemToGlobal: overlayBlurEffect.overlayItem  ?  overlayBlurEffect.overlayItem.mapToGlobal(offset.x,offset.y) : Qt.point(0,0);
+        property var overlayToBackgroundMapping: overlayBlurEffect.backgroundItem  ? overlayBlurEffect.backgroundItem.mapFromGlobal(overlayItemToGlobal.x,overlayItemToGlobal.y) : Qt.point(0,0);
+
+        function updateOverlayMapping() {
+            _internal.overlayItemToGlobal = Qt.binding(function() {return overlayBlurEffect.overlayItem.mapToGlobal(offset.x,offset.y); });
+        }
+
+        function updateBkMapping() {
+            _internal.overlayToBackgroundMapping = Qt.binding(function() {return  backgroundItem.mapFromGlobal(overlayItemToGlobal.x,overlayItemToGlobal.y);});
+        }
+
+    }
+
+    Component.onCompleted: overlayBlurShader.updateRect();
+
+    onOverlayItemChanged: overlayBlurShader.updateRect();
+    onBackgroundItemChanged: overlayBlurShader.updateRect();
+
+    Connections {
+        target:overlayItem
+        onXChanged: overlayBlurShader.updateRect();
+        onYChanged: overlayBlurShader.updateRect();
+        onWidthChanged: overlayBlurShader.updateRect();
+        onHeightChanged: overlayBlurShader.updateRect();
+        onScaleChanged: overlayBlurShader.updateRect();
+    }
+
+    Connections {
+        target:backgroundItem
+        onXChanged: overlayBlurShader.updateRect();
+        onYChanged: overlayBlurShader.updateRect();
+        onWidthChanged: overlayBlurShader.updateRect();
+        onHeightChanged: overlayBlurShader.updateRect();
+        onScaleChanged: overlayBlurShader.updateRect();
+    }
+
+    onOffsetChanged: overlayBlurShader.updateRect();
+
+    radius:units.gu(3)
     source:  ShaderEffectSource {
+        id:overlayBlurShader
         clip: true
         sourceItem: backgroundItem
-        sourceRect: Qt.rect( overlayItem.mapToItem(backgroundItem).x,
-                             overlayItem.mapToItem(backgroundItem).y,
-                             overlayItem.width,
-                             overlayItem.height )
-        recursive: true
+
+        recursive: false
+
+        function updateRect() {
+            _internal.updateOverlayMapping();
+            _internal.updateBkMapping();
+            if(_internal.overlayToBackgroundMapping && overlayItem) {
+                sourceRect = Qt.binding(function() {
+                    return  Qt.rect(    _internal.overlayToBackgroundMapping.x,
+                                        _internal.overlayToBackgroundMapping.y,
+                                        overlayItem.width,
+                                        overlayItem.height );
+                });
+            }
+        }
     }
 }

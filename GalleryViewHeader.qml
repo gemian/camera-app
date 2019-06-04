@@ -152,6 +152,16 @@ Item {
         }
     }
 
+    OverlayBlur {
+        visible: actionsDrawer.opened && appSettings.blurEffects
+        backgroundItem: slideshowView
+        overlayItem: actionsDrawer
+        transform: Translate {y: actionsColumn.y }
+        offset: Qt.point(0,actionsColumn.y)
+        z:-1
+    }
+
+
     Item {
         id: actionsDrawer
         objectName: "actionsDrawer"

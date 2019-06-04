@@ -433,6 +433,16 @@ FocusScope {
         }
     }
 
+    OverlayBlur {
+        id:bottomimageBlur
+        backgroundItem:  listView
+        overlayItem: photoBottomEdge
+        anchorTo:photoBottomEdge
+        visible:photoBottomEdge.status !== BottomEdge.Hidden && appSettings.blurEffects
+        transform: Translate {y: photoBottomEdge.height - (photoBottomEdge.height*photoBottomEdge.dragProgress) }
+        offset: Qt.point(photoBottomEdge.x,photoBottomEdge.height - (photoBottomEdge.height*photoBottomEdge.dragProgress))
+    }
+
     BottomEdge {
         id: photoBottomEdge
         enabled: !editor.active
@@ -443,6 +453,7 @@ FocusScope {
         hint.visible:enabled
 
         contentComponent: Page {
+            id:bottomReturn
             opacity: photoBottomEdge.dragProgress
             header: PageHeader { opacity: 0 }
             Rectangle {
@@ -451,7 +462,6 @@ FocusScope {
                 height:photoBottomEdge.height
                 color: Qt.rgba(0,0,0,0.6)
             }
-
 
             Icon {
                 id:bottomEdgeGoUpIcon

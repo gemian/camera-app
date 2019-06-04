@@ -22,6 +22,7 @@ import Ubuntu.Unity.Action 1.1 as UnityActions
 import UserMetrics 0.1
 import Ubuntu.Content 1.3
 import CameraApp 0.1
+import Qt.labs.settings 1.0
 
 Window {
     id: main
@@ -33,6 +34,12 @@ Window {
     // special flag only supported by Unity8/MIR so far that hides the shell's
     // top panel in Staged mode
     flags: Qt.Window | 0x00800000
+
+      Settings {
+        id: appSettings
+
+        property bool blurEffects:true
+      }
 
     property int preFullScreenVisibility
 

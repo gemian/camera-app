@@ -1199,7 +1199,7 @@ Item {
         opacity: photoRollHint.visible ? finalOpacity : (1.0 - viewFinderOverlay.revealProgress) * finalOpacity + finalOpacity
         source: viewFinderSwitcher !== null ? viewFinderSwitcher : null
         z:-1
-        visible: radius !== 0
+        visible:  appSettings.blurEffects && radius !== 0
         Behavior on radius { UbuntuNumberAnimation { duration: UbuntuAnimation.SnapDuration} }
     }
 
