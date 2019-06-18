@@ -33,7 +33,6 @@ Item {
     property var controls: controls
     property var settings: settings
     property bool readyForCapture
-    property int sensorOrientation
     property bool overlayPageVisible : (advancedOptionsToggle.selected || infoPageToggle.selected);
 
     function showFocusRing(x, y) {
@@ -753,38 +752,6 @@ Item {
         }
 
         function shoot() {
-            var orientation = 0;
-            if (orientationSensor.reading != null) {
-                switch (orientationSensor.reading.orientation) {
-                    case OrientationReading.TopUp:
-                        orientation = 0;
-                        break;
-                    case OrientationReading.TopDown:
-                        orientation = 180;
-                        break;
-                    case OrientationReading.LeftUp:
-                        orientation = 90;
-                        break;
-                    case OrientationReading.RightUp:
-                        orientation = 270;
-                        break;
-                    default:
-                        /* Workaround for OrientationSensor not setting a valid value until
-                           the device is rotated.
-                           Ref.: https://bugs.launchpad.net/qtubuntu-sensors/+bug/1429865
-
-                           Note that the value returned by Screen.angleBetween is valid if
-                           the orientation lock is not engaged.
-                           Ref.: https://bugs.launchpad.net/camera-app/+bug/1422762
-                        */
-                        orientation = Screen.angleBetween(Screen.orientation, Screen.primaryOrientation);
-                        break;
-                }
-            }
-
-            // account for the orientation of the sensor
-            orientation -= viewFinderOverlay.sensorOrientation;
-
             if (camera.captureMode == Camera.CaptureVideo) {
                 if (main.contentExportMode) {
                     camera.videoRecorder.outputLocation = StorageLocations.temporaryLocation;
@@ -795,7 +762,6 @@ Item {
                 }
 
                 if (camera.videoRecorder.recorderState == CameraRecorder.StoppedState) {
-                    camera.videoRecorder.setMetadata("Orientation", orientation);
                     camera.videoRecorder.setMetadata("Date", new Date());
                     camera.videoRecorder.record();
                 }
@@ -804,7 +770,6 @@ Item {
                     shootFeedback.start();
                 }
                 camera.photoCaptureInProgress = true;
-                camera.imageCapture.setMetadata("Orientation", orientation);
                 camera.imageCapture.setMetadata("Date", new Date());
                 var position = positionSource.position;
                 if (settings.gpsEnabled && positionSource.isPrecise) {
