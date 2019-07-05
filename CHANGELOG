@@ -1,0 +1,7 @@
+v3.1.0 :
+========
+- Use new QCamera API to get picture orientation.
+- Updated translation (Thanks for all the translators
+- Added vibrate on picture shot
+- Added missing translations references
+- Changed the editor "save" button to match gallery
