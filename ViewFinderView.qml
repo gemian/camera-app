@@ -250,23 +250,17 @@ FocusScope {
                       (!main.contentExportMode && camera.photoCaptureInProgress && !camera.imageCapture.ready))
                       ? 0.1 : 1.0
 
-            /* This rotation need to be applied since the camera hardware in the
-               Galaxy Nexus phone is mounted at an angle inside the device, so the video
-               feed is rotated too.
-               FIXME: This should come from a system configuration option so that we
-               don't have to have a different codebase for each different device we want
-               to run on. Android has that information and QML has an API to reflect it:
-               the camera.orientation property. Unfortunately it is not hooked up yet.
+            orientation: {
+                // Camera-app uses X-Ubuntu-Rotates-Window-Contents, which means we're always in
+                // native orientation. Thus, Screen.orientation isn't used here.
 
-               Ref.: http://doc.qt.io/qt-5/qml-qtmultimedia-camera.html#orientation-prop
-                     http://doc.qt.io/qt-5/qcamerainfocontrol.html#cameraOrientation
-                     http://developer.android.com/reference/android/hardware/Camera.CameraInfo.html#orientation
-            */
-            Component.onCompleted: {
-                // Set orientation only at startup because later on Screen.primaryOrientation
-                // may change.
-                orientation = Screen.primaryOrientation === Qt.PortraitOrientation  ? -90 : 0;
-                viewFinderOverlay.sensorOrientation = orientation;
+                if (camera.position === Camera.FrontFace) {
+                    // Front facing cameras are flipped horizontally, compensate the mirror
+                    return (360 - camera.orientation) % 360;
+                } else {
+                    return camera.orientation;
+                }
+                
             }
 
             transform: Rotation {

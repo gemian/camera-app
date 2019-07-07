@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2019-05-09 21:02+0000\n"
+"PO-Revision-Date: 2019-05-16 22:03+0000\n"
 "Last-Translator: louies0623 <louies0623@gmail.com>\n"
 "Language-Team: Chinese (Hong Kong) <https://translate.ubports.com/projects/"
 "ubports/camera-app/zh_Hant_HK/>\n"
@@ -254,7 +254,7 @@ msgstr ""
 
 #: ../UnableShareDialog.qml:25
 msgid "Unable to share"
-msgstr ""
+msgstr "無法分享"
 
 #: ../UnableShareDialog.qml:26
 msgid "Unable to share photos and videos at the same time"

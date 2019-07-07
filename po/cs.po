@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2019-05-06 08:02+0000\n"
+"PO-Revision-Date: 2019-06-06 10:03+0000\n"
 "Last-Translator: Milan Korecký <milan.korecky@gmail.com>\n"
 "Language-Team: Czech <https://translate.ubports.com/projects/ubports/"
 "camera-app/cs/>\n"
@@ -250,7 +250,7 @@ msgstr "Informace o obrázku"
 
 #: ../SlideshowView.qml:86
 msgid "Edit"
-msgstr "Upravit"
+msgstr "Editovat"
 
 #: ../SlideshowView.qml:441
 msgid "Back to Photo roll"
