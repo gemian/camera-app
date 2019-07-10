@@ -1165,7 +1165,17 @@ Item {
         source: viewFinderSwitcher !== null ? viewFinderSwitcher : null
         z:-1
         visible:  appSettings.blurEffects && radius !== 0
+        transparentBorder:false
         Behavior on radius { UbuntuNumberAnimation { duration: UbuntuAnimation.SnapDuration} }
     }
-
+    Rectangle {
+		id: viewFinderOverlayTint
+		anchors.fill:parent
+		property real finalOpacity: 0.25
+		property real tintOpacity : viewFinderOverlay.revealProgress * finalOpacity
+		visible: viewFinderOverlay.revealProgress > 0
+		opacity:tintOpacity
+		color: UbuntuColors.jet
+		z:-1
+	}
 }

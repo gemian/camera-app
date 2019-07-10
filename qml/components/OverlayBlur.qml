@@ -24,10 +24,9 @@ FastBlur {
     property var backgroundItem
     property alias live: overlayBlurShader.live
     property var offset: Qt.point(0,0)
-    property var  anchorTo: null
     property alias recursive: overlayBlurShader.recursive
 
-    anchors.fill: anchorTo ? anchorTo : overlayItem
+    anchors.fill:parent
 
     QtObject {
         id:_internal
@@ -69,7 +68,7 @@ FastBlur {
 
     onOffsetChanged: overlayBlurShader.updateRect();
 
-    radius:units.gu(3)
+    radius:units.gu(4)
     source:  ShaderEffectSource {
         id:overlayBlurShader
         clip: true

@@ -18,8 +18,10 @@ import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Content 1.3
 import Ubuntu.Thumbnailer 0.1
+
 import CameraApp 0.1
 import "MimeTypeMapper.js" as MimeTypeMapper
+import "qml/components"
 
 Item {
     id: galleryView
@@ -114,16 +116,21 @@ Item {
             onToggleHeader: header.toggle()
         }
 
-        OverlayBlur {
-            visible: galleryView.gridMode && appSettings.blurEffects
-            backgroundItem:  photogridView
-            overlayItem: header
+        OverlayPanel {
+			overlayItem: header
+            visible: galleryView.gridMode
+            blur.visible: appSettings.blurEffects
+            blur.transparentBorder:false
+            blur.backgroundItem:  photogridView
         }
 
-        OverlayBlur {
-            visible: !galleryView.gridMode && appSettings.blurEffects
-            backgroundItem: slideshowView
-            overlayItem: header
+        OverlayPanel {
+			overlayItem: header
+            visible: !galleryView.gridMode
+            blur.visible: appSettings.blurEffects
+            blur.transparentBorder:false
+            blur.backgroundItem: slideshowView
+
         }
 
 
