@@ -447,7 +447,7 @@ FocusScope {
 			Behavior on y { UbuntuNumberAnimation {duration:UbuntuAnimation.FastDuration}}
 		}
 
-		blur.visible: appSettings.blurEffects
+		blur.visible: appSettings.blurEffects && !appSettings.blurEffectsPreviewOnly
 		blur.backgroundItem:  listView
 		blur.transparentBorder:false
         blur.offset: Qt.point(photoBottomEdge.x,beTransalte.y)

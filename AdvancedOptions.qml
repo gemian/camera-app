@@ -331,6 +331,27 @@ Page {
                     }
                 }
             }
+            ListItems.Expandable {
+                id:dblurEffectExpand
+                expanded: appSettings.blurEffects
+                collapsedHeight: 0
+                expandedHeight: units.gu(6)
+                collapseOnClick: false
+                highlightWhenPressed: false
+
+                ListItem {
+					ListItemLayout {
+						id: blurEffectsPreviewOnlySwitch
+						title.text: i18n.tr("Only Blur Preview overlay")
+						title.color: "white"
+						Switch {
+							SlotsLayout.position: SlotsLayout.Last
+							checked: appSettings.blurEffectsPreviewOnly
+							onClicked: appSettings.blurEffectsPreviewOnly = checked
+						}
+					}
+				}
+			}
         }
     }
 

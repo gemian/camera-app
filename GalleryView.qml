@@ -119,7 +119,7 @@ Item {
         OverlayPanel {
 			overlayItem: header
             visible: galleryView.gridMode
-            blur.visible: appSettings.blurEffects
+            blur.visible: appSettings.blurEffects && !appSettings.blurEffectsPreviewOnly
             blur.transparentBorder:false
             blur.backgroundItem:  photogridView
         }
@@ -127,7 +127,7 @@ Item {
         OverlayPanel {
 			overlayItem: header
             visible: !galleryView.gridMode
-            blur.visible: appSettings.blurEffects
+            blur.visible: appSettings.blurEffects && !appSettings.blurEffectsPreviewOnly
             blur.transparentBorder:false
             blur.backgroundItem: slideshowView
 

@@ -265,7 +265,7 @@ Item {
 			overlayItem: actionsColumn
 			visible: actionsColumn.visible
 
-			blur.visible: appSettings.blurEffects
+			blur.visible: appSettings.blurEffects && !appSettings.blurEffectsPreviewOnly
 			blur.backgroundItem: slideshowView
 			blur.transparentBorder:false
 			z:-1

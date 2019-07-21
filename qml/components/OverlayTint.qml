@@ -22,6 +22,6 @@ Rectangle {
 	id:_tintRect
 	anchors.fill:parent
 	visible: true
-	opacity: 0.5
+	opacity: 0.4
 	color: theme.palette.normal.background
 }

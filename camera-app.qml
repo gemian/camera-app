@@ -39,6 +39,7 @@ Window {
         id: appSettings
 
         property bool blurEffects:true
+        property bool blurEffectsPreviewOnly: true
       }
 
     property int preFullScreenVisibility
