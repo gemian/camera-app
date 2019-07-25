@@ -18,6 +18,7 @@
 #define FILEOPERATIONS_H
 
 #include <QtCore/QObject>
+#include <QtCore/QJsonObject>
 
 class FileOperations : public QObject
 {
@@ -26,6 +27,7 @@ class FileOperations : public QObject
 public:
     explicit FileOperations(QObject *parent = 0);
     Q_INVOKABLE bool remove(const QString & fileName) const;
+    Q_INVOKABLE QJsonObject getEXIFData(const QString & path) const;
 };
 
 #endif // FILEOPERATIONS_H

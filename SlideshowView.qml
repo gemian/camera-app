@@ -181,7 +181,7 @@ FocusScope {
             }
 
             function getMedia() {
-                return  isVideo ? null : highResolutionImage;
+                return  isVideo ? null : media;
             }
 
             width: ListView.view.width
@@ -250,7 +250,7 @@ FocusScope {
 
                         property bool isVideo: MimeTypeMapper.mimeTypeToContentType(fileType) === ContentType.Videos
                         property string photoUrl: editingAvailable ? "image://photo/%1".arg(fileURL.toString()) : fileURL.toString().replace("file://", "")
-
+                        property string url: fileURL.toString().replace("file://", "");
                         Image {
                             id: image
                             anchors.fill: parent
@@ -271,10 +271,14 @@ FocusScope {
                             id: highResolutionImage
                             anchors.fill: parent
                             asynchronous: true
-                            cache: true
-                            source: slideshowView.inView && (flickable.sizeScale > 1.0 || infoPopover.visible) ?
+                            cache: false
+                            source: slideshowView.inView && (flickable.sizeScale > 1.0 ) ?
                                         media.photoUrl :
                                         ""
+                            sourceSize {
+                                width: listView.maxDimension * (zoomPinchArea.maximumZoom / 2)
+                                height: listView.maxDimension  * (zoomPinchArea.maximumZoom / 2)
+                            }
                             fillMode: Image.PreserveAspectFit
                         }
 
