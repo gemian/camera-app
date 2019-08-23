@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2018-11-18 18:13+0000\n"
+"PO-Revision-Date: 2019-08-24 03:49+0000\n"
 "Last-Translator: Samson <sambelet@yahoo.com>\n"
 "Language-Team: Amharic <https://translate.ubports.com/projects/ubports/"
 "camera-app/am/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 3.6.1\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: ../AdvancedOptions.qml:16
@@ -81,19 +81,19 @@ msgstr ""
 
 #: ../AdvancedOptions.qml:137
 msgid "the hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)"
-msgstr ""
+msgstr "ሰአት ያለ ቀዳሚ ዜሮ ከ (0 እስከ 23 ወይንም ከ 1 እስከ 12 ጠዋት/ከሰአት በሚታይ ጊዜ)"
 
 #: ../AdvancedOptions.qml:138
 msgid "the hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)"
-msgstr ""
+msgstr "ሰአት ከ ቀዳሚ ዜሮ ጋር ከ (00 እስከ 23 ወይንም ከ 01 እስከ 12 ጠዋት/ከሰአት በሚታይ ጊዜ)"
 
 #: ../AdvancedOptions.qml:139
 msgid "the hour without a leading zero (0 to 23, even with AM/PM display)"
-msgstr ""
+msgstr "ሰአት ያለ ቀዳሚ ዜሮ ከ (0 እስከ 23 ወይንም ከ 0 እስከ 12 ጠዋት/ከሰአት በሚታይ ጊዜ)"
 
 #: ../AdvancedOptions.qml:140
 msgid "the hour with a leading zero (00 to 23, even with AM/PM display)"
-msgstr ""
+msgstr "ሰአት ከ ቀዳሚ ዜሮ ጋር ከ (00 እስከ 23: ጠዋት/ከሰአት በሚታይ ጊዜ)"
 
 #: ../AdvancedOptions.qml:141
 msgid "the minute without a leading zero (0 to 59)"
