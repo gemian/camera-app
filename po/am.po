@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2019-08-24 03:49+0000\n"
+"PO-Revision-Date: 2019-09-03 17:50+0000\n"
 "Last-Translator: Samson <sambelet@yahoo.com>\n"
 "Language-Team: Amharic <https://translate.ubports.com/projects/ubports/"
 "camera-app/am/>\n"
@@ -77,7 +77,7 @@ msgstr "አመት እንደ ሁለት አሀዝ ቁጥር (00 እስከ 99)"
 msgid ""
 "the year as four digit number. If the year is negative, a minus sign is "
 "prepended in addition."
-msgstr ""
+msgstr "አመት እንደ አራት አሀዝ ቁጥር: አመት አሉታዊ ከሆነ: የ መቀነስ ምልክት ይጨመርበታል:"
 
 #: ../AdvancedOptions.qml:137
 msgid "the hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)"
@@ -121,11 +121,11 @@ msgstr "ሚሊ ሰከንድ ከ ቀዳሚ ዜሮ ጋር ከ (0 እስከ 999)"
 
 #: ../AdvancedOptions.qml:147
 msgid "use AM/PM display. AP will be replaced by either 'AM' or 'PM'."
-msgstr ""
+msgstr "ይጠቀሙ ጠዋት/ከሰአት ማሳያ: AP ይቀየራል በ አንዱ 'ጠዋት' ወይንም 'ከሰአት'."
 
 #: ../AdvancedOptions.qml:148
 msgid "use am/pm display. ap will be replaced by either 'am' or 'pm'."
-msgstr ""
+msgstr "ይጠቀሙ ጠዋት/ከሰአት ማሳያ: AP ይቀየራል በ አንዱ 'ጠዋት' ወይንም 'ከሰአት'."
 
 #: ../AdvancedOptions.qml:149
 msgid "the timezone (for example 'CEST')"
