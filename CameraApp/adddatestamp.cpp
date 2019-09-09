@@ -26,7 +26,7 @@ void AddDateStamp::run() {
       QTransform trasform = QTransform();
       trasform.rotate(orientation);
       image = image.transformed(trasform);
-      qDebug() << "orientation  : " <<  orientation;
+
       QString currentDate = QString(now.toString(this->dateFormat));
       int imageHeight = std::max(image.width(),image.height());
       int imageWidth = std::min(image.width(),image.height());
