@@ -2,6 +2,7 @@
 #define ADDDATESTAMP_H
 
 #include <QThread>
+#include <exiv2/exiv2.hpp>
 
 class AddDateStamp : public QThread
 {
@@ -13,6 +14,10 @@ public:
     void run();
 
 protected:
+    int rotationToAligment(int rotation);
+    int getOrientation(QString pathToImage);
+    void copyMetadata(QString srcPath, QString dstPath);
+    
     QString path;
     QString dateFormat;
     QColor  stampColor;
