@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 Canonical, Ltd.
+ * Copyright (C) 2019 Ubports.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,24 +15,28 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import QtGraphicalEffects 1.0
 
-FastBlur {
-    id: overlayBlurEffect
-    property var overlayItem
-    property var backgroundItem
+Item {
+	id:_overlayPanel
+	property var overlayItem
+	property var  anchorTo: null
 
-    anchors.fill: overlayItem
+    anchors.fill: anchorTo ? anchorTo : overlayItem
 
-    radius: units.gu(2)
-    source:  ShaderEffectSource {
-        clip: true
-        sourceItem: backgroundItem
-        sourceRect: Qt.rect( overlayItem.mapToItem(backgroundItem).x,
-                             overlayItem.mapToItem(backgroundItem).y,
-                             overlayItem.width,
-                             overlayItem.height )
-        recursive: true
+	property alias blur: _overlayBlur
+	property alias tint: _overlayTint
+
+	 OverlayBlur {
+		id:_overlayBlur
+		 anchors.fill:parent
+
+		 overlayItem:_overlayPanel.overlayItem
+        z:-1
     }
+
+    OverlayTint {
+		id:_overlayTint
+		anchors.fill:parent
+	}
+
 }

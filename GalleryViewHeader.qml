@@ -19,6 +19,8 @@ import Ubuntu.Components 1.3
 import QtQuick.Layouts 1.1
 import QtGraphicalEffects 1.0
 
+import "qml/components"
+
 Item {
     id: header
     anchors {
@@ -56,11 +58,11 @@ Item {
         shown = !shown;
     }
 
-    Rectangle {
-        id:headerBkRect
-        anchors.fill: parent
-        color: Qt.rgba(0,0,0,0.6)
-    }
+//     Rectangle {
+//         id:headerBkRect
+//         anchors.fill: parent
+//         color: Qt.rgba(0,0,0,0.6)
+//     }
 
     RowLayout {
         anchors.fill: parent
@@ -74,7 +76,7 @@ Item {
             }
             width: units.gu(8)
             iconName: editMode ? "save" : "back"
-            iconColor: "white"
+            iconColor: theme.palette.normal.backgroundText
             onClicked: editMode ? header.exitEditor() : header.exit()
         }
 
@@ -82,7 +84,7 @@ Item {
             text: main.contentExportMode || userSelectionMode ? i18n.tr("Select") :
                   (editMode ? i18n.tr("Edit Photo") : i18n.tr("Photo Roll"))
             fontSize: "x-large"
-            color: "white"
+            color: theme.palette.normal.backgroundText
             elide: Text.ElideRight
             Layout.fillWidth: true
         }
@@ -94,6 +96,7 @@ Item {
                 bottom: parent.bottom
             }
             iconName: header.gridMode ? "stock_image" : "view-grid-symbolic"
+			iconColor: theme.palette.normal.backgroundText
             onClicked: header.toggleViews()
             visible: !main.contentExportMode && !userSelectionMode && !editMode
         }
@@ -105,6 +108,7 @@ Item {
                 bottom: parent.bottom
             }
             iconName: "select"
+			iconColor: theme.palette.normal.backgroundText
             onClicked: header.toggleSelectAll()
             visible: header.gridMode && userSelectionMode
         }
@@ -116,6 +120,7 @@ Item {
                 bottom: parent.bottom
             }
             action: actionsDrawer.actions[0] ? actionsDrawer.actions[0] : null
+			iconColor: theme.palette.normal.backgroundText
             visible: actionsDrawer.actions.length == 1 && !editMode
             onTriggered: if (action) action.triggered()
         }
@@ -127,6 +132,7 @@ Item {
                 bottom: parent.bottom
             }
             iconName: "contextual-menu"
+			iconColor: theme.palette.normal.backgroundText
             visible: actionsDrawer.actions.length > 1 && !editMode
             onClicked: actionsDrawer.opened = !actionsDrawer.opened
         }
@@ -138,6 +144,7 @@ Item {
                 bottom: parent.bottom
             }
             iconName: "ok"
+			iconColor: theme.palette.normal.backgroundText
             onClicked: header.validationClicked()
             visible: header.validationVisible
         }
@@ -147,6 +154,7 @@ Item {
             IconButton {
                 Layout.fillHeight: true
                 visible: header.editMode
+				iconColor: theme.palette.normal.backgroundText
                 action: modelData
             }
         }
@@ -164,6 +172,7 @@ Item {
         height: actionsColumn.height
         clip: actionsColumn.y != 0
         visible: false
+        z:-1
 
         actions: header.actions
 
@@ -218,7 +227,8 @@ Item {
 
                     Rectangle {
                         anchors.fill: parent
-                        color: actionButton.pressed ? Qt.rgba(1.0, 1.0, 1.0, 0.3) : Qt.rgba(0.0, 0.0, 0.0, 0.6)
+                        visible: actionButton.pressed
+                        color: theme.palette.selected.background
                     }
 
                     Label {
@@ -232,7 +242,7 @@ Item {
                         }
                         text: model.text
                         elide: Text.ElideRight
-                        color: action.enabled ? "white" : Qt.darker("white", 2.0)
+                        color: action.enabled ? theme.palette.normal.backgroundText : theme.palette.disabled.backgroundText
                     }
 
                     Icon {
@@ -251,5 +261,15 @@ Item {
                 }
             }
         }
+        OverlayPanel {
+			overlayItem: actionsColumn
+			visible: actionsColumn.visible
+
+			blur.visible: appSettings.blurEffects && !appSettings.blurEffectsPreviewOnly
+			blur.backgroundItem: slideshowView
+			blur.transparentBorder:false
+			z:-1
     }
+    }
+
 }

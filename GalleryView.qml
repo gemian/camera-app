@@ -18,8 +18,10 @@ import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Content 1.3
 import Ubuntu.Thumbnailer 0.1
+
 import CameraApp 0.1
 import "MimeTypeMapper.js" as MimeTypeMapper
+import "qml/components"
 
 Item {
     id: galleryView
@@ -113,6 +115,24 @@ Item {
             onExitUserSelectionMode: galleryView.exitUserSelectionMode()
             onToggleHeader: header.toggle()
         }
+
+        OverlayPanel {
+			overlayItem: header
+            visible: galleryView.gridMode
+            blur.visible: appSettings.blurEffects && !appSettings.blurEffectsPreviewOnly
+            blur.transparentBorder:false
+            blur.backgroundItem:  photogridView
+        }
+
+        OverlayPanel {
+			overlayItem: header
+            visible: !galleryView.gridMode
+            blur.visible: appSettings.blurEffects && !appSettings.blurEffectsPreviewOnly
+            blur.transparentBorder:false
+            blur.backgroundItem: slideshowView
+
+        }
+
 
         // FIXME: it would be better to use the standard header from the toolkit
         GalleryViewHeader {
