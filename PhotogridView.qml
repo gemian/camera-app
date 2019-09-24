@@ -135,8 +135,8 @@ FocusScope {
                 height: headerHeight
             }
 
-            property var baseDelegateWidth: units.gu(13)
-            property var baseDelegateHeight: units.gu(13)
+            property var baseDelegateWidth: Math.min(photogridView.width,photogridView.height)/2/2
+            property var baseDelegateHeight: baseDelegateWidth
 
             Component.onCompleted: {
                 // FIXME: workaround for qtubuntu not returning values depending on the grid unit definition
@@ -181,7 +181,7 @@ FocusScope {
                     }
 
                     asynchronous: true
-                    cache: true
+                    cache: photogridView.inView 
                     // The thumbnailer does not seem to check when an image has been changed on disk,
                     // so we use this hack to force it to check and refresh if necessary.
                     source: photogridView.inView ? "image://thumbnailer/" + fileURL.toString() + "?at=" + Date.now() : ""

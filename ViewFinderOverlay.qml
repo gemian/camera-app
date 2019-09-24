@@ -23,6 +23,7 @@ import QtPositioning 5.2
 import QtSensors 5.0
 import CameraApp 0.1
 import Qt.labs.settings 1.0
+import QtGraphicalEffects 1.0
 
 Item {
     id: viewFinderOverlay
@@ -1153,4 +1154,28 @@ Item {
              }
          }
     }
+
+     FastBlur {
+        id: viewFinderSwitcherBlurred
+        anchors.fill: parent
+        property real finalRadius: 67
+        property real finalOpacity: 1.0
+        radius: photoRollHint.visible ? finalRadius : viewFinderOverlay.revealProgress * finalRadius
+        opacity: photoRollHint.visible ? finalOpacity : (1.0 - viewFinderOverlay.revealProgress) * finalOpacity + finalOpacity
+        source: viewFinderSwitcher !== null ? viewFinderSwitcher : null
+        z:-1
+        visible:  appSettings.blurEffects && radius !== 0
+        transparentBorder:false
+        Behavior on radius { UbuntuNumberAnimation { duration: UbuntuAnimation.SnapDuration} }
+    }
+    Rectangle {
+		id: viewFinderOverlayTint
+		anchors.fill:parent
+		property real finalOpacity: 0.25
+		property real tintOpacity : viewFinderOverlay.revealProgress * finalOpacity
+		visible: viewFinderOverlay.revealProgress > 0
+		opacity:tintOpacity
+		color: UbuntuColors.jet
+		z:-1
+	}
 }

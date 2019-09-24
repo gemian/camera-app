@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 Canonical, Ltd.
+ * Copyright (C) 2019 Ubports.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,20 +14,14 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef FILEOPERATIONS_H
-#define FILEOPERATIONS_H
 
-#include <QtCore/QObject>
-#include <QtCore/QJsonObject>
+import QtQuick 2.4
 
-class FileOperations : public QObject
-{
-    Q_OBJECT
 
-public:
-    explicit FileOperations(QObject *parent = 0);
-    Q_INVOKABLE bool remove(const QString & fileName) const;
-    Q_INVOKABLE QJsonObject getEXIFData(const QString & path) const;
-};
-
-#endif // FILEOPERATIONS_H
+Rectangle {
+	id:_tintRect
+	anchors.fill:parent
+	visible: true
+	opacity: 0.4
+	color: theme.palette.normal.background
+}

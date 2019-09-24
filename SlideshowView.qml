@@ -24,6 +24,7 @@ import QtGraphicalEffects 1.0
 
 import CameraApp 0.1
 import "MimeTypeMapper.js" as MimeTypeMapper
+import "qml/components"
 
 FocusScope {
     id: slideshowView
@@ -181,7 +182,7 @@ FocusScope {
             }
 
             function getMedia() {
-                return  isVideo ? null : highResolutionImage;
+                return  isVideo ? null : media;
             }
 
             width: ListView.view.width
@@ -250,7 +251,7 @@ FocusScope {
 
                         property bool isVideo: MimeTypeMapper.mimeTypeToContentType(fileType) === ContentType.Videos
                         property string photoUrl: editingAvailable ? "image://photo/%1".arg(fileURL.toString()) : fileURL.toString().replace("file://", "")
-
+                        property string url: fileURL.toString().replace("file://", "");
                         Image {
                             id: image
                             anchors.fill: parent
@@ -271,10 +272,14 @@ FocusScope {
                             id: highResolutionImage
                             anchors.fill: parent
                             asynchronous: true
-                            cache: true
-                            source: slideshowView.inView && (flickable.sizeScale > 1.0 || infoPopover.visible) ?
+                            cache: false
+                            source: slideshowView.inView && (flickable.sizeScale > 1.0 ) ?
                                         media.photoUrl :
                                         ""
+                            sourceSize {
+                                width: listView.maxDimension * (zoomPinchArea.maximumZoom / 2)
+                                height: listView.maxDimension  * (zoomPinchArea.maximumZoom / 2)
+                            }
                             fillMode: Image.PreserveAspectFit
                         }
 
@@ -433,6 +438,25 @@ FocusScope {
         }
     }
 
+    OverlayPanel {
+        id:bottomimageBlur
+
+        overlayItem: photoBottomEdge
+        anchorTo: photoBottomEdge
+
+        visible: photoBottomEdge.status !== BottomEdge.Hidden
+        transform: Translate {
+			id:beTransalte
+			y: photoBottomEdge.height - (photoBottomEdge.height*photoBottomEdge.dragProgress)
+			Behavior on y { UbuntuNumberAnimation {duration:UbuntuAnimation.FastDuration}}
+		}
+
+		blur.visible: appSettings.blurEffects && !appSettings.blurEffectsPreviewOnly
+		blur.backgroundItem:  listView
+		blur.transparentBorder:false
+        blur.offset: Qt.point(photoBottomEdge.x,beTransalte.y)
+    }
+
     BottomEdge {
         id: photoBottomEdge
         enabled: !editor.active
@@ -441,24 +465,19 @@ FocusScope {
         hint.text: i18n.tr("Back to Photo roll");
         hint.iconName: "go-up"
         hint.visible:enabled
+        hint.opacity: 1.0 - photoBottomEdge.dragProgress
 
         contentComponent: Page {
+            id:bottomReturn
             opacity: photoBottomEdge.dragProgress
             header: PageHeader { opacity: 0 }
-            Rectangle {
-                id:photoBottomEdgeRect
-                width:photoBottomEdge.width
-                height:photoBottomEdge.height
-                color: Qt.rgba(0,0,0,0.6)
-            }
-
 
             Icon {
                 id:bottomEdgeGoUpIcon
                 height:units.gu(3)
                 width:units.gu(3)
                 name:"go-up"
-                color: "white"
+                color: theme.palette.normal.backgroundText
                 anchors.top:parent.top
                 anchors.horizontalCenter:parent.horizontalCenter
             }
@@ -467,7 +486,7 @@ FocusScope {
                 verticalAlignment: Text.AlignVCenter
                 height:photoBottomEdge.height
                 text: photoBottomEdge.hint.text
-                color:"white"
+                color: theme.palette.normal.backgroundText
                 fontSize: "x-large"
             }
         }

@@ -14,8 +14,12 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <exiv2/exiv2.hpp>
+
 #include "fileoperations.h"
+#include <QtCore/QJsonObject>
 #include <QtCore/QFile>
+#include <QDebug>
 
 FileOperations::FileOperations(QObject *parent) :
     QObject(parent)
@@ -25,4 +29,24 @@ FileOperations::FileOperations(QObject *parent) :
 bool FileOperations::remove(const QString & fileName) const
 {
     return QFile::remove(fileName);
+}
+
+QJsonObject FileOperations::getEXIFData(const QString & path) const
+{
+     const std::string& exifPath = path.toStdString();
+     Exiv2::Image::AutoPtr exifImageFile;
+     QJsonObject retJson;
+     try {
+        exifImageFile = Exiv2::ImageFactory::open(exifPath);
+        exifImageFile->readMetadata();
+        Exiv2::ExifData &exifData = exifImageFile->exifData();
+    
+        for( Exiv2::ExifMetadata::iterator iter = exifData.begin(); iter != exifData.end(); iter++) {
+                retJson[QString::fromStdString(iter->key())] = QString::fromStdString(iter->value().toString());
+        }
+     } catch (const std::exception& e) {
+        qDebug() << "Failed when reading EXIF data : " <<  e.what();
+     }
+      
+     return retJson;
 }
