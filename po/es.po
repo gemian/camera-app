@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2018-06-24 11:59+0000\n"
+"PO-Revision-Date: 2019-09-27 02:51+0000\n"
 "Last-Translator: advocatux <advocatux@airpost.net>\n"
-"Language-Team: Spanish <https://translate.ubports.com/projects/ubports"
-"/camera-app/es/>\n"
+"Language-Team: Spanish <https://translate.ubports.com/projects/ubports/"
+"camera-app/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.15\n"
+"X-Generator: Weblate 3.8\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: ../AdvancedOptions.qml:16
@@ -306,7 +306,7 @@ msgstr "15 segundos"
 
 #: ../ViewFinderOverlay.qml:493
 msgid "Fine Quality"
-msgstr "Calidad alta"
+msgstr "Calidad excelente"
 
 #: ../ViewFinderOverlay.qml:498
 msgid "High Quality"
