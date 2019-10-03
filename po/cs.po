@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2019-09-14 20:50+0000\n"
+"PO-Revision-Date: 2019-10-04 14:53+0000\n"
 "Last-Translator: Milan Korecký <milan.korecky@gmail.com>\n"
 "Language-Team: Czech <https://translate.ubports.com/projects/ubports/"
 "camera-app/cs/>\n"
@@ -202,7 +202,7 @@ msgstr "Nahlásit problémy"
 
 #: ../Information.qml:84
 msgid "Help translate"
-msgstr "Pomozte s překladem"
+msgstr "Pomožte s překlady"
 
 #: ../MediaInfoPopover.qml:25
 msgid "Media Information"
