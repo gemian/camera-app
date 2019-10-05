@@ -7,6 +7,8 @@ Page {
     id:_advancedOptionsPage
     signal back();
 
+    property Settings settings: null
+    
     header: PageHeader {
         id:_advancedOptionsPageHeader
         StyleHints {
@@ -26,7 +28,7 @@ Page {
     Flickable {
         id:advancedOptions
 
-        property Settings settings: viewFinderOverlay.settings
+
 
         anchors {
             top: _advancedOptionsPageHeader.bottom

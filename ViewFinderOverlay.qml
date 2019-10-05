@@ -1155,7 +1155,7 @@ Item {
          }
     }
 
-     FastBlur {
+    FastBlur {
         id: viewFinderSwitcherBlurred
         anchors.fill: parent
         property real finalRadius: 67
@@ -1169,13 +1169,13 @@ Item {
         Behavior on radius { UbuntuNumberAnimation { duration: UbuntuAnimation.SnapDuration} }
     }
     Rectangle {
-		id: viewFinderOverlayTint
-		anchors.fill:parent
-		property real finalOpacity: 0.25
-		property real tintOpacity : viewFinderOverlay.revealProgress * finalOpacity
-		visible: viewFinderOverlay.revealProgress > 0
-		opacity:tintOpacity
-		color: UbuntuColors.jet
-		z:-1
-	}
+        id: viewFinderOverlayTint
+        anchors.fill:parent
+        property real finalOpacity: 0.25
+        property real tintOpacity : viewFinderOverlay.revealProgress * finalOpacity
+        visible: viewFinderOverlay.revealProgress > 0
+        opacity:tintOpacity
+        color: UbuntuColors.jet
+        z:-1
+    }
 }

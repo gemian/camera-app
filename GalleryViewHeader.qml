@@ -46,6 +46,8 @@ Item {
     signal toggleViews
     signal toggleSelectAll
     signal validationClicked
+    signal advanceSettingsToggle
+    signal infoPageToggle
 
     function show() {
         shown = true;
@@ -89,6 +91,8 @@ Item {
             Layout.fillWidth: true
         }
 
+        //-------------------------------------------------------------------------------
+        
         IconButton {
             objectName: "viewToggleButton"
             anchors {
@@ -100,7 +104,33 @@ Item {
             onClicked: header.toggleViews()
             visible: !main.contentExportMode && !userSelectionMode && !editMode
         }
+        
+        IconButton {
+            objectName: "toggleAdvanceSettings"
+            anchors {
+                top: parent.top
+                bottom: parent.bottom
+            }
+            iconName: "settings"
+			iconColor: theme.palette.normal.backgroundText
+            onClicked: header.advanceSettingsToggle()
+            visible: !main.contentExportMode && !userSelectionMode && !editMode
+        }
+        
+        IconButton {
+            objectName: "toggleInfoPage"
+            anchors {
+                top: parent.top
+                bottom: parent.bottom
+            }
+            iconName: "info"
+			iconColor: theme.palette.normal.backgroundText
+            onClicked: header.infoPageToggle()
+            visible: !main.contentExportMode && !userSelectionMode && !editMode
+        }
 
+        //------------------------------------------------------------------------- 
+        
         IconButton {
             objectName: "selectAllButton"
             anchors {
