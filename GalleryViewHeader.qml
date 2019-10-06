@@ -106,29 +106,16 @@ Item {
         }
         
         IconButton {
-            objectName: "toggleAdvanceSettings"
+            objectName: "galleryLink"
             anchors {
                 top: parent.top
                 bottom: parent.bottom
             }
-            iconName: "settings"
+            iconName: "gallery-app-symbolic"
 			iconColor: theme.palette.normal.backgroundText
-            onClicked: header.advanceSettingsToggle()
+            onClicked:  { Qt.openUrlExternally("appid://com.ubuntu.gallery/gallery/current-user-version") }
             visible: !main.contentExportMode && !userSelectionMode && !editMode
         }
-        
-        IconButton {
-            objectName: "toggleInfoPage"
-            anchors {
-                top: parent.top
-                bottom: parent.bottom
-            }
-            iconName: "info"
-			iconColor: theme.palette.normal.backgroundText
-            onClicked: header.infoPageToggle()
-            visible: !main.contentExportMode && !userSelectionMode && !editMode
-        }
-
         //------------------------------------------------------------------------- 
         
         IconButton {

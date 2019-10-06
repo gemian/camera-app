@@ -73,13 +73,7 @@ Item {
         id:advancedOptionsComponent
         AdvancedOptions {
             id:advancedOptions
-            settings:null
-            anchors {
-                top : header.bottom
-                left:parent.left
-                right:parent.right
-                bottom:parent.bottom
-            }
+            settings:main.viewSwitcher.viewFinderView.viewFinderOverlay.settings
             onBack: galleryPageStack.pop()
             
             OverlayPanel {
@@ -90,25 +84,6 @@ Item {
             }
         }
     }
-    Component {
-        id:infoPageComponent
-        Information {
-            id:infoPage
-            anchors {
-                top : header.bottom
-                left:parent.left
-                right:parent.right
-                bottom:parent.bottom
-            }
-            onBack: galleryPageStack.pop()
-            OverlayPanel {
-                z:-1
-                overlayItem: infoPage
-                blur.visible: appSettings.blurEffects && !appSettings.blurEffectsPreviewOnly
-                blur.backgroundItem: currentView
-            }
-        } 
-    }
 
     OrientationHelper {
         visible: inView
@@ -116,6 +91,7 @@ Item {
         PageStack {
             id:galleryPageStack
             z:10
+            anchors.topMargin:header.height
             anchors.fill:parent
         }
         

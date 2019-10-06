@@ -3,26 +3,51 @@ import Ubuntu.Components 1.3
 import Qt.labs.settings 1.0
 import Ubuntu.Components.ListItems 1.3 as ListItems
 
+import "qml/components"
+
+
 Page {
     id:_advancedOptionsPage
     signal back();
 
-    property Settings settings: null
+    property Settings settings: viewFinderView.viewFinderOverlay.settings
+    
+    Component {
+        id:infoPageComponent
+        Information {
+            id:infoPage
+            onBack: galleryPageStack.pop()
+            OverlayPanel {
+                z:-1
+                overlayItem: infoPage
+                blur.visible: appSettings.blurEffects && !appSettings.blurEffectsPreviewOnly
+                blur.backgroundItem: currentView
+            }
+        } 
+    }    
     
     header: PageHeader {
         id:_advancedOptionsPageHeader
         StyleHints {
             backgroundColor:"transparent"
-            foregroundColor:"white"
+            foregroundColor: theme.palette.normal.backgroudText
         }
         title: i18n.tr("Settings")
         leadingActionBar.actions: [
                Action {
                    iconName: "down"
-                   text: "Back"
+                   text: i18n.tr("Back")
                    onTriggered: _advancedOptionsPage.back();
                }
            ]
+           
+       trailingActionBar.actions: [
+                Action {
+                   iconName: "info"
+                   text: i18n.tr("About")
+                   onTriggered: galleryPageStack.push(infoPageComponent)
+               }
+        ]
     }
 
     Flickable {
@@ -48,7 +73,7 @@ Page {
                 ListItemLayout {
                     id: datestampSwitchLayout
                     title.text: i18n.tr("Add date stamp on captured images")
-                    title.color: "white"
+                    title.color: theme.palette.normal.backgroudText
                     Switch {
                         SlotsLayout.position: SlotsLayout.Last
                         checked: advancedOptions.settings.dateStampImages
@@ -70,7 +95,7 @@ Page {
                     ListItemLayout {
                         // TRANSLATORS: this refers to the opacity  of date stamp added to captured images
                         title.text: i18n.tr("Format")
-                        title.color: "white"
+                        title.color: theme.palette.normal.backgroudText
                         TextField {
                             id:dateFormatText
                             SlotsLayout.position: SlotsLayout.Last
@@ -142,13 +167,13 @@ Page {
                                 { "seq" : "HH", "desc" : i18n.tr("the hour with a leading zero (00 to 23, even with AM/PM display)") },
                                 { "seq" : "m", "desc" : i18n.tr("the minute without a leading zero (0 to 59)") },
                                 { "seq" : "mm", "desc" : i18n.tr("the minute with a leading zero (00 to 59)") },
+                                { "seq" : "AP", "desc" : i18n.tr("use AM/PM display. AP will be replaced by either 'AM' or 'PM'.") },
+                                { "seq" : "ap", "desc" : i18n.tr("use am/pm display. ap will be replaced by either 'am' or 'pm'.") },
+                                { "seq" : "t", "desc" : i18n.tr("the timezone (for example 'CEST')") },
                                 { "seq" : "s", "desc" : i18n.tr("the second without a leading zero (0 to 59)") },
                                 { "seq" : "ss", "desc" : i18n.tr("the second with a leading zero (00 to 59)") },
                                 { "seq" : "z", "desc" : i18n.tr("the milliseconds without leading zeroes (0 to 999)") },
-                                { "seq" : "zzz", "desc" : i18n.tr("the milliseconds with leading zeroes (000 to 999)") },
-                                { "seq" : "AP", "desc" : i18n.tr("use AM/PM display. AP will be replaced by either 'AM' or 'PM'.") },
-                                { "seq" : "ap", "desc" : i18n.tr("use am/pm display. ap will be replaced by either 'am' or 'pm'.") },
-                                { "seq" : "t", "desc" : i18n.tr("the timezone (for example 'CEST')") }
+                                { "seq" : "zzz", "desc" : i18n.tr("the milliseconds with leading zeroes (000 to 999)") }
                             ]
                             delegate: ListItem {
                                 height:units.gu(8)
@@ -186,7 +211,7 @@ Page {
                     ListItemLayout {
                         id:  dateStampColorItemLayout
 
-                        title.color: "white"
+                        title.color:  theme.palette.normal.backgroudText
                         // TRANSLATORS: this refers to the color of date stamp added to captured images
                         title.text:i18n.tr("Color")
 
@@ -254,7 +279,7 @@ Page {
                     divider.visible: false
                     ListItemLayout {
                         id:  dateStampAlignmentItemLayout
-                        title.color: "white"
+                        title.color:  theme.palette.normal.backgroudText
                         // TRANSLATORS: this refers to the alignment of date stamp within captured images (bottom left, top right,etc..)
                         title.text:i18n.tr("Alignment")
                         Row {
@@ -300,7 +325,7 @@ Page {
                     ListItemLayout {
                         id:  dateStampOpacityItemLayout
                         height: dateStampOpacityItem.height
-                        title.color: "white"
+                        title.color:  theme.palette.normal.backgroudText
                         // TRANSLATORS: this refers to the opacity  of date stamp added to captured images
                         title.text:i18n.tr("Opacity")
 
@@ -325,7 +350,7 @@ Page {
                 ListItemLayout {
                     id: blurEffectSwitch
                     title.text: i18n.tr("Blurred Overlay")
-                    title.color: "white"
+                    title.color: theme.palette.normal.backgroudText
                     Switch {
                         SlotsLayout.position: SlotsLayout.Last
                         checked: appSettings.blurEffects
@@ -345,7 +370,7 @@ Page {
 					ListItemLayout {
 						id: blurEffectsPreviewOnlySwitch
 						title.text: i18n.tr("Only Blur Preview overlay")
-						title.color: "white"
+						title.color: theme.palette.normal.backgroudText
 						Switch {
 							SlotsLayout.position: SlotsLayout.Last
 							checked: appSettings.blurEffectsPreviewOnly
