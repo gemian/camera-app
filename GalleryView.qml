@@ -73,7 +73,7 @@ Item {
         id:advancedOptionsComponent
         AdvancedOptions {
             id:advancedOptions
-            settings:main.viewSwitcher.viewFinderView.viewFinderOverlay.settings
+            settings: viewFinderView.finderOverlay.settings
             onBack: galleryPageStack.pop()
             
             OverlayPanel {

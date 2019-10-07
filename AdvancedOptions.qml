@@ -8,9 +8,10 @@ import "qml/components"
 
 Page {
     id:_advancedOptionsPage
-    signal back();
 
-    property Settings settings: viewFinderView.viewFinderOverlay.settings
+    signal back();
+    
+    property Settings settings: viewFinderView.finderOverlay.settings    
     
     Component {
         id:infoPageComponent
@@ -53,8 +54,6 @@ Page {
     Flickable {
         id:advancedOptions
 
-
-
         anchors {
             top: _advancedOptionsPageHeader.bottom
             left:parent.left
@@ -76,14 +75,14 @@ Page {
                     title.color: theme.palette.normal.backgroudText
                     Switch {
                         SlotsLayout.position: SlotsLayout.Last
-                        checked: advancedOptions.settings.dateStampImages
-                        onClicked: advancedOptions.settings.dateStampImages = checked
+                        checked: settings.dateStampImages
+                        onClicked: settings.dateStampImages = checked
                     }
                 }
             }
             ListItems.Expandable {
                 id:dateStampExpand
-                expanded: advancedOptions.settings.dateStampImages
+                expanded: settings.dateStampImages
                 collapsedHeight: 0
                 expandedHeight: units.gu(27)
                 collapseOnClick: false
@@ -101,11 +100,11 @@ Page {
                             SlotsLayout.position: SlotsLayout.Last
                             focus: true
                             width:datestampFormatItem.width - units.gu(18)
-                            text: advancedOptions.settings.dateStampFormat
+                            text: settings.dateStampFormat
                             placeholderText:  Qt.locale().dateFormat(Locale.ShortFormat)
                             onActiveFocusChanged: if(!text) {text = Qt.locale().dateFormat(Locale.ShortFormat);}
                             onTextChanged: {
-                                advancedOptions.settings.dateStampFormat = text;
+                                settings.dateStampFormat = text;
                             }
                         }
                     }
@@ -249,7 +248,7 @@ Page {
                                     }
                                 }
                                 model = newColors;
-                                currentIndex = dateStampColor.getItemIdx( advancedOptions.settings.dateStampColor);
+                                currentIndex = dateStampColor.getItemIdx( settings.dateStampColor);
                                 positionViewAtIndex(currentIndex, ListView.Center);
                             }
 
@@ -259,12 +258,12 @@ Page {
                                 height:dateStampColorItem.height - units.gu(1)
                                 width:height
                                 color: modelData
-                                iconName: advancedOptions.settings.dateStampColor == modelData ? "tick" : ""
+                                iconName: settings.dateStampColor == modelData ? "tick" : ""
                                 onClicked: {
                                     dateStampColor.currentIndex = index;
-                                    advancedOptions.settings.dateStampColor = modelData;
+                                    settings.dateStampColor = modelData;
                                 }
-                                Component.onCompleted: if( advancedOptions.settings.dateStampColor == modelData) {dateStampColor.positionViewAtIndex(index, ListView.Center);  }
+                                Component.onCompleted: if( settings.dateStampColor == modelData) {dateStampColor.positionViewAtIndex(index, ListView.Center);  }
                             }
                         }
                     }
@@ -305,9 +304,9 @@ Page {
                                     width:height
                                     automaticOrientation:false
                                     iconSource: Qt.resolvedUrl( modelData.icon )
-                                    on:(modelData.value == advancedOptions.settings.dateStampAlign)
+                                    on:(modelData.value == settings.dateStampAlign)
                                     onClicked: {
-                                        advancedOptions.settings.dateStampAlign = modelData.value;
+                                        settings.dateStampAlign = modelData.value;
                                     }
                                 }
                             }
@@ -333,14 +332,14 @@ Page {
                             id: dateStampOpacity
                             width:dateFormatText.width
                             height:dateStampOpacityItem.height
-                            value:advancedOptions.settings.dateStampOpacity
+                            value:settings.dateStampOpacity
                             SlotsLayout.position: SlotsLayout.Last
                             maximumValue: 1.0
                             minimumValue: 0.25
                             stepSize: 0.1
                             live:true
                             onValueChanged: {
-                                 advancedOptions.settings.dateStampOpacity = dateStampColor.opacity = value;
+                                 settings.dateStampOpacity = dateStampColor.opacity = value;
                             }
                         }
                     }

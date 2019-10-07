@@ -34,7 +34,7 @@ Item {
     property var controls: controls
     property var settings: settings
     property bool readyForCapture
-    property bool overlayPageVisible : (advancedOptionsToggle.selected || infoPageToggle.selected);
+
 
     function showFocusRing(x, y) {
         focusRing.center = Qt.point(x, y);
@@ -680,39 +680,6 @@ Item {
                         bottomEdge.open();
                     }
                 }
-            }
-        }
-
-        OptionValueButton {
-            id:advancedOptionsToggle
-            z:1
-            anchors.right: parent.right
-            anchors.top: parent.top
-            opacity: bottomEdge.progress
-            visible:opacity != 0
-            iconName:  "settings"
-            isLast: true
-            onClicked: {
-                selected = !selected;
-                infoPageToggle.selected = false;
-                bottomEdge.open()
-            }
-        }
-
-
-        OptionValueButton {
-            id:infoPageToggle
-            z:1
-            anchors.right: advancedOptionsToggle.left
-            anchors.top: parent.top
-            opacity: bottomEdge.progress
-            visible:opacity != 0
-            iconName:  "info"
-            isLast: true
-            onClicked: {
-                selected = !selected
-                advancedOptionsToggle.selected = false;
-                bottomEdge.open()
             }
         }
     }
