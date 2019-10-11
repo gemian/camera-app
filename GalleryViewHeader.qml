@@ -47,7 +47,6 @@ Item {
     signal toggleSelectAll
     signal validationClicked
     signal advanceSettingsToggle
-    signal infoPageToggle
 
     function show() {
         shown = true;

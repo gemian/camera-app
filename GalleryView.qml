@@ -201,9 +201,6 @@ Item {
                 main.exportContent(urls);
             }
             
-            onInfoPageToggle:{
-                galleryPageStack.push(infoPageComponent)
-            }
             onAdvanceSettingsToggle:{
                 galleryPageStack.push(advancedOptionsComponent)
             }
