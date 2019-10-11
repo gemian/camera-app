@@ -54,7 +54,10 @@ FocusScope {
                 text: i18n.tr("Settings")
                 objectName: "openSettingsPage"
                 iconName: "settings"
-                onTriggered: { galleryPageStack.push(advancedOptionsComponent) }
+                onTriggered: { 
+                    galleryPageStack.clear();
+                    galleryPageStack.push(advancedOptionsComponent) 
+                }
             },
         Action {
             text: i18n.tr("Share")

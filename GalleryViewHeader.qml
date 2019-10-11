@@ -88,6 +88,7 @@ Item {
             fontSize: "x-large"
             color: theme.palette.normal.backgroundText
             elide: Text.ElideRight
+            horizontalAlignment:Text.AlignLeft
             Layout.fillWidth: true
         }
 

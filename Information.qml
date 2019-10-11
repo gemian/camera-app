@@ -21,7 +21,7 @@ Page {
 
         leadingActionBar.actions: [
                Action {
-                   iconName: "down"
+                   iconName: "back"
                    text: i18n.tr("Back")
                    onTriggered: _infoPage.back();
                }
@@ -46,11 +46,6 @@ Page {
                 target: aboutCloumn
                 width: parent.width/2
             }
-
-//             PropertyChanges {
-//                 target: _infoPage
-//                 height:infoHeader.height + aboutCloumn.height
-//             }
 
             AnchorChanges {
                 target: aboutCloumn

@@ -9,6 +9,7 @@ import "qml/components"
 Page {
     id:_advancedOptionsPage
 
+    
     signal back();
     
     property Settings settings: viewFinderView.finderOverlay.settings    
@@ -36,8 +37,8 @@ Page {
         title: i18n.tr("Settings")
         leadingActionBar.actions: [
                Action {
-                   iconName: "down"
-                   text: i18n.tr("Back")
+                   iconName: "close"
+                   text: i18n.tr("Close")
                    onTriggered: _advancedOptionsPage.back();
                }
            ]
@@ -46,7 +47,9 @@ Page {
                 Action {
                    iconName: "info"
                    text: i18n.tr("About")
-                   onTriggered: galleryPageStack.push(infoPageComponent)
+                   onTriggered: { 
+                       galleryPageStack.push(infoPageComponent)
+                   }
                }
         ]
     }
@@ -73,6 +76,7 @@ Page {
                     id: datestampSwitchLayout
                     title.text: i18n.tr("Add date stamp on captured images")
                     title.color: theme.palette.normal.backgroudText
+                    title.horizontalAlignment:Text.AlignLeft
                     Switch {
                         SlotsLayout.position: SlotsLayout.Last
                         checked: settings.dateStampImages
@@ -94,6 +98,7 @@ Page {
                     ListItemLayout {
                         // TRANSLATORS: this refers to the opacity  of date stamp added to captured images
                         title.text: i18n.tr("Format")
+                        title.horizontalAlignment:Text.AlignLeft
                         title.color: theme.palette.normal.backgroudText
                         TextField {
                             id:dateFormatText
@@ -213,6 +218,7 @@ Page {
                         title.color:  theme.palette.normal.backgroudText
                         // TRANSLATORS: this refers to the color of date stamp added to captured images
                         title.text:i18n.tr("Color")
+                        title.horizontalAlignment:Text.AlignLeft
 
                         ListView {
                             id:dateStampColor
@@ -281,6 +287,7 @@ Page {
                         title.color:  theme.palette.normal.backgroudText
                         // TRANSLATORS: this refers to the alignment of date stamp within captured images (bottom left, top right,etc..)
                         title.text:i18n.tr("Alignment")
+                        title.horizontalAlignment:Text.AlignLeft
                         Row {
                             id:dateStampAlignment
                             anchors.topMargin:units.gu(1)
@@ -327,6 +334,7 @@ Page {
                         title.color:  theme.palette.normal.backgroudText
                         // TRANSLATORS: this refers to the opacity  of date stamp added to captured images
                         title.text:i18n.tr("Opacity")
+                        title.horizontalAlignment:Text.AlignLeft
 
                         Slider {
                             id: dateStampOpacity
@@ -349,6 +357,7 @@ Page {
                 ListItemLayout {
                     id: blurEffectSwitch
                     title.text: i18n.tr("Blurred Overlay")
+                    title.horizontalAlignment:Text.AlignLeft
                     title.color: theme.palette.normal.backgroudText
                     Switch {
                         SlotsLayout.position: SlotsLayout.Last
@@ -369,6 +378,7 @@ Page {
 					ListItemLayout {
 						id: blurEffectsPreviewOnlySwitch
 						title.text: i18n.tr("Only Blur Preview overlay")
+                        title.horizontalAlignment:Text.AlignLeft
 						title.color: theme.palette.normal.backgroudText
 						Switch {
 							SlotsLayout.position: SlotsLayout.Last
