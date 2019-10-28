@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2019-10-28 16:36+0000\n"
+"PO-Revision-Date: 2019-10-30 01:36+0000\n"
 "Last-Translator: enolp <enolp@softastur.org>\n"
 "Language-Team: Asturian <https://translate.ubports.com/projects/ubports/"
 "camera-app/ast/>\n"
@@ -152,7 +152,7 @@ msgstr ""
 
 #: ../DeleteDialog.qml:24
 msgid "Delete media?"
-msgstr "¿Desaniciar multimedia?"
+msgstr ""
 
 #: ../DeleteDialog.qml:34 ../PhotogridView.qml:56 ../SlideshowView.qml:75
 msgid "Delete"
@@ -166,23 +166,23 @@ msgstr "Encaboxar"
 
 #: ../GalleryView.qml:200
 msgid "No media available."
-msgstr "Nun hai elementos multimedia disponibles."
+msgstr ""
 
 #: ../GalleryView.qml:235
 msgid "Scanning for content..."
-msgstr "Buscando conteníu..."
+msgstr ""
 
 #: ../GalleryViewHeader.qml:82 ../SlideshowView.qml:45
 msgid "Select"
-msgstr "Seleicionar"
+msgstr ""
 
 #: ../GalleryViewHeader.qml:83
 msgid "Edit Photo"
-msgstr "Editar la foto"
+msgstr ""
 
 #: ../GalleryViewHeader.qml:83
 msgid "Photo Roll"
-msgstr "Rollu de semeyes"
+msgstr ""
 
 #: ../Information.qml:20
 msgid "About"
@@ -226,11 +226,11 @@ msgstr ""
 
 #: ../NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
-msgstr "Nun queda espaciu llibre, llibera espaciu pa siguir."
+msgstr ""
 
 #: ../PhotoRollHint.qml:69
 msgid "Swipe left for photo roll"
-msgstr "Eslizar a manzorga pal rollu de semeyes"
+msgstr ""
 
 #: ../PhotogridView.qml:42 ../SlideshowView.qml:60
 msgid "Share"
@@ -249,9 +249,8 @@ msgid "Edit"
 msgstr ""
 
 #: ../SlideshowView.qml:441
-#, fuzzy
 msgid "Back to Photo roll"
-msgstr "Rollu de semeyes"
+msgstr ""
 
 #: ../UnableShareDialog.qml:25
 msgid "Unable to share"
@@ -272,7 +271,7 @@ msgstr ""
 #: ../tests/unittests/tst_BottomEdgeIndicators.qml:65
 #: ../tests/unittests/tst_BottomEdgeIndicators.qml:86
 msgid "On"
-msgstr "Activáu"
+msgstr ""
 
 #: ../ViewFinderOverlay.qml:372 ../ViewFinderOverlay.qml:400
 #: ../ViewFinderOverlay.qml:423 ../ViewFinderOverlay.qml:446
@@ -282,53 +281,52 @@ msgstr "Activáu"
 #: ../tests/unittests/tst_BottomEdgeIndicators.qml:70
 #: ../tests/unittests/tst_BottomEdgeIndicators.qml:91
 msgid "Off"
-msgstr "Desactiváu"
+msgstr ""
 
 #: ../ViewFinderOverlay.qml:395
 msgid "Auto"
-msgstr "Auto"
+msgstr ""
 
 #: ../ViewFinderOverlay.qml:432
 msgid "HDR"
-msgstr "HDR"
+msgstr ""
 
 #: ../ViewFinderOverlay.qml:470
 msgid "5 seconds"
-msgstr "5 segundos"
+msgstr ""
 
 #: ../ViewFinderOverlay.qml:475
 msgid "15 seconds"
-msgstr "15 segundos"
+msgstr ""
 
 #: ../ViewFinderOverlay.qml:493
 msgid "Fine Quality"
-msgstr "Calidá fino"
+msgstr ""
 
 #: ../ViewFinderOverlay.qml:498
-#, fuzzy
 msgid "High Quality"
-msgstr "Calidá fino"
+msgstr ""
 
 #: ../ViewFinderOverlay.qml:503
 msgid "Normal Quality"
-msgstr "Calidá normal"
+msgstr ""
 
 #: ../ViewFinderOverlay.qml:508
 msgid "Basic Quality"
-msgstr "Calidá básico"
+msgstr ""
 
 #. TRANSLATORS: this will be displayed on an small button so for it to fit it should be less then 3 characters long.
 #: ../ViewFinderOverlay.qml:541
 msgid "SD"
-msgstr "SD"
+msgstr ""
 
 #: ../ViewFinderOverlay.qml:549
 msgid "Save to SD Card"
-msgstr "Guardar en tarxeta SD"
+msgstr ""
 
 #: ../ViewFinderOverlay.qml:554
 msgid "Save internally"
-msgstr "Guardar internamente"
+msgstr ""
 
 #: ../ViewFinderOverlay.qml:594
 msgid "Vibrate"
@@ -336,15 +334,13 @@ msgstr ""
 
 #: ../ViewFinderOverlay.qml:1119
 msgid "Low storage space"
-msgstr "Espaciu d'almacenamientu baxu"
+msgstr ""
 
 #: ../ViewFinderOverlay.qml:1120
 msgid ""
 "You are running out of storage space. To continue without interruptions, "
 "free up storage space now."
 msgstr ""
-"Tienes pocu espaciu d'almacenamientu. Pa siguir ensin interrupciones, "
-"llibera espaciu agora."
 
 #: ../ViewFinderOverlay.qml:1133
 msgid "External storage not writeable"
@@ -359,24 +355,19 @@ msgstr ""
 
 #: ../ViewFinderOverlay.qml:1172
 msgid "Cannot access camera"
-msgstr "Nun pue accedese a la cámara"
+msgstr ""
 
 #: ../ViewFinderOverlay.qml:1173
-#, fuzzy
 msgid ""
 "Camera app doesn't have permission to access the camera hardware or another "
 "error occurred.\n"
 "\n"
 "If granting permission does not resolve this problem, reboot your device."
 msgstr ""
-"L'aplicación Cámara nun tien permisu p'acceder al hardware de la cámara o "
-"asocedió otru fallu.\n"
-"\n"
-"Si conceder permisu nun igua esti problema, reanicia'l to teléfonu."
 
 #: ../ViewFinderOverlay.qml:1182
 msgid "Edit Permissions"
-msgstr "Editar permisos"
+msgstr ""
 
 #: ../ViewFinderView.qml:485
 msgid "Capture failed"
@@ -394,70 +385,70 @@ msgstr ""
 
 #: ../camera-app.qml:57
 msgid "Flash"
-msgstr "Flash"
+msgstr ""
 
 #: ../camera-app.qml:58
 msgid "Light;Dark"
-msgstr "Claro;Escuro"
+msgstr ""
 
 #: ../camera-app.qml:61
 msgid "Flip Camera"
-msgstr "Voltiar cámara"
+msgstr ""
 
 #: ../camera-app.qml:62
 msgid "Front Facing;Back Facing"
-msgstr "Frontal;Trasera"
+msgstr ""
 
 #: ../camera-app.qml:65
 msgid "Shutter"
-msgstr "Disparador"
+msgstr ""
 
 #: ../camera-app.qml:66
 msgid "Take a Photo;Snap;Record"
-msgstr "Tomar una semeya;Capturar;Grabar"
+msgstr ""
 
 #: ../camera-app.qml:69
 msgid "Mode"
-msgstr "Mou"
+msgstr ""
 
 #: ../camera-app.qml:70
 msgid "Stills;Video"
-msgstr "Semeya;Videu"
+msgstr ""
 
 #: ../camera-app.qml:74
 msgid "White Balance"
-msgstr "Balance del Blancu"
+msgstr ""
 
 #: ../camera-app.qml:75
 msgid "Lighting Condition;Day;Cloudy;Inside"
-msgstr "Illuminación;Día;Nubláu;Interior"
+msgstr ""
 
 #: ../camera-app.qml:380
 #, qt-format
 msgid "<b>%1</b> photos taken today"
-msgstr "<b>%1</b> semeyes feches güei"
+msgstr ""
 
 #: ../camera-app.qml:381
 msgid "No photos taken today"
-msgstr "Güei nun se ficieron semeyes"
+msgstr ""
 
 #: ../camera-app.qml:391
 #, qt-format
 msgid "<b>%1</b> videos recorded today"
-msgstr "<b>%1</b> vídeos grabaos güei"
+msgstr ""
 
 #: ../camera-app.qml:392
 msgid "No videos recorded today"
-msgstr "Güei nun se grabaron vídeos"
+msgstr ""
 
 #: camera-app.desktop.in.in.h:1
 msgid "Camera"
-msgstr "Cámara"
+msgstr ""
 
 #: camera-app.desktop.in.in.h:2
 msgid "Camera application"
-msgstr "Aplicación Cámara"
+msgstr ""
 
 #: camera-app.desktop.in.in.h:3
 msgid "Photos;Videos;Capture;Shoot;Snapshot;Record"
-msgstr "Semeyes;Vídeos;Captura;Toma;Instantánea;Rexistru"
+msgstr ""
