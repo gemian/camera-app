@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2019-09-25 19:51+0000\n"
+"PO-Revision-Date: 2019-11-11 22:36+0000\n"
 "Last-Translator: Moo <moose@mail.ru>\n"
 "Language-Team: Lithuanian <https://translate.ubports.com/projects/ubports/"
 "camera-app/lt/>\n"
@@ -49,10 +49,13 @@ msgstr ""
 #: ../AdvancedOptions.qml:129
 msgid "the abbreviated localized day name (e.g. 'Mon' to 'Sun')."
 msgstr ""
+"sutrumpintas lokalizuotas dienos pavadinimas (pvz., nuo \"Pir\" iki \"Sek\")."
 
 #: ../AdvancedOptions.qml:130
 msgid "the long localized day name (e.g. 'Monday' to 'Sunday')."
 msgstr ""
+"ilgas lokalizuotas dienos pavadinimas (pvz., nuo \"Pirmadienis\" iki \""
+"Sekmadienis\")."
 
 #: ../AdvancedOptions.qml:131
 msgid "the month as number without a leading zero (1 to 12)"
@@ -65,14 +68,18 @@ msgstr ""
 #: ../AdvancedOptions.qml:133
 msgid "the abbreviated localized month name (e.g. 'Jan' to 'Dec')."
 msgstr ""
+"sutrumpintas lokalizuotas mėnesio pavadinimas (pvz., nuo \"Sau\" iki \"Gru\""
+")."
 
 #: ../AdvancedOptions.qml:134
 msgid "the long localized month name (e.g. 'January' to 'December')."
 msgstr ""
+"ilgas lokalizuotas mėnesio pavadinimas (pvz., nuo \"Sausis\" iki \"Gruodis\""
+")."
 
 #: ../AdvancedOptions.qml:135
 msgid "the year as two digit number (00 to 99)"
-msgstr ""
+msgstr "metai kaip du skaitmenys (nuo 00 iki 99)"
 
 #: ../AdvancedOptions.qml:136
 msgid ""
@@ -178,7 +185,6 @@ msgid "Select"
 msgstr "Pasirinkti"
 
 #: ../GalleryViewHeader.qml:83
-#, fuzzy
 msgid "Edit Photo"
 msgstr "Redaguoti nuotrauką"
 
@@ -273,7 +279,7 @@ msgstr "Gerai"
 #: ../tests/unittests/tst_BottomEdgeIndicators.qml:65
 #: ../tests/unittests/tst_BottomEdgeIndicators.qml:86
 msgid "On"
-msgstr ""
+msgstr "Įjungta"
 
 #: ../ViewFinderOverlay.qml:372 ../ViewFinderOverlay.qml:400
 #: ../ViewFinderOverlay.qml:423 ../ViewFinderOverlay.qml:446
@@ -283,11 +289,11 @@ msgstr ""
 #: ../tests/unittests/tst_BottomEdgeIndicators.qml:70
 #: ../tests/unittests/tst_BottomEdgeIndicators.qml:91
 msgid "Off"
-msgstr ""
+msgstr "Išjungta"
 
 #: ../ViewFinderOverlay.qml:395
 msgid "Auto"
-msgstr ""
+msgstr "Automatiškai"
 
 #: ../ViewFinderOverlay.qml:432
 msgid "HDR"
@@ -295,11 +301,11 @@ msgstr "HDR"
 
 #: ../ViewFinderOverlay.qml:470
 msgid "5 seconds"
-msgstr ""
+msgstr "5 sekundės"
 
 #: ../ViewFinderOverlay.qml:475
 msgid "15 seconds"
-msgstr ""
+msgstr "15 sekundžių"
 
 #: ../ViewFinderOverlay.qml:493
 msgid "Fine Quality"
@@ -357,7 +363,7 @@ msgstr ""
 
 #: ../ViewFinderOverlay.qml:1172
 msgid "Cannot access camera"
-msgstr ""
+msgstr "Nepavyksta gauti prieigos prie kameros"
 
 #: ../ViewFinderOverlay.qml:1173
 msgid ""
@@ -366,6 +372,11 @@ msgid ""
 "\n"
 "If granting permission does not resolve this problem, reboot your device."
 msgstr ""
+"Kameros programėlė neturi leidimo gauti prieigą prie kameros aparatinės "
+"įrangos arba įvyko kitokia klaida.\n"
+"\n"
+"Jei suteikus leidimą ši problema neišsisprendžia, paleiskite savo įrenginį "
+"iš naujo."
 
 #: ../ViewFinderOverlay.qml:1182
 msgid "Edit Permissions"
@@ -395,7 +406,7 @@ msgstr ""
 
 #: ../camera-app.qml:61
 msgid "Flip Camera"
-msgstr ""
+msgstr "Apversti kamerą"
 
 #: ../camera-app.qml:62
 msgid "Front Facing;Back Facing"
