@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2019-09-17 15:50+0000\n"
+"PO-Revision-Date: 2019-10-07 12:53+0000\n"
 "Last-Translator: Eran <etherpulse@gmail.com>\n"
 "Language-Team: Hebrew <https://translate.ubports.com/projects/ubports/"
 "camera-app/he/>\n"
@@ -98,27 +98,27 @@ msgstr "השעה עם אפס מוביל ( 00 עד 23 , אפילו עם תצוג�
 
 #: ../AdvancedOptions.qml:141
 msgid "the minute without a leading zero (0 to 59)"
-msgstr ""
+msgstr "הדקה בשעה ללא אפס מוביל (0 עד 59)"
 
 #: ../AdvancedOptions.qml:142
 msgid "the minute with a leading zero (00 to 59)"
-msgstr ""
+msgstr "הדקה בשעה עם אפס מוביל (00 עד 59)"
 
 #: ../AdvancedOptions.qml:143
 msgid "the second without a leading zero (0 to 59)"
-msgstr ""
+msgstr "השנייה בשעה ללא  אפס מוביל (0 עד 59)"
 
 #: ../AdvancedOptions.qml:144
 msgid "the second with a leading zero (00 to 59)"
-msgstr ""
+msgstr "השנייה בשעה עם אפס מוביל (00 עד 59)"
 
 #: ../AdvancedOptions.qml:145
 msgid "the milliseconds without leading zeroes (0 to 999)"
-msgstr ""
+msgstr "המילי שנייה בשעה ללא אפס מוביל (0 עד 999)"
 
 #: ../AdvancedOptions.qml:146
 msgid "the milliseconds with leading zeroes (000 to 999)"
-msgstr ""
+msgstr "המילי שנייה בשעה עם אפסים מובילים (000 עד 999)"
 
 #: ../AdvancedOptions.qml:147
 msgid "use AM/PM display. AP will be replaced by either 'AM' or 'PM'."
@@ -460,7 +460,7 @@ msgstr "יישום המצלמה"
 
 #: camera-app.desktop.in.in.h:3
 msgid "Photos;Videos;Capture;Shoot;Snapshot;Record"
-msgstr ""
+msgstr "תמונות;וידאו;לכידת וידאו;צילום;תמונה;הקלטה"
 
 #~ msgid "Version %1"
 #~ msgstr "גרסה %1"
