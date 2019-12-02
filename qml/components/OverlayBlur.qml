@@ -68,7 +68,7 @@ FastBlur {
 
     onOffsetChanged: overlayBlurShader.updateRect();
 
-    radius:units.gu(4)
+    radius:units.gu(3)
     source:  ShaderEffectSource {
         id:overlayBlurShader
         clip: true

@@ -8,21 +8,21 @@ Page {
 
     signal back();
 
-    height: infoHeader.height + aboutCloumn.height + infoLinksList.height
+    height: parent.height ;//infoHeader.height + aboutCloumn.height + infoLinksList.height
 
     header: PageHeader {
         id:infoHeader
         StyleHints {
             backgroundColor:"transparent"
-            foregroundColor:"white"
+            foregroundColor: theme.palette.normal.backgroudText
         }
 
         title: i18n.tr("About")
 
         leadingActionBar.actions: [
                Action {
-                   iconName: "down"
-                   text: "Back"
+                   iconName: "back"
+                   text: i18n.tr("Back")
                    onTriggered: _infoPage.back();
                }
            ]
@@ -45,11 +45,6 @@ Page {
             PropertyChanges {
                 target: aboutCloumn
                 width: parent.width/2
-            }
-
-            PropertyChanges {
-                target: _infoPage
-                height:infoHeader.height + aboutCloumn.height
             }
 
             AnchorChanges {
@@ -107,13 +102,13 @@ Page {
             width: parent.width
             font.pixelSize: units.gu(5)
             font.bold: true
-            color: UbuntuColors.silk
+            color: theme.palette.normal.backgroundText
             horizontalAlignment: Text.AlignHCenter
             text: "Camera App"
         }
         Label {
             width: parent.width
-            color: UbuntuColors.ash
+            color: theme.palette.normal.backgroundSecondaryText
             horizontalAlignment: Text.AlignHCenter
             //TODO find a way to retirve the version from the manifest file
             text: "";//i18n.tr("Version %1").arg("3.0.1.747")
@@ -136,10 +131,10 @@ Page {
 
          model :infoModel
          delegate: ListItem {
-             highlightColor:"#800F0F0F"
+             highlightColor:theme.palette.highlighted.backgroudT
             ListItemLayout {
              title.text : model.name
-             title.color: UbuntuColors.silk
+             title.color: theme.palette.normal.backgroudText
              Icon {
                  width:units.gu(2)
                  name:"go-to"

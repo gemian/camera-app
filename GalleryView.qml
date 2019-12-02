@@ -67,11 +67,35 @@ Item {
     onExit: {
         slideshowView.exit();
         photogridView.exit();
+        galleryPageStack.clear();
+    }
+    
+    Component {
+        id:advancedOptionsComponent
+        AdvancedOptions {
+            id:advancedOptions
+            settings: viewFinderView.finderOverlay.settings
+            onBack: galleryPageStack.pop()
+            
+            OverlayPanel {
+                z:-1
+                overlayItem: advancedOptions
+                blur.visible: appSettings.blurEffects && !appSettings.blurEffectsPreviewOnly
+                blur.backgroundItem: currentView
+            }
+        }
     }
 
     OrientationHelper {
         visible: inView
 
+        PageStack {
+            id:galleryPageStack
+            z:10
+            anchors.topMargin:header.height+header.y
+            anchors.fill:parent
+        }
+        
         SlideshowView {
             id: slideshowView
             anchors.fill: parent
@@ -176,6 +200,10 @@ Item {
                 model.clearSelection();
                 main.exportContent(urls);
             }
+            
+            onAdvanceSettingsToggle:{
+                galleryPageStack.push(advancedOptionsComponent)
+            }
         }
     }
 
@@ -193,7 +221,7 @@ Item {
         objectName: "noMediaHint"
         anchors.fill: parent
         visible: model.count === 0 && !model.loading
-        color: "#0F0F0F"
+        color: theme.palette.normal.base
 
         Icon {
             id: noMediaIcon
@@ -204,7 +232,7 @@ Item {
             }
             height: units.gu(9)
             width: units.gu(9)
-            color: "white"
+            color: theme.palette.normal.backgroundText
             opacity: 0.2
             name: "camera-app-symbolic"
             asynchronous: true
@@ -218,7 +246,7 @@ Item {
                 topMargin: units.gu(4)
             }
             text: i18n.tr("No media available.")
-            color: "white"
+            color: theme.palette.normal.backgroundText
             opacity: 0.2
             fontSize: "large"
         }
@@ -228,7 +256,7 @@ Item {
         objectName: "scanningMediaHint"
         anchors.fill: parent
         visible: model.count === 0 && model.loading
-        color: "#0F0F0F"
+        color:  theme.palette.normal.base
 
         Icon {
             id: scanningMediaIcon
@@ -239,7 +267,7 @@ Item {
             }
             height: units.gu(9)
             width: units.gu(9)
-            color: "white"
+            color: theme.palette.normal.backgroundText
             opacity: 0.2
             name: "camera-app-symbolic"
             asynchronous: true
@@ -253,7 +281,7 @@ Item {
                 topMargin: units.gu(4)
             }
             text: i18n.tr("Scanning for content...")
-            color: "white"
+            color: theme.palette.normal.backgroundText
             opacity: 0.2
             fontSize: "large"
         }
