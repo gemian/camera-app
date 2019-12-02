@@ -22,9 +22,13 @@ void AddDateStamp::run() {
       QImage image = QImage(this->path);
       QDateTime now = QDateTime::currentDateTime();
       //Rotate image to match it`s orentation
-      int orientation = this->getOrientation(this->path);
+      long orientationFlags = this->getOrientation(this->path);
+      int rotation = this->getRotationByOrientation(orientationFlags);
+      bool isImageMirrored = this->isOrientationMirrored(orientationFlags);
+      
       QTransform trasform = QTransform();
-      trasform.rotate(orientation);
+      trasform.rotate(rotation);
+      trasform.scale(isImageMirrored ? -1 : 1,1);
       image = image.transformed(trasform);
 
       QString currentDate = QString(now.toString(this->dateFormat));
@@ -45,7 +49,8 @@ void AddDateStamp::run() {
       painter->drawText(imageRect, this->alignment, currentDate);
       
       //Rotate image back to it`s orginal orientation
-      trasform.rotate(-orientation*2);
+      trasform.rotate(-rotation*2);
+      trasform.scale(isImageMirrored ? -1 : 1,1);
       image = image.transformed(trasform);
       
       //Save to a temporary location and preform a filename swap in order to keep the file fully rendered
@@ -82,7 +87,7 @@ int AddDateStamp::rotationToAligment(int rotation) {
     return Qt::AlignTop | Qt::AlignLeft;
 }
 
-int AddDateStamp::getOrientation(QString pathToImage) {
+long AddDateStamp::getOrientation(QString pathToImage) {
      const std::string& srcExifPath = pathToImage.toStdString();
       Exiv2::Image::AutoPtr exifImageFile;
       exifImageFile = Exiv2::ImageFactory::open(srcExifPath);
@@ -90,7 +95,15 @@ int AddDateStamp::getOrientation(QString pathToImage) {
       Exiv2::ExifData &exifData = exifImageFile->exifData();
       long orientationFlags  = exifData["Exif.Image.Orientation"].toLong();
       
-      return orientationFlags ? ((orientationFlags - 1) & 0x3)  * 90 : 0;
+      return orientationFlags;
+}
+
+int AddDateStamp::getRotationByOrientation( long orientationFlags ) {
+      return orientationFlags ? this->orientationMapping[orientationFlags] : 0;
+}
+
+bool AddDateStamp::isOrientationMirrored( long orientationFlags ) {
+      return orientationFlags ? this->mirrorMapping[orientationFlags] : false;
 }
 
 void AddDateStamp::copyMetadata(QString srcPath, QString dstPath) {
