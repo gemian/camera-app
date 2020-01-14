@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Qt.labs.settings 1.0
 import Ubuntu.Components.ListItems 1.3 as ListItems
@@ -17,7 +17,7 @@ Page {
         leadingActionBar.actions: [
                Action {
                    iconName: "down"
-                   text: "Back"
+                   text: i18n.tr("Back")
                    onTriggered: _advancedOptionsPage.back();
                }
            ]
@@ -340,18 +340,18 @@ Page {
                 highlightWhenPressed: false
 
                 ListItem {
-					ListItemLayout {
-						id: blurEffectsPreviewOnlySwitch
-						title.text: i18n.tr("Only Blur Preview overlay")
-						title.color: "white"
-						Switch {
-							SlotsLayout.position: SlotsLayout.Last
-							checked: appSettings.blurEffectsPreviewOnly
-							onClicked: appSettings.blurEffectsPreviewOnly = checked
-						}
-					}
-				}
-			}
+                    ListItemLayout {
+                        id: blurEffectsPreviewOnlySwitch
+                        title.text: i18n.tr("Only Blur Preview overlay")
+                        title.color: "white"
+                        Switch {
+                            SlotsLayout.position: SlotsLayout.Last
+                            checked: appSettings.blurEffectsPreviewOnly
+                            onClicked: appSettings.blurEffectsPreviewOnly = checked
+                        }
+                    }
+                }
+            }
         }
     }
 
