@@ -288,30 +288,30 @@ FocusScope {
             viewFinderOrientation: viewFinder.orientation
         }
 
-		Loader {
-			anchors.horizontalCenter: parent.horizontalCenter
-			width: viewFinderGeometry.width
+        Loader {
+            anchors.horizontalCenter: parent.horizontalCenter
+            width: viewFinderGeometry.width
             height: viewFinderGeometry.height
-			visible: viewFinderOverlay.settings != undefined && viewFinderOverlay.settings.gridEnabled
-			source:"qml/Viewfinder/GridLines.qml"
-			asynchronous:true
-		}
+            visible: viewFinderOverlay.settings != undefined && viewFinderOverlay.settings.gridEnabled
+            source: "qml/Viewfinder/GridLines.qml"
+            asynchronous: true
+        }
 
-		Connections {
-			target: viewFinderView
-			onInViewChanged: if (!viewFinderView.inView) viewFinderOverlay.controls.cancelTimedShoot()
-		}
+        Connections {
+            target: viewFinderView
+            onInViewChanged: if (!viewFinderView.inView) viewFinderOverlay.controls.cancelTimedShoot()
+        }
 
-		TimedShootFeedback {
-			id: timedShootFeedback
-			anchors.fill: parent
-		}
+        TimedShootFeedback {
+            id: timedShootFeedback
+            anchors.fill: parent
+        }
 
-		ShootFeedback {
-			id: shootFeedback
-			anchors.fill: parent
-		}
-	}
+        ShootFeedback {
+            id: shootFeedback
+            anchors.fill: parent
+        }
+    }
 
 
     PhotoRollHint {
@@ -331,7 +331,7 @@ FocusScope {
         id: viewFinderOverlay
 
         anchors.fill: parent
-        asynchronous:true
+        asynchronous: true
         camera: camera
         opacity: status == Loader.Ready && overlayVisible && !photoRollHint.enabled ? 1.0 : 0.0
         readyForCapture: main.contentExportMode &&
@@ -351,37 +351,37 @@ FocusScope {
     }
 
     Loader {
-		id: viewFinderExportConfirmationLoader
-		asynchronous:true
-		anchors.fill: parent
-		sourceComponent:viewFinderExportConfirmationComp
-		onLoaded: {
-			item.id = "viewFinderExportConfirmation"
-		}
-	}
+        id: viewFinderExportConfirmationLoader
+        asynchronous: true
+        anchors.fill: parent
+        sourceComponent: viewFinderExportConfirmationComp
+        onLoaded: {
+            item.id = "viewFinderExportConfirmation"
+        }
+    }
 
-	Component {
-		id: viewFinderExportConfirmationComp
-		ViewFinderExportConfirmation {
-			id: viewFinderExportConfirmation
-			anchors.fill: parent
+    Component {
+        id: viewFinderExportConfirmationComp
+        ViewFinderExportConfirmation {
+            id: viewFinderExportConfirmation
+            anchors.fill: parent
 
-			isVideo: main.transfer && main.transfer.contentType == ContentType.Videos
-			viewFinderGeometry: viewFinderGeometry
+            isVideo: main.transfer && main.transfer.contentType == ContentType.Videos
+            viewFinderGeometry: viewFinderGeometry
 
-			onShowRequested: {
-				viewFinder.visible = false;
-				viewFinderOverlay.visible = false;
-				visible = true;
-			}
+            onShowRequested: {
+                viewFinder.visible = false;
+                viewFinderOverlay.visible = false;
+                visible = true;
+            }
 
-			onHideRequested: {
-				viewFinder.visible = true;
-				viewFinderOverlay.visible = true;
-				visible = false;
-			}
-		}
-	}
+            onHideRequested: {
+                viewFinder.visible = true;
+                viewFinderOverlay.visible = true;
+                visible = false;
+            }
+        }
+    }
 
     Component {
          id: captureFailedDialogComponent
