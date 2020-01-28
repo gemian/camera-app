@@ -355,10 +355,9 @@ FocusScope {
         asynchronous: true
         anchors.fill: parent
         sourceComponent: viewFinderExportConfirmationComp
-        onLoaded: {
-            item.id = "viewFinderExportConfirmation"
-        }
     }
+
+    property alias viewFinderExportConfirmation: viewFinderExportConfirmationLoader.item
 
     Component {
         id: viewFinderExportConfirmationComp
