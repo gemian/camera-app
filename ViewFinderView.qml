@@ -366,7 +366,7 @@ FocusScope {
             anchors.fill: parent
 
             isVideo: main.transfer && main.transfer.contentType == ContentType.Videos
-            viewFinderGeometry: viewFinderGeometry
+            geometry: viewFinderGeometry
 
             onShowRequested: {
                 viewFinder.visible = false;

@@ -26,7 +26,7 @@ Item {
 
     signal hideRequested()
     signal showRequested()
-    property ViewFinderGeometry viewFinderGeometry
+    property ViewFinderGeometry geometry
 
     visible: false
 
@@ -59,7 +59,7 @@ Item {
                     id: pictureReview
                     anchors.fill: parent
                     visible: !isVideo
-                    geometry: viewFinderGeometry
+                    geometry: viewFinderExportConfirmation.geometry
                     source: !isVideo ? mediaPath : ""
 
                     // Show export confirmation only when the snapshot is loaded to prevent the
