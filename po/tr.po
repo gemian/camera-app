@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2019-11-03 20:36+0000\n"
+"PO-Revision-Date: 2020-02-06 20:21+0000\n"
 "Last-Translator: Ege Öz <ege.oz@tutanota.com>\n"
 "Language-Team: Turkish <https://translate.ubports.com/projects/ubports/"
 "camera-app/tr/>\n"
@@ -26,12 +26,12 @@ msgstr "Ayarlar"
 
 #: ../AdvancedOptions.qml:48
 msgid "Add date stamp on captured images"
-msgstr "Yakalanan görüntülere tarih damgası ekleme"
+msgstr "Yakalanan görüntülere tarih damgası ekle"
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: ../AdvancedOptions.qml:70
 msgid "Format"
-msgstr ""
+msgstr "Dosya Formatı"
 
 #: ../AdvancedOptions.qml:122
 msgid "Date formatting keywords"
@@ -59,65 +59,65 @@ msgstr "ay (1 ile 12 arası)"
 
 #: ../AdvancedOptions.qml:132
 msgid "the month as number with a leading zero (01 to 12)"
-msgstr ""
+msgstr "başında sıfır olan ay (01'den 12'ye)"
 
 #: ../AdvancedOptions.qml:133
 msgid "the abbreviated localized month name (e.g. 'Jan' to 'Dec')."
-msgstr ""
+msgstr "kısaltılmış yerel ay ismi (örn. \"Oca\" ve \"Ara\")."
 
 #: ../AdvancedOptions.qml:134
 msgid "the long localized month name (e.g. 'January' to 'December')."
-msgstr ""
+msgstr "uzun yerelleştirilmiş ay ismi (örn. \"Ocak\" ve \"Aralık\")."
 
 #: ../AdvancedOptions.qml:135
 msgid "the year as two digit number (00 to 99)"
-msgstr ""
+msgstr "iki haneli yıl (00'dan 99'a)"
 
 #: ../AdvancedOptions.qml:136
 msgid ""
 "the year as four digit number. If the year is negative, a minus sign is "
 "prepended in addition."
-msgstr ""
+msgstr "dört haneli yıl. Eğer yıl negatifse başına eksi sembolü eklenir."
 
 #: ../AdvancedOptions.qml:137
 msgid "the hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)"
-msgstr ""
+msgstr "başında sıfır olmadan saat (0'dan 23'e veya AM/PM ise 1'den 12'ye)"
 
 #: ../AdvancedOptions.qml:138
 msgid "the hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)"
-msgstr ""
+msgstr "başında sıfır olan saat (0'dan 23'e veya AM/PM ise 1'den 12'ye)"
 
 #: ../AdvancedOptions.qml:139
 msgid "the hour without a leading zero (0 to 23, even with AM/PM display)"
-msgstr ""
+msgstr "başında sıfır olmayan saat (AM/PM açıksa bile 0'dan 23'e kadar)"
 
 #: ../AdvancedOptions.qml:140
 msgid "the hour with a leading zero (00 to 23, even with AM/PM display)"
-msgstr ""
+msgstr "başında sıfır olan saat (AM/PM açıksa bile 0'dan 23'e kadar)"
 
 #: ../AdvancedOptions.qml:141
 msgid "the minute without a leading zero (0 to 59)"
-msgstr ""
+msgstr "başında sıfır olmayan dakika (0'dan 59'a)"
 
 #: ../AdvancedOptions.qml:142
 msgid "the minute with a leading zero (00 to 59)"
-msgstr ""
+msgstr "başında sıfır olan dakika (00'dan 59'a)"
 
 #: ../AdvancedOptions.qml:143
 msgid "the second without a leading zero (0 to 59)"
-msgstr ""
+msgstr "başında sıfır olmayan saniye (0'dan 59'a)"
 
 #: ../AdvancedOptions.qml:144
 msgid "the second with a leading zero (00 to 59)"
-msgstr ""
+msgstr "başında sıfır olan saniye (00'dan 59'a)"
 
 #: ../AdvancedOptions.qml:145
 msgid "the milliseconds without leading zeroes (0 to 999)"
-msgstr ""
+msgstr "başında sıfır olmayan milisaniye (0'dan 999'a)"
 
 #: ../AdvancedOptions.qml:146
 msgid "the milliseconds with leading zeroes (000 to 999)"
-msgstr ""
+msgstr "başında sıfır olan milisaniye (000'dan 999'a)"
 
 #: ../AdvancedOptions.qml:147
 msgid "use AM/PM display. AP will be replaced by either 'AM' or 'PM'."
@@ -129,7 +129,7 @@ msgstr ""
 
 #: ../AdvancedOptions.qml:149
 msgid "the timezone (for example 'CEST')"
-msgstr ""
+msgstr "zaman dilimi (örn. \"CEST\")"
 
 #: ../AdvancedOptions.qml:158
 msgid "Add to Format"
@@ -138,17 +138,17 @@ msgstr ""
 #. TRANSLATORS: this refers to the color of date stamp added to captured images
 #: ../AdvancedOptions.qml:189
 msgid "Color"
-msgstr ""
+msgstr "Renk"
 
 #. TRANSLATORS: this refers to the alignment of date stamp within captured images (bottom left, top right,etc..)
 #: ../AdvancedOptions.qml:257
 msgid "Alignment"
-msgstr ""
+msgstr "Hizalama"
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: ../AdvancedOptions.qml:303
 msgid "Opacity"
-msgstr ""
+msgstr "Opaklık"
 
 #: ../DeleteDialog.qml:24
 msgid "Delete media?"
@@ -170,7 +170,7 @@ msgstr "Kullanılabilir ortam yok."
 
 #: ../GalleryView.qml:235
 msgid "Scanning for content..."
-msgstr "İçerik aranıyor..."
+msgstr "İçerik taraması yapılıyor..."
 
 #: ../GalleryViewHeader.qml:82 ../SlideshowView.qml:45
 msgid "Select"
@@ -201,29 +201,28 @@ msgid "Help translate"
 msgstr "Çeviriye yardımcı ol"
 
 #: ../MediaInfoPopover.qml:25
-#, fuzzy
 msgid "Media Information"
-msgstr "Uygulama Bilgileri"
+msgstr "Ortam Bilgisi"
 
 #: ../MediaInfoPopover.qml:30
 #, qt-format
 msgid "Name : %1"
-msgstr ""
+msgstr "İsim: %1"
 
 #: ../MediaInfoPopover.qml:33
 #, qt-format
 msgid "Type : %1"
-msgstr ""
+msgstr "Tip: %1"
 
 #: ../MediaInfoPopover.qml:37
 #, qt-format
 msgid "Width : %1"
-msgstr ""
+msgstr "Genişlik: %1"
 
 #: ../MediaInfoPopover.qml:41
 #, qt-format
 msgid "Height : %1"
-msgstr ""
+msgstr "Yükseklik: %1"
 
 #: ../NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
@@ -243,20 +242,19 @@ msgstr "Galeri"
 
 #: ../SlideshowView.qml:68
 msgid "Image Info"
-msgstr ""
+msgstr "Resim Bilgisi"
 
 #: ../SlideshowView.qml:86
 msgid "Edit"
 msgstr "Düzenle"
 
 #: ../SlideshowView.qml:441
-#, fuzzy
 msgid "Back to Photo roll"
-msgstr "Fotoğraf Rulosu"
+msgstr "Film Rulosuna Dön"
 
 #: ../UnableShareDialog.qml:25
 msgid "Unable to share"
-msgstr "Paylaşıma aç"
+msgstr "Paylaşıma açılamıyor"
 
 #: ../UnableShareDialog.qml:26
 msgid "Unable to share photos and videos at the same time"
@@ -306,9 +304,8 @@ msgid "Fine Quality"
 msgstr "İyi Kalite"
 
 #: ../ViewFinderOverlay.qml:498
-#, fuzzy
 msgid "High Quality"
-msgstr "İyi Kalite"
+msgstr "Yüksek Kalite"
 
 #: ../ViewFinderOverlay.qml:503
 msgid "Normal Quality"
@@ -325,7 +322,7 @@ msgstr "SD"
 
 #: ../ViewFinderOverlay.qml:549
 msgid "Save to SD Card"
-msgstr "SD Kartına kaydedildi"
+msgstr "SD Kartına kaydet"
 
 #: ../ViewFinderOverlay.qml:554
 msgid "Save internally"
@@ -333,17 +330,17 @@ msgstr "Dahili olarak kaydedin"
 
 #: ../ViewFinderOverlay.qml:594
 msgid "Vibrate"
-msgstr ""
+msgstr "Titret"
 
 #: ../ViewFinderOverlay.qml:1119
 msgid "Low storage space"
-msgstr "Az depo alanı"
+msgstr "Düşük depolama alanı"
 
 #: ../ViewFinderOverlay.qml:1120
 msgid ""
 "You are running out of storage space. To continue without interruptions, "
 "free up storage space now."
-msgstr "Depo alanınız bitiyor. Kesilmeden devam etmek için, şimdi yer açın."
+msgstr "Depolama alanınız bitiyor. Kesilmeden devam etmek için, şimdi yer açın."
 
 #: ../ViewFinderOverlay.qml:1133
 msgid "External storage not writeable"
@@ -363,7 +360,6 @@ msgid "Cannot access camera"
 msgstr "Kamera'ya erişilemiyor"
 
 #: ../ViewFinderOverlay.qml:1173
-#, fuzzy
 msgid ""
 "Camera app doesn't have permission to access the camera hardware or another "
 "error occurred.\n"
