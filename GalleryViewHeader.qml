@@ -41,12 +41,14 @@ Item {
     property bool editMode: false
     property bool validationVisible
     property bool userSelectionMode: false
+
     signal exit
     signal exitEditor
     signal toggleViews
     signal toggleSelectAll
     signal validationClicked
     signal advanceSettingsToggle
+    signal drawerToggle( bool isOpen )
 
     function show() {
         shown = true;
@@ -205,6 +207,8 @@ Item {
         onOpenedChanged: {
             if (opened)
                 visible = true;
+
+			drawerToggle(opened);
         }
 
         InverseMouseArea {

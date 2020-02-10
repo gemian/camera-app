@@ -73,6 +73,15 @@ FocusScope {
                     galleryPageStack.clear();
                     galleryPageStack.push(advancedOptionsComponent); 
                 }
+            },
+			Action {
+                text: i18n.tr("About")
+                objectName: "openAboutPage"
+                iconName: "info"
+                onTriggered: {
+                    galleryPageStack.clear();
+                    galleryPageStack.push(infoPageComponent);
+                }
             }
     ]
 

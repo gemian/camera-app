@@ -14,20 +14,6 @@ Page {
     
     property Settings settings: viewFinderView.finderOverlay.settings    
     
-    Component {
-        id:infoPageComponent
-        Information {
-            id:infoPage
-            onBack: galleryPageStack.pop()
-            OverlayPanel {
-                z:-1
-                overlayItem: infoPage
-                blur.visible: appSettings.blurEffects && !appSettings.blurEffectsPreviewOnly
-                blur.backgroundItem: currentView
-            }
-        } 
-    }    
-    
     header: PageHeader {
         id:_advancedOptionsPageHeader
         StyleHints {
@@ -66,6 +52,7 @@ Page {
         }
 
         interactive: true
+      flickableDirection: Flickable.VerticalFlick
 
         Column {
 
@@ -288,7 +275,7 @@ Page {
                         // TRANSLATORS: this refers to the alignment of date stamp within captured images (bottom left, top right,etc..)
                         title.text:i18n.tr("Alignment")
                         title.horizontalAlignment:Text.AlignLeft
-                        Row {
+                        ListView {
                             id:dateStampAlignment
                             anchors.topMargin:units.gu(1)
                             SlotsLayout.position: SlotsLayout.Last
@@ -296,27 +283,25 @@ Page {
                             height:dateStampAlignmentItem.height
                             spacing:units.gu(0.5)
                             layoutDirection: Qt.RightToLeft
+                            clip:true
+                     orientation: Qt.Horizontal
 
-                            Repeater {
-                                height:dateStampAlignmentItem.height
-
-                                model:[
-                                    {"value" :Qt.AlignBottom | Qt.AlignRight,"icon":"assets/align_bottom_right.png"},
-                                    {"value" :Qt.AlignBottom | Qt.AlignLeft,"icon":"assets/align_bottom_left.png"},
-                                    {"value" :Qt.AlignTop | Qt.AlignRight,"icon":"assets/align_top_right.png"},
-                                    {"value" :Qt.AlignTop | Qt.AlignLeft,"icon":"assets/align_top_left.png"},
-                                ]
-                                delegate: CircleButton {
-                                    height:dateStampAlignmentItem.height - units.gu(1)
-                                    width:height
-                                    automaticOrientation:false
-                                    iconSource: Qt.resolvedUrl( modelData.icon )
-                                    on:(modelData.value == settings.dateStampAlign)
-                                    onClicked: {
-                                        settings.dateStampAlign = modelData.value;
-                                    }
-                                }
-                            }
+                     model:[
+                        {"value" :Qt.AlignBottom | Qt.AlignRight,"icon":"assets/align_bottom_right.png"},
+                        {"value" :Qt.AlignBottom | Qt.AlignLeft,"icon":"assets/align_bottom_left.png"},
+                        {"value" :Qt.AlignTop | Qt.AlignRight,"icon":"assets/align_top_right.png"},
+                        {"value" :Qt.AlignTop | Qt.AlignLeft,"icon":"assets/align_top_left.png"},
+                     ]
+                     delegate: CircleButton {
+                        height:dateStampAlignmentItem.height - units.gu(1)
+                        width:height
+                        automaticOrientation:false
+                        iconSource: Qt.resolvedUrl( modelData.icon )
+                        on:(modelData.value == settings.dateStampAlign)
+                        onClicked: {
+                           settings.dateStampAlign = modelData.value;
+                        }
+                     }
                         }
                     }
                 }
@@ -375,19 +360,19 @@ Page {
                 highlightWhenPressed: false
 
                 ListItem {
-					ListItemLayout {
-						id: blurEffectsPreviewOnlySwitch
-						title.text: i18n.tr("Only Blur Preview overlay")
+               ListItemLayout {
+                  id: blurEffectsPreviewOnlySwitch
+                  title.text: i18n.tr("Only Blur Preview overlay")
                         title.horizontalAlignment:Text.AlignLeft
-						title.color: theme.palette.normal.backgroudText
-						Switch {
-							SlotsLayout.position: SlotsLayout.Last
-							checked: appSettings.blurEffectsPreviewOnly
-							onClicked: appSettings.blurEffectsPreviewOnly = checked
-						}
-					}
-				}
-			}
+                  title.color: theme.palette.normal.backgroudText
+                  Switch {
+                     SlotsLayout.position: SlotsLayout.Last
+                     checked: appSettings.blurEffectsPreviewOnly
+                     onClicked: appSettings.blurEffectsPreviewOnly = checked
+                  }
+               }
+            }
+         }
         }
     }
 

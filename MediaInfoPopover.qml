@@ -31,7 +31,7 @@ Popover {
         height: childrenRect.height + units.gu(4)
         anchors {
             centerIn: parent
-            margins: units.gu(2)
+            margins: units.gu(1)
         }
         Column {
             anchors {
