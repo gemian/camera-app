@@ -75,11 +75,26 @@ Item {
         AdvancedOptions {
             id:advancedOptions
             settings: viewFinderView.finderOverlay.settings
+
             onBack: galleryPageStack.pop()
-            
+
             OverlayPanel {
                 z:-1
                 overlayItem: advancedOptions
+                blur.visible: appSettings.blurEffects && !appSettings.blurEffectsPreviewOnly
+                blur.backgroundItem: currentView
+            }
+        }
+    }
+
+     Component {
+        id:infoPageComponent
+        Information {
+            id:infoPage
+            onBack: galleryPageStack.pop()
+            OverlayPanel {
+                z:-1
+                overlayItem: infoPage
                 blur.visible: appSettings.blurEffects && !appSettings.blurEffectsPreviewOnly
                 blur.backgroundItem: currentView
             }
@@ -141,7 +156,7 @@ Item {
         }
 
         OverlayPanel {
-			overlayItem: header
+            overlayItem: header
             visible: galleryView.gridMode
             blur.visible: appSettings.blurEffects && !appSettings.blurEffectsPreviewOnly
             blur.transparentBorder:false
@@ -149,7 +164,7 @@ Item {
         }
 
         OverlayPanel {
-			overlayItem: header
+            overlayItem: header
             visible: !galleryView.gridMode
             blur.visible: appSettings.blurEffects && !appSettings.blurEffectsPreviewOnly
             blur.transparentBorder:false
@@ -161,7 +176,7 @@ Item {
         // FIXME: it would be better to use the standard header from the toolkit
         GalleryViewHeader {
             id: header
-            z:1
+            z:10
             actions: currentView.actions
             gridMode: galleryView.gridMode
             validationVisible: main.contentExportMode && model.selectedFiles.length > 0 && galleryView.gridMode
@@ -204,6 +219,12 @@ Item {
             onAdvanceSettingsToggle:{
                 galleryPageStack.push(advancedOptionsComponent)
             }
+
+            onDrawerToggle:{
+                    if(isOpen && galleryPageStack.depth > 0 ) {
+                        galleryPageStack.clear();
+                    }
+                }
         }
     }
 
