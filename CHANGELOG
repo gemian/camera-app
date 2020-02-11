@@ -5,6 +5,7 @@ v3.1.2 :
 - Fixed orientation logic to be complient with the standard
 - Fix for missing import 'UbuntuAniumation'
 - Translation updates , Thanks translators :)
+- Fixed image info overprints header in portrait mode
 
 v3.1.1 :
 ========
