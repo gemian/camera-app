@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2020-02-11 14:21+0000\n"
+"PO-Revision-Date: 2020-02-16 01:21+0000\n"
 "Last-Translator: HSN80 <hosseinabbasi80@outlook.com>\n"
 "Language-Team: Persian <https://translate.ubports.com/projects/ubports/"
 "camera-app/fa/>\n"
@@ -25,7 +25,6 @@ msgid "Settings"
 msgstr "تنظیمات"
 
 #: ../AdvancedOptions.qml:48
-#, fuzzy
 msgid "Add date stamp on captured images"
 msgstr "تمبر تاریخ را بر روی تصاویر ضبط شده اضافه کنید"
 
@@ -35,17 +34,14 @@ msgid "Format"
 msgstr "قالب بندی"
 
 #: ../AdvancedOptions.qml:122
-#, fuzzy
 msgid "Date formatting keywords"
 msgstr "کلمات کلیدی قالب بندی تاریخ"
 
 #: ../AdvancedOptions.qml:127
-#, fuzzy
 msgid "the day as number without a leading zero (1 to 31)"
 msgstr "روز به عنوان شماره بدون صفر پیشرو (1 تا 31)"
 
 #: ../AdvancedOptions.qml:128
-#, fuzzy
 msgid "the day as number with a leading zero (01 to 31)"
 msgstr "روز به عنوان عدد صفر پیشرو (01 تا 31)"
 
@@ -58,102 +54,104 @@ msgid "the long localized day name (e.g. 'Monday' to 'Sunday')."
 msgstr "نام روز محلی طولانی (به عنوان مثال \"دوشنبه\" تا \"یکشنبه\")."
 
 #: ../AdvancedOptions.qml:131
-#, fuzzy
 msgid "the month as number without a leading zero (1 to 12)"
-msgstr "‭ماه به عنوان شماره بدون صفر پیشرو (1 تا 12)"
+msgstr "ماه به عنوان شماره بدون صفر پیشرو (1 تا 12)"
 
 #: ../AdvancedOptions.qml:132
 msgid "the month as number with a leading zero (01 to 12)"
-msgstr ""
+msgstr "ماه به عنوان شماره با صفر پیشرو (1 تا 12)"
 
 #: ../AdvancedOptions.qml:133
 msgid "the abbreviated localized month name (e.g. 'Jan' to 'Dec')."
-msgstr ""
+msgstr "نام مختصر ماه محلی (به عنوان مثال \"ژانویه\" تا \"دسامبر\")."
 
 #: ../AdvancedOptions.qml:134
 msgid "the long localized month name (e.g. 'January' to 'December')."
-msgstr ""
+msgstr "نام ماه محلی طولانی (به عنوان مثال \"ژانویه\" تا \"دسامبر\")."
 
 #: ../AdvancedOptions.qml:135
 msgid "the year as two digit number (00 to 99)"
-msgstr ""
+msgstr "سال به عنوان شماره دو رقمی (00 تا 99)"
 
 #: ../AdvancedOptions.qml:136
 msgid ""
 "the year as four digit number. If the year is negative, a minus sign is "
 "prepended in addition."
 msgstr ""
+"سال به عنوان شماره چهار رقمی. اگر سال منفی باشد ، علائم منفی علاوه بر آن "
+"اضافه می شود."
 
 #: ../AdvancedOptions.qml:137
 msgid "the hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)"
-msgstr ""
+msgstr "ساعت بدون صفر پیشرو (0 تا 23 یا 1 تا 12 در صورت نمایش AM / PM)"
 
 #: ../AdvancedOptions.qml:138
 msgid "the hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)"
-msgstr ""
+msgstr "ساعت با صفر پیشرو (د 00 تا 23 یا 01 تا 12 در صورت نمایش AM/PM)"
 
 #: ../AdvancedOptions.qml:139
 msgid "the hour without a leading zero (0 to 23, even with AM/PM display)"
-msgstr ""
+msgstr "ساعت بدون صفر پیشرو (0 تا 23 ، حتی با نمایش AM / PM)"
 
 #: ../AdvancedOptions.qml:140
 msgid "the hour with a leading zero (00 to 23, even with AM/PM display)"
-msgstr ""
+msgstr "ساعت با صفر پیشرو (00 تا 23 ، حتی با نمایش AM / PM)"
 
 #: ../AdvancedOptions.qml:141
 msgid "the minute without a leading zero (0 to 59)"
-msgstr ""
+msgstr "دقیقه بدون صفر پیشرو (0 تا 59)"
 
 #: ../AdvancedOptions.qml:142
 msgid "the minute with a leading zero (00 to 59)"
-msgstr ""
+msgstr "دقیقه با صفر پیشرو (00 تا 59)"
 
 #: ../AdvancedOptions.qml:143
 msgid "the second without a leading zero (0 to 59)"
-msgstr ""
+msgstr "ثانیه بدون صفر پیشرو (0 تا 59)"
 
 #: ../AdvancedOptions.qml:144
 msgid "the second with a leading zero (00 to 59)"
-msgstr ""
+msgstr "ثانیه با صفر پیشرو (00 تا 59)"
 
 #: ../AdvancedOptions.qml:145
 msgid "the milliseconds without leading zeroes (0 to 999)"
-msgstr ""
+msgstr "میلی ثانیه بدون صفرهای پیشرو (0 تا 999)"
 
 #: ../AdvancedOptions.qml:146
 msgid "the milliseconds with leading zeroes (000 to 999)"
-msgstr ""
+msgstr "میلی ثانیه با صفرهای پیشرو (000 تا 999)"
 
 #: ../AdvancedOptions.qml:147
 msgid "use AM/PM display. AP will be replaced by either 'AM' or 'PM'."
-msgstr ""
+msgstr "از نمایشگر AM / PM استفاده کنید. AP با «AM» یا «PM» جایگزین خواهد شد."
 
 #: ../AdvancedOptions.qml:148
 msgid "use am/pm display. ap will be replaced by either 'am' or 'pm'."
 msgstr ""
+"از نمایشگر am / pm استفاده کنید. ap با \"am\" یا \"pm\" جایگزین خواهد شد."
 
 #: ../AdvancedOptions.qml:149
 msgid "the timezone (for example 'CEST')"
-msgstr ""
+msgstr "منطقه زمانی (به عنوان مثال \"CEST\")"
 
 #: ../AdvancedOptions.qml:158
 msgid "Add to Format"
-msgstr ""
+msgstr "به قالب اضافه کنید"
 
 #. TRANSLATORS: this refers to the color of date stamp added to captured images
 #: ../AdvancedOptions.qml:189
 msgid "Color"
-msgstr ""
+msgstr "رنگ"
 
 #. TRANSLATORS: this refers to the alignment of date stamp within captured images (bottom left, top right,etc..)
 #: ../AdvancedOptions.qml:257
 msgid "Alignment"
-msgstr ""
+msgstr "هم ترازی"
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: ../AdvancedOptions.qml:303
 msgid "Opacity"
-msgstr ""
+msgstr "سطح کدورت"
 
 #: ../DeleteDialog.qml:24
 msgid "Delete media?"
@@ -207,27 +205,27 @@ msgstr "کمک به ترجمه"
 
 #: ../MediaInfoPopover.qml:25
 msgid "Media Information"
-msgstr ""
+msgstr "اطلاعات رسانه ای"
 
 #: ../MediaInfoPopover.qml:30
 #, qt-format
 msgid "Name : %1"
-msgstr ""
+msgstr "نام : %1"
 
 #: ../MediaInfoPopover.qml:33
 #, qt-format
 msgid "Type : %1"
-msgstr ""
+msgstr "نوع : %1"
 
 #: ../MediaInfoPopover.qml:37
 #, qt-format
 msgid "Width : %1"
-msgstr ""
+msgstr "عرض : %1"
 
 #: ../MediaInfoPopover.qml:41
 #, qt-format
 msgid "Height : %1"
-msgstr ""
+msgstr "ارتفاع : %1"
 
 #: ../NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
@@ -243,28 +241,27 @@ msgstr "به‌اشتراک گذاری"
 
 #: ../PhotogridView.qml:69 ../SlideshowView.qml:53
 msgid "Gallery"
-msgstr ""
+msgstr "گالری"
 
 #: ../SlideshowView.qml:68
 msgid "Image Info"
-msgstr ""
+msgstr "اطلاعات تصویر"
 
 #: ../SlideshowView.qml:86
 msgid "Edit"
 msgstr "ویرایش"
 
 #: ../SlideshowView.qml:441
-#, fuzzy
 msgid "Back to Photo roll"
-msgstr "چرخش عکس"
+msgstr "بازگشت به رول عکس"
 
 #: ../UnableShareDialog.qml:25
 msgid "Unable to share"
-msgstr ""
+msgstr "اشتراک گذاری امکان پذیر نیست"
 
 #: ../UnableShareDialog.qml:26
 msgid "Unable to share photos and videos at the same time"
-msgstr ""
+msgstr "به اشتراک گذاشتن عکس ها و فیلم ها به طور همزمان امکان پذیر نیست"
 
 #: ../UnableShareDialog.qml:30
 msgid "Ok"
@@ -310,9 +307,8 @@ msgid "Fine Quality"
 msgstr "کیفیت خوب"
 
 #: ../ViewFinderOverlay.qml:498
-#, fuzzy
 msgid "High Quality"
-msgstr "کیفیت خوب"
+msgstr "کیفیت بالا"
 
 #: ../ViewFinderOverlay.qml:503
 msgid "Normal Quality"
@@ -337,7 +333,7 @@ msgstr "دخیره‌ی داخلی"
 
 #: ../ViewFinderOverlay.qml:594
 msgid "Vibrate"
-msgstr ""
+msgstr "لرزش"
 
 #: ../ViewFinderOverlay.qml:1119
 msgid "Low storage space"
@@ -353,7 +349,7 @@ msgstr ""
 
 #: ../ViewFinderOverlay.qml:1133
 msgid "External storage not writeable"
-msgstr ""
+msgstr "ذخیره سازی خارجی قابل نوشتن نیست"
 
 #: ../ViewFinderOverlay.qml:1134
 msgid ""
@@ -361,21 +357,24 @@ msgid ""
 "eject and insert it again might solve the issue, or you might need to format "
 "it."
 msgstr ""
+"بنظر نمی رسد که بتوانید در رسانه های ذخیره سازی خارجی خود بنویسید. تلاش برای "
+"بیرون کشیدن و درج دوباره آن ممکن است مسئله را برطرف کند ، یا ممکن است نیاز "
+"به قالب بندی آن داشته باشید."
 
 #: ../ViewFinderOverlay.qml:1172
 msgid "Cannot access camera"
 msgstr "نمی‌توان به دوربین دسترسی داشت"
 
 #: ../ViewFinderOverlay.qml:1173
-#, fuzzy
 msgid ""
 "Camera app doesn't have permission to access the camera hardware or another "
 "error occurred.\n"
 "\n"
 "If granting permission does not resolve this problem, reboot your device."
 msgstr ""
-"کارهٔ دوربین اجازهٔ دسترسی به سخت‌افزار دوربین را نداشته یا خطایی دیگر رخ داده "
-"است.\n"
+"برنامه دوربین اجازهٔ دسترسی به سخت‌افزار دوربین را نداشته یا خطایی دیگر رخ "
+"داده است.\n"
+"\n"
 "\n"
 "اگر اعطای دسترسی این مشکل را حل نکرد، تلفنتان را راه‌انداری دوباره کنید."
 
@@ -385,17 +384,19 @@ msgstr "ویرایش مجوّزها"
 
 #: ../ViewFinderView.qml:485
 msgid "Capture failed"
-msgstr ""
+msgstr "ضبط انجام نشد"
 
 #: ../ViewFinderView.qml:490
 msgid ""
 "Replacing your external media, formatting it, or restarting the device might "
 "fix the problem."
 msgstr ""
+"جایگزینی رسانه خارجی ، قالب بندی آن یا راه اندازی مجدد دستگاه ممکن است مشکل "
+"را برطرف کند."
 
 #: ../ViewFinderView.qml:491
 msgid "Restarting your device might fix the problem."
-msgstr ""
+msgstr "راه اندازی مجدد دستگاه ممکن است این مشکل را برطرف کند."
 
 #: ../camera-app.qml:57
 msgid "Flash"
