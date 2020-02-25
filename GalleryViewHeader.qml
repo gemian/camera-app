@@ -41,11 +41,14 @@ Item {
     property bool editMode: false
     property bool validationVisible
     property bool userSelectionMode: false
+
     signal exit
     signal exitEditor
     signal toggleViews
     signal toggleSelectAll
     signal validationClicked
+    signal advanceSettingsToggle
+    signal drawerToggle( bool isOpen )
 
     function show() {
         shown = true;
@@ -86,9 +89,12 @@ Item {
             fontSize: "x-large"
             color: theme.palette.normal.backgroundText
             elide: Text.ElideRight
+            horizontalAlignment:Text.AlignLeft
             Layout.fillWidth: true
         }
 
+        //-------------------------------------------------------------------------------
+        
         IconButton {
             objectName: "viewToggleButton"
             anchors {
@@ -100,7 +106,20 @@ Item {
             onClicked: header.toggleViews()
             visible: !main.contentExportMode && !userSelectionMode && !editMode
         }
-
+        
+        IconButton {
+            objectName: "galleryLink"
+            anchors {
+                top: parent.top
+                bottom: parent.bottom
+            }
+            iconName: "gallery-app-symbolic"
+			iconColor: theme.palette.normal.backgroundText
+            onClicked:  { Qt.openUrlExternally("appid://com.ubuntu.gallery/gallery/current-user-version") }
+            visible: !main.contentExportMode && !userSelectionMode && !editMode
+        }
+        //------------------------------------------------------------------------- 
+        
         IconButton {
             objectName: "selectAllButton"
             anchors {
@@ -188,6 +207,8 @@ Item {
         onOpenedChanged: {
             if (opened)
                 visible = true;
+
+			drawerToggle(opened);
         }
 
         InverseMouseArea {

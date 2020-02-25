@@ -66,10 +66,22 @@ FocusScope {
 
     property list<Action> regularModeActions: [
             Action {
-                text: i18n.tr("Gallery")
-                objectName: "galleryLink"
-                iconName: "gallery-app-symbolic"
-                onTriggered: { Qt.openUrlExternally("appid://com.ubuntu.gallery/gallery/current-user-version") }
+                text: i18n.tr("Settings")
+                objectName: "openSettingsPage"
+                iconName: "settings"
+                onTriggered: { 
+                    galleryPageStack.clear();
+                    galleryPageStack.push(advancedOptionsComponent); 
+                }
+            },
+			Action {
+                text: i18n.tr("About")
+                objectName: "openAboutPage"
+                iconName: "info"
+                onTriggered: {
+                    galleryPageStack.clear();
+                    galleryPageStack.push(infoPageComponent);
+                }
             }
     ]
 

@@ -51,13 +51,6 @@ FocusScope {
 
     property list<Action> slideShowActions: [
         Action {
-            text: i18n.tr("Gallery")
-            objectName: "galleryLink"
-            enabled: !editor.active
-            iconName: "gallery-app-symbolic"
-            onTriggered: { Qt.openUrlExternally("appid://com.ubuntu.gallery/gallery/current-user-version") }
-        },
-        Action {
             text: i18n.tr("Share")
             iconName: "share"
             onTriggered: {
@@ -78,6 +71,24 @@ FocusScope {
             onTriggered: {
                 var dialog = PopupUtils.open(deleteDialogComponent)
                 dialog.parent = slideshowView
+            }
+        },
+        Action {
+            text: i18n.tr("Settings")
+            objectName: "openSettingsPage"
+            iconName: "settings"
+            onTriggered: {
+                galleryPageStack.clear();
+                galleryPageStack.push(advancedOptionsComponent)
+            }
+        },
+        Action {
+            text: i18n.tr("About")
+            objectName: "openAboutPage"
+            iconName: "info"
+            onTriggered: {
+                galleryPageStack.clear();
+                galleryPageStack.push(infoPageComponent);
             }
         }
     ]
@@ -373,8 +384,9 @@ FocusScope {
 
    MediaInfoPopover {
         id: infoPopover
-       currentMedia: listView.currentItem.getMedia()
-       model:{
+        contentWidth:slideshowView.width > units.gu(45) ? units.gu(40) : slideshowView.width*0.85
+        currentMedia: listView.currentItem.getMedia()
+        model:{
             "fileName": slideshowView.model.get(slideshowView.currentIndex, "fileName"),
             "fileType": slideshowView.model.get(slideshowView.currentIndex, "fileType"),
         }
@@ -446,14 +458,14 @@ FocusScope {
 
         visible: photoBottomEdge.status !== BottomEdge.Hidden
         transform: Translate {
-			id:beTransalte
-			y: photoBottomEdge.height - (photoBottomEdge.height*photoBottomEdge.dragProgress)
-			Behavior on y { UbuntuNumberAnimation {duration:UbuntuAnimation.FastDuration}}
-		}
+            id:beTransalte
+            y: photoBottomEdge.height - (photoBottomEdge.height*photoBottomEdge.dragProgress)
+            Behavior on y { UbuntuNumberAnimation {duration:UbuntuAnimation.FastDuration}}
+        }
 
-		blur.visible: appSettings.blurEffects && !appSettings.blurEffectsPreviewOnly
-		blur.backgroundItem:  listView
-		blur.transparentBorder:false
+        blur.visible: appSettings.blurEffects && !appSettings.blurEffectsPreviewOnly
+        blur.backgroundItem:  listView
+        blur.transparentBorder:false
         blur.offset: Qt.point(photoBottomEdge.x,beTransalte.y)
     }
 

@@ -29,11 +29,11 @@ FocusScope {
     id: viewFinderView
 
     property bool overlayVisible: true
-    property bool overlayPageVisible: false
     property bool optionValueSelectorVisible: false
     property bool touchAcquired: viewFinderOverlay.touchAcquired || camera.videoRecorder.recorderState == CameraRecorder.RecordingState
     property bool inView
     property alias captureMode: camera.captureMode
+    property alias finderOverlay: viewFinderOverlay
     property real aspectRatio: viewFinder.sourceRect.height != 0 ? viewFinder.sourceRect.width / viewFinder.sourceRect.height : 1.0
     signal photoTaken(string filePath)
     signal videoShot(string filePath)
@@ -288,30 +288,30 @@ FocusScope {
             viewFinderOrientation: viewFinder.orientation
         }
 
-		Loader {
-			anchors.horizontalCenter: parent.horizontalCenter
-			width: viewFinderGeometry.width
+        Loader {
+            anchors.horizontalCenter: parent.horizontalCenter
+            width: viewFinderGeometry.width
             height: viewFinderGeometry.height
-			visible: viewFinderOverlay.settings != undefined && viewFinderOverlay.settings.gridEnabled
-			source:"qml/Viewfinder/GridLines.qml"
-			asynchronous:true
-		}
+            visible: viewFinderOverlay.settings != undefined && viewFinderOverlay.settings.gridEnabled
+            source: "qml/Viewfinder/GridLines.qml"
+            asynchronous: true
+        }
 
-		Connections {
-			target: viewFinderView
-			onInViewChanged: if (!viewFinderView.inView) viewFinderOverlay.controls.cancelTimedShoot()
-		}
+        Connections {
+            target: viewFinderView
+            onInViewChanged: if (!viewFinderView.inView) viewFinderOverlay.controls.cancelTimedShoot()
+        }
 
-		TimedShootFeedback {
-			id: timedShootFeedback
-			anchors.fill: parent
-		}
+        TimedShootFeedback {
+            id: timedShootFeedback
+            anchors.fill: parent
+        }
 
-		ShootFeedback {
-			id: shootFeedback
-			anchors.fill: parent
-		}
-	}
+        ShootFeedback {
+            id: shootFeedback
+            anchors.fill: parent
+        }
+    }
 
 
     PhotoRollHint {
@@ -331,7 +331,7 @@ FocusScope {
         id: viewFinderOverlay
 
         anchors.fill: parent
-        asynchronous:true
+        asynchronous: true
         camera: camera
         opacity: status == Loader.Ready && overlayVisible && !photoRollHint.enabled ? 1.0 : 0.0
         readyForCapture: main.contentExportMode &&
@@ -348,43 +348,39 @@ FocusScope {
             anchors.fill: parent
             enabled: photoRollHint.visible
         }
-        onLoaded: {
-            viewFinderView.overlayPageVisible = Qt.binding(function() { return item.overlayPageVisible;})
-        }
     }
 
     Loader {
-		id: viewFinderExportConfirmationLoader
-		asynchronous:true
-		anchors.fill: parent
-		sourceComponent:viewFinderExportConfirmationComp
-		onLoaded: {
-			item.id = "viewFinderExportConfirmation"
-		}
-	}
+        id: viewFinderExportConfirmationLoader
+        asynchronous: true
+        anchors.fill: parent
+        sourceComponent: viewFinderExportConfirmationComp
+    }
 
-	Component {
-		id: viewFinderExportConfirmationComp
-		ViewFinderExportConfirmation {
-			id: viewFinderExportConfirmation
-			anchors.fill: parent
+    property alias viewFinderExportConfirmation: viewFinderExportConfirmationLoader.item
 
-			isVideo: main.transfer && main.transfer.contentType == ContentType.Videos
-			viewFinderGeometry: viewFinderGeometry
+    Component {
+        id: viewFinderExportConfirmationComp
+        ViewFinderExportConfirmation {
+            id: viewFinderExportConfirmation
+            anchors.fill: parent
 
-			onShowRequested: {
-				viewFinder.visible = false;
-				viewFinderOverlay.visible = false;
-				visible = true;
-			}
+            isVideo: main.transfer && main.transfer.contentType == ContentType.Videos
+            geometry: viewFinderGeometry
 
-			onHideRequested: {
-				viewFinder.visible = true;
-				viewFinderOverlay.visible = true;
-				visible = false;
-			}
-		}
-	}
+            onShowRequested: {
+                viewFinder.visible = false;
+                viewFinderOverlay.visible = false;
+                visible = true;
+            }
+
+            onHideRequested: {
+                viewFinder.visible = true;
+                viewFinderOverlay.visible = true;
+                visible = false;
+            }
+        }
+    }
 
     Component {
          id: captureFailedDialogComponent

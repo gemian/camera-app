@@ -1,3 +1,19 @@
+v3.1.2 :
+========
+- Fix for ContentHub export
+- Changes to the  UI to better match the rest of the core applications UI 
+- Fixed orientation logic to be complient with the standard
+- Fix for missing import 'UbuntuAniumation'
+- Translation updates , Thanks translators :)
+- Fixed image info overprints header in portrait mode
+
+v3.1.1 :
+========
+- Add an optional blur effect to the gallery overlay
+- Fixed media info makes phone freeze or crashes camera app
+- Pictures with visual time stamp have no meta data
+- Small optimization to memory usage
+
 v3.1.0 :
 ========
 - Use new QCamera API to get picture orientation.

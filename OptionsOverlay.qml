@@ -26,19 +26,16 @@ Item {
 
     function closeValueSelector() {
         optionValueSelector.hide();
-        advancedOptionsToggle.selected = false;
-        infoPageToggle.selected = false;
     }
 
     height: optionsGrid.height + optionsGrid.rowSpacing
-            + (infoPage.visible || advancedOptions.visible ? optionValueSelector.screenHeight - units.gu(5) : 0)
 
     Grid {
         id: optionsGrid
         anchors {
             horizontalCenter: parent.horizontalCenter
         }
-        visible: !(infoPage.visible || advancedOptions.visible )
+
         columns: 3
         columnSpacing: units.gu(9.5)
         rowSpacing: units.gu(3)
@@ -170,33 +167,4 @@ Item {
             name:"go-down"
         }
     }
-
-    AdvancedOptions {
-        id:advancedOptions
-        anchors {
-            top : optionsGrid.bottom
-            left:parent.left
-            right:parent.right
-            topMargin: units.gu(4)
-            leftMargin: units.gu(1)
-            rightMargin: units.gu(1)
-        }
-        visible: advancedOptionsToggle.selected
-        onBack: advancedOptionsToggle.selected = false;
-    }
-
-    Information {
-        id:infoPage
-        anchors {
-            top : optionsGrid.bottom
-            left:parent.left
-            right:parent.right
-            topMargin: units.gu(4)
-            leftMargin: units.gu(1)
-            rightMargin: units.gu(1)
-        }
-        visible: infoPageToggle.selected
-        onBack: infoPageToggle.selected = false;
-    }
-
 }
