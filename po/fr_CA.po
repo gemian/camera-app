@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2020-02-21 19:21+0000\n"
+"PO-Revision-Date: 2020-02-26 21:43+0000\n"
 "Last-Translator: Ryan Argente <rargente@lonerider.one>\n"
 "Language-Team: French (Canada) <https://translate.ubports.com/projects/"
 "ubports/camera-app/fr_CA/>\n"
@@ -186,19 +186,19 @@ msgstr "Pellicule"
 
 #: ../Information.qml:20
 msgid "About"
-msgstr ""
+msgstr "A propos"
 
 #: ../Information.qml:82
 msgid "Get the source"
-msgstr ""
+msgstr "Récupérer le code source"
 
 #: ../Information.qml:83
 msgid "Report issues"
-msgstr ""
+msgstr "Déclarer un problème"
 
 #: ../Information.qml:84
 msgid "Help translate"
-msgstr ""
+msgstr "Aider à traduire"
 
 #: ../MediaInfoPopover.qml:25
 msgid "Media Information"
