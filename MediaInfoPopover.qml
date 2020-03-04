@@ -59,10 +59,30 @@ Popover {
                 }
             }
             Label {
-                visible:undefined !==  exifData['Exif.Photo.Flash'];
-                text: visible ? i18n.tr("With Flash : %1").arg( exifData['Exif.Photo.Flash'] == 0 ? i18n.tr("No") : i18n.tr("Yes")) : "";
-            }
+                visible: undefined !== exifData['Exif.Photo.Flash'];
+                text: {
+                    if (!visible)
+                        return "";
 
+                    var flashTag = parseInt(exifData['Exif.Photo.Flash'], /* radix */ 10);
+
+                    /*
+                     * From https://www.awaresystems.be/imaging/tiff/tifftags/privateifd/exif/flash.html:
+                     *
+                     * Exif TIFF Tag Flash, code 37385 (0x9209)
+                     *
+                     * Indicates the status of flash when the image was shot.
+                     *
+                     * Bit 0 indicates the flash firing status, bits 1 and 2
+                     * indicate the flash return status, bits 3 and 4 indicate
+                     * the flash mode, bit 5 indicates whether the flash
+                     * function is present, and bit 6 indicates "red eye" mode.
+                     */
+                    var flashDidFire = (flashTag & (1 << 0));
+
+                    return i18n.tr("With Flash : %1").arg( flashDidFire ? i18n.tr("Yes") : i18n.tr("No"));
+                }
+            }
         }
     }
 
