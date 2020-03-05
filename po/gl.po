@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2019-07-24 10:49+0000\n"
+"PO-Revision-Date: 2020-03-06 08:22+0000\n"
 "Last-Translator: Neutrum N <neutro@tutanota.com>\n"
 "Language-Team: Galician <https://translate.ubports.com/projects/ubports/"
 "camera-app/gl/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.8\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: ../AdvancedOptions.qml:16
@@ -228,11 +228,11 @@ msgstr "Altura : %1"
 
 #: ../NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
-msgstr "Non queda espazo no dispositivo, libere espazo para continuar."
+msgstr "Non queda espazo no dispositivo, libere espazo pra continuar."
 
 #: ../PhotoRollHint.qml:69
 msgid "Swipe left for photo roll"
-msgstr "Esvare o dedo á esquerda para ver as fotos"
+msgstr "Esvare o dedo á esquerda pra ver as fotos"
 
 #: ../PhotogridView.qml:42 ../SlideshowView.qml:60
 msgid "Share"
@@ -303,7 +303,7 @@ msgstr "15 segundos"
 
 #: ../ViewFinderOverlay.qml:493
 msgid "Fine Quality"
-msgstr "Calidade moi alta"
+msgstr "Calidade fina"
 
 #: ../ViewFinderOverlay.qml:498
 msgid "High Quality"
@@ -343,8 +343,8 @@ msgid ""
 "You are running out of storage space. To continue without interruptions, "
 "free up storage space now."
 msgstr ""
-"Queda pouco espazo de almacenamento. Para continuar sen interrupcións, "
-"libere espazo agora."
+"Queda pouco espazo de almacenamento. Pra continuar sen interrupcións, libere "
+"espazo agora."
 
 #: ../ViewFinderOverlay.qml:1133
 msgid "External storage not writeable"
@@ -371,7 +371,7 @@ msgid ""
 "\n"
 "If granting permission does not resolve this problem, reboot your device."
 msgstr ""
-"O aplicativo Cámara non ten permisos para acceder ao hardware da cámara ou "
+"O aplicativo Cámara non ten permisos pra acceder ao hardware da cámara ou "
 "produciuse outro erro.\n"
 "\n"
 "Se conceder os permisos non resolve o problema, reinicie o dispositivo."
