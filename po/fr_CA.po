@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2020-03-12 10:22+0000\n"
+"PO-Revision-Date: 2020-03-22 15:22+0000\n"
 "Last-Translator: Ryan Argente <rargente@lonerider.one>\n"
 "Language-Team: French (Canada) <https://translate.ubports.com/projects/"
 "ubports/camera-app/fr_CA/>\n"
@@ -47,7 +47,7 @@ msgstr "le numéro du jour avec zéro initial (01 à 31)"
 
 #: ../AdvancedOptions.qml:129
 msgid "the abbreviated localized day name (e.g. 'Mon' to 'Sun')."
-msgstr "le nom local du jour sous forme abrégée (ex. « Lun » à « Dim »)"
+msgstr "le nom local du jour sous forme abrégée (ex. «Lun» à «Dim»)."
 
 #: ../AdvancedOptions.qml:130
 msgid "the long localized day name (e.g. 'Monday' to 'Sunday')."
@@ -92,69 +92,75 @@ msgstr ""
 #: ../AdvancedOptions.qml:138
 msgid "the hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)"
 msgstr ""
+"l'heure avec un numéro à deux chiffres (00 à 23 ou 01 à 12 avec un affichage "
+"en notation anglo-saxonne)"
 
 #: ../AdvancedOptions.qml:139
 msgid "the hour without a leading zero (0 to 23, even with AM/PM display)"
 msgstr ""
+"l'heure sans zéro initial (0 à 23, même avec un l'affichage en notation "
+"anglo-saxonne)"
 
 #: ../AdvancedOptions.qml:140
 msgid "the hour with a leading zero (00 to 23, even with AM/PM display)"
 msgstr ""
+"l'heure avec zéro initial (00 à 23, même avec un affichage en notation anglo-"
+"saxonne)"
 
 #: ../AdvancedOptions.qml:141
 msgid "the minute without a leading zero (0 to 59)"
-msgstr ""
+msgstr "la minute sans zéro initial (0 à 59)"
 
 #: ../AdvancedOptions.qml:142
 msgid "the minute with a leading zero (00 to 59)"
-msgstr ""
+msgstr "la minute avec zéro initial (00 à 59)"
 
 #: ../AdvancedOptions.qml:143
 msgid "the second without a leading zero (0 to 59)"
-msgstr ""
+msgstr "la seconde sans zéro initial (0 à 59)"
 
 #: ../AdvancedOptions.qml:144
 msgid "the second with a leading zero (00 to 59)"
-msgstr ""
+msgstr "la seconde avec zéro initial (00 à 59)"
 
 #: ../AdvancedOptions.qml:145
 msgid "the milliseconds without leading zeroes (0 to 999)"
-msgstr ""
+msgstr "la milliseconde sans zéros initiaux (0 à 999)"
 
 #: ../AdvancedOptions.qml:146
 msgid "the milliseconds with leading zeroes (000 to 999)"
-msgstr ""
+msgstr "la milliseconde avec zéros initiaux (000 à 999)"
 
 #: ../AdvancedOptions.qml:147
 msgid "use AM/PM display. AP will be replaced by either 'AM' or 'PM'."
-msgstr ""
+msgstr "utiliser l'affichage anglo-saxon. AP sera remplacé par «AM» ou «PM»."
 
 #: ../AdvancedOptions.qml:148
 msgid "use am/pm display. ap will be replaced by either 'am' or 'pm'."
-msgstr ""
+msgstr "utiliser l'affichage anglo-saxon. ap sera remplacé par «am» ou «pm»."
 
 #: ../AdvancedOptions.qml:149
 msgid "the timezone (for example 'CEST')"
-msgstr ""
+msgstr "le fuseau horaire (par exemple «CEST»)"
 
 #: ../AdvancedOptions.qml:158
 msgid "Add to Format"
-msgstr ""
+msgstr "Ajouter au format"
 
 #. TRANSLATORS: this refers to the color of date stamp added to captured images
 #: ../AdvancedOptions.qml:189
 msgid "Color"
-msgstr ""
+msgstr "Couleur"
 
 #. TRANSLATORS: this refers to the alignment of date stamp within captured images (bottom left, top right,etc..)
 #: ../AdvancedOptions.qml:257
 msgid "Alignment"
-msgstr ""
+msgstr "Alignement"
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: ../AdvancedOptions.qml:303
 msgid "Opacity"
-msgstr ""
+msgstr "Opacité"
 
 #: ../DeleteDialog.qml:24
 msgid "Delete media?"
@@ -208,27 +214,27 @@ msgstr "Aider à traduire"
 
 #: ../MediaInfoPopover.qml:25
 msgid "Media Information"
-msgstr ""
+msgstr "Information sur le media"
 
 #: ../MediaInfoPopover.qml:30
 #, qt-format
 msgid "Name : %1"
-msgstr ""
+msgstr "Nom : %1"
 
 #: ../MediaInfoPopover.qml:33
 #, qt-format
 msgid "Type : %1"
-msgstr ""
+msgstr "Genre : %1"
 
 #: ../MediaInfoPopover.qml:37
 #, qt-format
 msgid "Width : %1"
-msgstr ""
+msgstr "Largeur : %1"
 
 #: ../MediaInfoPopover.qml:41
 #, qt-format
 msgid "Height : %1"
-msgstr ""
+msgstr "Hauteur : %1"
 
 #: ../NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
@@ -244,28 +250,27 @@ msgstr "Partager"
 
 #: ../PhotogridView.qml:69 ../SlideshowView.qml:53
 msgid "Gallery"
-msgstr ""
+msgstr "Galerie"
 
 #: ../SlideshowView.qml:68
 msgid "Image Info"
-msgstr ""
+msgstr "Information sur l'image"
 
 #: ../SlideshowView.qml:86
 msgid "Edit"
 msgstr "Modifier"
 
 #: ../SlideshowView.qml:441
-#, fuzzy
 msgid "Back to Photo roll"
-msgstr "Pellicule"
+msgstr "Retourner à la pellicule"
 
 #: ../UnableShareDialog.qml:25
 msgid "Unable to share"
-msgstr ""
+msgstr "Impossible de partager"
 
 #: ../UnableShareDialog.qml:26
 msgid "Unable to share photos and videos at the same time"
-msgstr ""
+msgstr "Impossible de partager les photos et les vidéos en même temps"
 
 #: ../UnableShareDialog.qml:30
 msgid "Ok"
@@ -311,9 +316,8 @@ msgid "Fine Quality"
 msgstr "Haute qualité"
 
 #: ../ViewFinderOverlay.qml:498
-#, fuzzy
 msgid "High Quality"
-msgstr "Haute qualité"
+msgstr "Qualité supérieur"
 
 #: ../ViewFinderOverlay.qml:503
 msgid "Normal Quality"
@@ -338,7 +342,7 @@ msgstr "Enregistrer localement"
 
 #: ../ViewFinderOverlay.qml:594
 msgid "Vibrate"
-msgstr ""
+msgstr "Vibrer"
 
 #: ../ViewFinderOverlay.qml:1119
 msgid "Low storage space"
@@ -354,7 +358,7 @@ msgstr ""
 
 #: ../ViewFinderOverlay.qml:1133
 msgid "External storage not writeable"
-msgstr ""
+msgstr "Stockage externe non modifiable"
 
 #: ../ViewFinderOverlay.qml:1134
 msgid ""
@@ -362,23 +366,25 @@ msgid ""
 "eject and insert it again might solve the issue, or you might need to format "
 "it."
 msgstr ""
+"Il ne semble pas possible d’écrire sur le stockage externe. Éjecter et "
+"réinsérer le diapositif pourrait résoudre le problème, sinon vous pouvez "
+"tenter de le formater."
 
 #: ../ViewFinderOverlay.qml:1172
 msgid "Cannot access camera"
 msgstr "Impossible d'accéder à la camera"
 
 #: ../ViewFinderOverlay.qml:1173
-#, fuzzy
 msgid ""
 "Camera app doesn't have permission to access the camera hardware or another "
 "error occurred.\n"
 "\n"
 "If granting permission does not resolve this problem, reboot your device."
 msgstr ""
-"L'application Caméra n'est pas autorisée à accéder à la caméra, ou une autre "
-"erreur est survenue.\n"
+"Le logiciel n'est pas autorisé à accéder à la caméra, ou une autre erreur "
+"est survenue.\n"
 "\n"
-"Si le problème perdure après avoir donné l'accès à la caméra, redémarrer "
+"Si le problème persiste après avoir donné l'accès à la caméra, redémarrer "
 "l'appareil."
 
 #: ../ViewFinderOverlay.qml:1182
@@ -387,17 +393,19 @@ msgstr "Modifier les droits"
 
 #: ../ViewFinderView.qml:485
 msgid "Capture failed"
-msgstr ""
+msgstr "La capture a échoué"
 
 #: ../ViewFinderView.qml:490
 msgid ""
 "Replacing your external media, formatting it, or restarting the device might "
 "fix the problem."
 msgstr ""
+"Le remplacement de votre dispositif externe, son formatage ou le redémarrage "
+"de l'appareil pourrait résoudre le problème."
 
 #: ../ViewFinderView.qml:491
 msgid "Restarting your device might fix the problem."
-msgstr ""
+msgstr "Le redémarrage de votre appareil pourrait résoudre le problème."
 
 #: ../camera-app.qml:57
 msgid "Flash"
