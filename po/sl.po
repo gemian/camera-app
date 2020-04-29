@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2020-02-18 17:21+0000\n"
-"Last-Translator: Riccardo Riccio <rickyriccio@tiscali.it>\n"
+"PO-Revision-Date: 2020-04-27 04:23+0000\n"
+"Last-Translator: Junoš Lukan <junos.lukan@gmail.com>\n"
 "Language-Team: Slovenian <https://translate.ubports.com/projects/ubports/"
 "camera-app/sl/>\n"
 "Language: sl\n"
@@ -27,7 +27,7 @@ msgstr "Nastavitve"
 
 #: ../AdvancedOptions.qml:48
 msgid "Add date stamp on captured images"
-msgstr ""
+msgstr "Dodaj časovni žig na posnete slike"
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: ../AdvancedOptions.qml:70
@@ -131,7 +131,7 @@ msgstr ""
 
 #: ../AdvancedOptions.qml:149
 msgid "the timezone (for example 'CEST')"
-msgstr ""
+msgstr "Časovni pas (npr. 'CEST')"
 
 #: ../AdvancedOptions.qml:158
 msgid "Add to Format"
@@ -145,12 +145,12 @@ msgstr "Barva"
 #. TRANSLATORS: this refers to the alignment of date stamp within captured images (bottom left, top right,etc..)
 #: ../AdvancedOptions.qml:257
 msgid "Alignment"
-msgstr ""
+msgstr "Položaj"
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: ../AdvancedOptions.qml:303
 msgid "Opacity"
-msgstr ""
+msgstr "Motnost"
 
 #: ../DeleteDialog.qml:24
 msgid "Delete media?"
@@ -196,11 +196,11 @@ msgstr ""
 
 #: ../Information.qml:83
 msgid "Report issues"
-msgstr ""
+msgstr "Prijavi napake"
 
 #: ../Information.qml:84
 msgid "Help translate"
-msgstr ""
+msgstr "Pomagaj prevesti"
 
 #: ../MediaInfoPopover.qml:25
 msgid "Media Information"
@@ -209,22 +209,22 @@ msgstr ""
 #: ../MediaInfoPopover.qml:30
 #, qt-format
 msgid "Name : %1"
-msgstr ""
+msgstr "Ime: %1"
 
 #: ../MediaInfoPopover.qml:33
 #, qt-format
 msgid "Type : %1"
-msgstr ""
+msgstr "Vrsta: %1"
 
 #: ../MediaInfoPopover.qml:37
 #, qt-format
 msgid "Width : %1"
-msgstr ""
+msgstr "Širina: %1"
 
 #: ../MediaInfoPopover.qml:41
 #, qt-format
 msgid "Height : %1"
-msgstr ""
+msgstr "Višina: %1"
 
 #: ../NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
@@ -243,9 +243,8 @@ msgid "Gallery"
 msgstr "Galerija"
 
 #: ../SlideshowView.qml:68
-#, fuzzy
 msgid "Image Info"
-msgstr "Podatki o Sliki"
+msgstr "Podatki o sliki"
 
 #: ../SlideshowView.qml:86
 msgid "Edit"
@@ -308,9 +307,8 @@ msgid "Fine Quality"
 msgstr "Visoka kvaliteta"
 
 #: ../ViewFinderOverlay.qml:498
-#, fuzzy
 msgid "High Quality"
-msgstr "Visoka kvaliteta"
+msgstr "Visoka kakovost"
 
 #: ../ViewFinderOverlay.qml:503
 msgid "Normal Quality"
@@ -351,7 +349,7 @@ msgstr ""
 
 #: ../ViewFinderOverlay.qml:1133
 msgid "External storage not writeable"
-msgstr ""
+msgstr "Ni mogoče zapisovati na zunanjo shrambo"
 
 #: ../ViewFinderOverlay.qml:1134
 msgid ""
@@ -359,13 +357,14 @@ msgid ""
 "eject and insert it again might solve the issue, or you might need to format "
 "it."
 msgstr ""
+"Kot kaže, ni mogoče zapisovati na vašo zunanjo shrambo. Morda bo pomagalo, "
+"če jo poskusite izvreči in ponovno vstaviti, ali pa jo je treba formatirati."
 
 #: ../ViewFinderOverlay.qml:1172
 msgid "Cannot access camera"
 msgstr "Ni dostopa do kamere"
 
 #: ../ViewFinderOverlay.qml:1173
-#, fuzzy
 msgid ""
 "Camera app doesn't have permission to access the camera hardware or another "
 "error occurred.\n"
@@ -375,7 +374,7 @@ msgstr ""
 "Program Kamera nima dovoljenja za dostop do kamere ali pa je prišlo do druge "
 "napake.\n"
 "\n"
-"Če dodelitev dovoljenja ne zadošča, ponovno zaženite telefon."
+"Če dodelitev dovoljenja ne zadošča, ponovno zaženite svojo napravo."
 
 #: ../ViewFinderOverlay.qml:1182
 msgid "Edit Permissions"
