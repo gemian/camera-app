@@ -955,7 +955,10 @@ Item {
                 enabled: camera.focus.isFocusPointModeSupported(Camera.FocusPointCustom) &&
                          !camera.photoCaptureInProgress && !camera.timedCaptureInProgress
                 onClicked: {
-                    camera.manualFocus(mouse.x, mouse.y);
+                    // mouse.x/y is relative to this item. Convert to be relative to the overlay,
+                    // which in turn is relative to viewFinderView, where camera's VideoOutput resides.
+                    var mappedPoint = mapToItem(viewFinderOverlay, mouse.x, mouse.y);
+                    camera.manualFocus(mappedPoint.x, mappedPoint.y);
                     mouse.accepted = false;
                 }
             }
