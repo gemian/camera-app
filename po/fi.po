@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2020-02-10 11:21+0000\n"
-"Last-Translator: Oi Suomi On! <oisuomion@protonmail.com>\n"
+"PO-Revision-Date: 2020-05-09 17:23+0000\n"
+"Last-Translator: Ville Vainionpaa <ville.vainionpaa@protonmail.com>\n"
 "Language-Team: Finnish <https://translate.ubports.com/projects/ubports/"
 "camera-app/fi/>\n"
 "Language: fi\n"
@@ -187,19 +187,19 @@ msgstr "Kuvarulla"
 
 #: ../Information.qml:20
 msgid "About"
-msgstr "Tietoja"
+msgstr "Yleistä"
 
 #: ../Information.qml:82
 msgid "Get the source"
-msgstr "Hae lähdekoodi"
+msgstr "Lähdekoodi"
 
 #: ../Information.qml:83
 msgid "Report issues"
-msgstr "Ilmoita ongelmista"
+msgstr "Ilmoita ongelmasta"
 
 #: ../Information.qml:84
 msgid "Help translate"
-msgstr "Auta käännöksissä"
+msgstr "Auta käännöksessä"
 
 #: ../MediaInfoPopover.qml:25
 msgid "Media Information"
