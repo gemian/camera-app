@@ -32,13 +32,12 @@ Dialog {
         objectName: "deleteButton"
 
         text: i18n.tr("Delete")
-        color: UbuntuColors.red
+        color: theme.palette.normal.negative
         onClicked: PopupUtils.close(deleteDialog)
     }
 
     Button {
         text: i18n.tr("Cancel")
-        color: UbuntuColors.warmGrey
         onClicked: PopupUtils.close(deleteDialog)
     }
 }

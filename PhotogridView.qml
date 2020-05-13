@@ -193,7 +193,7 @@ FocusScope {
                     }
 
                     asynchronous: true
-                    cache: photogridView.inView 
+                    cache: photogridView.inView
                     // The thumbnailer does not seem to check when an image has been changed on disk,
                     // so we use this hack to force it to check and refresh if necessary.
                     source: photogridView.inView ? "image://thumbnailer/" + fileURL.toString() + "?at=" + Date.now() : ""
@@ -243,7 +243,7 @@ FocusScope {
                     }
                     width: units.gu(4)
                     height: units.gu(4)
-                    color: selected ? UbuntuColors.orange : UbuntuColors.coolGrey
+                    color: selected ? theme.palette.normal.focus : UbuntuColors.inkstone
                     radius: 10
                     opacity: selected ? 0.8 : 0.6
                     visible: inSelectionMode

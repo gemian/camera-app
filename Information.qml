@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.4
 import Ubuntu.Components 1.3
 import QtQuick.Window 2.2
 import QtSensors 5.4
@@ -32,8 +32,7 @@ Page {
 
     transitions: [
         Transition {
-          NumberAnimation { properties: "width,height,x,y"; duration: UbuntuAnimation.FastDuration}
-
+            NumberAnimation { properties: "width,height,x,y"; duration: UbuntuAnimation.FastDuration}
         }
     ]
 
@@ -70,8 +69,8 @@ Page {
     ]
 
     ListModel {
-       id: infoModel
-     }
+        id: infoModel
+    }
 
     Component.onCompleted: {
         infoModel.append({ name: i18n.tr("Get the source"), url: "https://github.com/ubports/camera-app" })
@@ -88,23 +87,23 @@ Page {
         height:units.gu(33)
 
         Icon {
-          anchors.horizontalCenter: parent.horizontalCenter
-
-          height: Math.min(parent.width/2, parent.height/2)
-          width:height
-          name:"camera-app"
-          layer.enabled: true
-          layer.effect: UbuntuShapeOverlay {
-              relativeRadius: 0.75
-           }
+            anchors.horizontalCenter: parent.horizontalCenter
+            height: Math.min(parent.width/2, parent.height/2)
+            width:height
+            name:"camera-app"
+            layer.enabled: true
+            layer.effect: UbuntuShapeOverlay {
+                relativeRadius: 0.75
+            }
         }
+
         Label {
             width: parent.width
             font.pixelSize: units.gu(5)
             font.bold: true
             color: theme.palette.normal.backgroundText
             horizontalAlignment: Text.AlignHCenter
-            text: "Camera App"
+            text: i18n.tr("Camera")
         }
         Label {
             width: parent.width
@@ -119,32 +118,31 @@ Page {
     UbuntuListView {
         id:infoLinksList
         height:units.gu(35)
-         anchors {
+        anchors {
             top: aboutCloumn.bottom
             bottom: parent.bottom
             left: parent.left
             right: parent.right
-         }
+        }
 
-         currentIndex: -1
-         interactive: false
+        currentIndex: -1
+        interactive: false
 
          model :infoModel
          delegate: ListItem {
              highlightColor:theme.palette.highlighted.backgroudT
-            ListItemLayout {
-             title.text : model.name
-             title.color: theme.palette.normal.backgroudText
-             Icon {
-                 width:units.gu(2)
-                 name:"go-to"
-             }
+             ListItemLayout {
+                title.text : model.name
+                title.color: theme.palette.normal.backgroudText
+                Icon {
+                   width:units.gu(2)
+                   name:"go-next"
+               }
             }
+
             onClicked: Qt.openUrlExternally(model.url)
 
-
          }
-
     }
 
 }

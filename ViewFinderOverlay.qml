@@ -1048,17 +1048,17 @@ Item {
     }
 
     Component {
-         id: freeSpaceLowDialogComponent
-         Dialog {
-             id: freeSpaceLowDialog
-             objectName: "lowSpaceDialog"
-             title: i18n.tr("Low storage space")
-             text: i18n.tr("You are running out of storage space. To continue without interruptions, free up storage space now.")
-             Button {
-                 text: i18n.tr("Cancel")
-                 onClicked: PopupUtils.close(freeSpaceLowDialog)
-             }
-         }
+        id: freeSpaceLowDialogComponent
+        Dialog {
+            id: freeSpaceLowDialog
+            objectName: "lowSpaceDialog"
+            title: i18n.tr("Low storage space")
+            text: i18n.tr("You are running out of storage space. To continue without interruptions, free up storage space now.")
+            Button {
+                text: i18n.tr("Cancel")
+                onClicked: PopupUtils.close(freeSpaceLowDialog)
+            }
+        }
     }
 
     Component {
@@ -1101,28 +1101,29 @@ Item {
     }
 
     Component {
-         id: noPermissionsDialogComponent
-         Dialog {
-             id: noPermissionsDialog
-             objectName: "noPermissionsDialog"
-             title: i18n.tr("Cannot access camera")
-             text: i18n.tr("Camera app doesn't have permission to access the camera hardware or another error occurred.\n\nIf granting permission does not resolve this problem, reboot your device.")
-             Button {
-                 text: i18n.tr("Cancel")
-                 onClicked: {
-                     PopupUtils.close(noPermissionsDialog);
-                     permissionErrorMonitor.currentPermissionsDialog = null;
-                 }
-             }
-             Button {
-                 text: i18n.tr("Edit Permissions")
-                 onClicked: {
-                     Qt.openUrlExternally("settings:///system/security-privacy?service=camera");
-                     PopupUtils.close(noPermissionsDialog);
-                     permissionErrorMonitor.currentPermissionsDialog = null;
-                 }
-             }
-         }
+        id: noPermissionsDialogComponent
+        Dialog {
+            id: noPermissionsDialog
+            objectName: "noPermissionsDialog"
+            title: i18n.tr("Cannot access camera")
+            text: i18n.tr("Camera app doesn't have permission to access the camera hardware or another error occurred.\n\nIf granting permission does not resolve this problem, reboot your device.")
+            Button {
+                text: i18n.tr("Edit Permissions")
+                color: theme.palette.normal.focus
+                onClicked: {
+                    Qt.openUrlExternally("settings:///system/security-privacy?service=camera");
+                    PopupUtils.close(noPermissionsDialog);
+                    permissionErrorMonitor.currentPermissionsDialog = null;
+                }
+            }
+            Button {
+                text: i18n.tr("Cancel")
+                onClicked: {
+                    PopupUtils.close(noPermissionsDialog);
+                    permissionErrorMonitor.currentPermissionsDialog = null;
+                }
+            }
+        }
     }
 
     FastBlur {
@@ -1138,6 +1139,7 @@ Item {
         transparentBorder:false
         Behavior on radius { UbuntuNumberAnimation { duration: UbuntuAnimation.SnapDuration} }
     }
+
     Rectangle {
         id: viewFinderOverlayTint
         anchors.fill:parent
