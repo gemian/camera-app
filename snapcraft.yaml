@@ -4,10 +4,11 @@ summary: Ubuntu Camera Application
 description: Camera application to take pictures and shoot videos
 confinement: devmode
 grade: devel
+base: core
 
 apps:
   camera-app:
-    command: desktop-launch $SNAP/bin/camera.wrapper
+    command: $SNAP/bin/camera.sh
     plugs: [unity7, unity8, opengl, camera, pulseaudio, home, platform]
 
 plugs:
@@ -18,10 +19,11 @@ plugs:
 
 parts:
   wrapper:
-    source: snap/
+    source: snap/local/
     plugin: dump
     organize:
       camera.wrapper: bin/camera.wrapper
+      camera-snap.sh: bin/camera.sh
 
   camera-app:
     source: .
@@ -38,8 +40,9 @@ parts:
       - qtdeclarative5-dev
       - libusermetricsinput1-dev
       - qtmultimedia5-dev
+      - libexiv2-dev
     stage-packages:
       - xdg-user-dirs
       - qtdeclarative5-ubuntu-ui-extras0.2
-    after: 
-      - desktop-ubuntu-app-platform
+    #after: 
+      #- desktop-ubuntu-app-platform
