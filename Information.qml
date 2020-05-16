@@ -130,7 +130,7 @@ Page {
 
          model :infoModel
          delegate: ListItem {
-             highlightColor:theme.palette.highlighted.backgroudT
+             highlightColor:theme.palette.highlighted.backgroudText
              ListItemLayout {
                 title.text : model.name
                 title.color: theme.palette.normal.backgroudText

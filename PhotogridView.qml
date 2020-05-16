@@ -243,7 +243,7 @@ FocusScope {
                     }
                     width: units.gu(4)
                     height: units.gu(4)
-                    color: selected ? theme.palette.normal.focus : UbuntuColors.inkstone
+                    color: selected ? theme.palette.normal.positive : UbuntuColors.inkstone
                     radius: 10
                     opacity: selected ? 0.8 : 0.6
                     visible: inSelectionMode
