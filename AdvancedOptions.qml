@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Qt.labs.settings 1.0
 import Ubuntu.Components.ListItems 1.3 as ListItems
@@ -43,6 +43,8 @@ Page {
     Flickable {
         id:advancedOptions
 
+        property Settings settings: viewFinderOverlay.settings
+
         anchors {
             top: _advancedOptionsPageHeader.bottom
             left:parent.left
@@ -52,7 +54,7 @@ Page {
         }
 
         interactive: true
-      flickableDirection: Flickable.VerticalFlick
+        flickableDirection: Flickable.VerticalFlick
 
         Column {
 
@@ -158,13 +160,13 @@ Page {
                                 { "seq" : "HH", "desc" : i18n.tr("the hour with a leading zero (00 to 23, even with AM/PM display)") },
                                 { "seq" : "m", "desc" : i18n.tr("the minute without a leading zero (0 to 59)") },
                                 { "seq" : "mm", "desc" : i18n.tr("the minute with a leading zero (00 to 59)") },
-                                { "seq" : "AP", "desc" : i18n.tr("use AM/PM display. AP will be replaced by either 'AM' or 'PM'.") },
-                                { "seq" : "ap", "desc" : i18n.tr("use am/pm display. ap will be replaced by either 'am' or 'pm'.") },
-                                { "seq" : "t", "desc" : i18n.tr("the timezone (for example 'CEST')") },
                                 { "seq" : "s", "desc" : i18n.tr("the second without a leading zero (0 to 59)") },
                                 { "seq" : "ss", "desc" : i18n.tr("the second with a leading zero (00 to 59)") },
                                 { "seq" : "z", "desc" : i18n.tr("the milliseconds without leading zeroes (0 to 999)") },
-                                { "seq" : "zzz", "desc" : i18n.tr("the milliseconds with leading zeroes (000 to 999)") }
+                                { "seq" : "zzz", "desc" : i18n.tr("the milliseconds with leading zeroes (000 to 999)") },
+                                { "seq" : "AP", "desc" : i18n.tr("use AM/PM display. AP will be replaced by either 'AM' or 'PM'.") },
+                                { "seq" : "ap", "desc" : i18n.tr("use am/pm display. ap will be replaced by either 'am' or 'pm'.") },
+                                { "seq" : "t", "desc" : i18n.tr("the timezone (for example 'CEST')") }
                             ]
                             delegate: ListItem {
                                 height:units.gu(8)
@@ -284,24 +286,24 @@ Page {
                             spacing:units.gu(0.5)
                             layoutDirection: Qt.RightToLeft
                             clip:true
-                     orientation: Qt.Horizontal
+                            orientation: Qt.Horizontal
 
-                     model:[
-                        {"value" :Qt.AlignBottom | Qt.AlignRight,"icon":"assets/align_bottom_right.png"},
-                        {"value" :Qt.AlignBottom | Qt.AlignLeft,"icon":"assets/align_bottom_left.png"},
-                        {"value" :Qt.AlignTop | Qt.AlignRight,"icon":"assets/align_top_right.png"},
-                        {"value" :Qt.AlignTop | Qt.AlignLeft,"icon":"assets/align_top_left.png"},
-                     ]
-                     delegate: CircleButton {
-                        height:dateStampAlignmentItem.height - units.gu(1)
-                        width:height
-                        automaticOrientation:false
-                        iconSource: Qt.resolvedUrl( modelData.icon )
-                        on:(modelData.value == settings.dateStampAlign)
-                        onClicked: {
-                           settings.dateStampAlign = modelData.value;
-                        }
-                     }
+		             model:[
+		                {"value" :Qt.AlignBottom | Qt.AlignRight,"icon":"assets/align_bottom_right.png"},
+		                {"value" :Qt.AlignBottom | Qt.AlignLeft,"icon":"assets/align_bottom_left.png"},
+		                {"value" :Qt.AlignTop | Qt.AlignRight,"icon":"assets/align_top_right.png"},
+		                {"value" :Qt.AlignTop | Qt.AlignLeft,"icon":"assets/align_top_left.png"},
+		             ]
+		             delegate: CircleButton {
+		                height:dateStampAlignmentItem.height - units.gu(1)
+		                width:height
+		                automaticOrientation:false
+		                iconSource: Qt.resolvedUrl( modelData.icon )
+		                on:(modelData.value == settings.dateStampAlign)
+		                onClicked: {
+		                   settings.dateStampAlign = modelData.value;
+		                }
+		             }
                         }
                     }
                 }
@@ -360,19 +362,19 @@ Page {
                 highlightWhenPressed: false
 
                 ListItem {
-               ListItemLayout {
-                  id: blurEffectsPreviewOnlySwitch
-                  title.text: i18n.tr("Only Blur Preview overlay")
-                        title.horizontalAlignment:Text.AlignLeft
-                  title.color: theme.palette.normal.backgroudText
-                  Switch {
-                     SlotsLayout.position: SlotsLayout.Last
-                     checked: appSettings.blurEffectsPreviewOnly
-                     onClicked: appSettings.blurEffectsPreviewOnly = checked
-                  }
-               }
+			ListItemLayout {
+			  id: blurEffectsPreviewOnlySwitch
+			  title.text: i18n.tr("Only Blur Preview overlay")
+				title.horizontalAlignment:Text.AlignLeft
+			  title.color: theme.palette.normal.backgroudText
+			  Switch {
+			     SlotsLayout.position: SlotsLayout.Last
+			     checked: appSettings.blurEffectsPreviewOnly
+			     onClicked: appSettings.blurEffectsPreviewOnly = checked
+			  }
+		     }
+	        }
             }
-         }
         }
     }
 
