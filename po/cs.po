@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2020-04-27 04:23+0000\n"
-"Last-Translator: Milan Korecký <milan.korecky@gmail.com>\n"
+"PO-Revision-Date: 2020-05-19 17:24+0000\n"
+"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://translate.ubports.com/projects/ubports/"
 "camera-app/cs/>\n"
 "Language: cs\n"
@@ -31,7 +31,7 @@ msgstr "Přidávat do zachycených snímků časovou značku"
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: ../AdvancedOptions.qml:70
 msgid "Format"
-msgstr "Formátovat"
+msgstr "Formát"
 
 #: ../AdvancedOptions.qml:122
 msgid "Date formatting keywords"
@@ -51,7 +51,7 @@ msgstr "zkrácený název dne v daném jazyce (např. „Po“ až „Ne“)."
 
 #: ../AdvancedOptions.qml:130
 msgid "the long localized day name (e.g. 'Monday' to 'Sunday')."
-msgstr "celý název dne v daném jayzce (např. „Pondělí“ až „Neděle“)."
+msgstr "celý název dne v daném jazyce (např. „Pondělí“ až „Neděle“)."
 
 #: ../AdvancedOptions.qml:131
 msgid "the month as number without a leading zero (1 to 12)"
@@ -67,7 +67,7 @@ msgstr "zkrácený název měsíce v daném jazyce (např. „Led“ až „Pros
 
 #: ../AdvancedOptions.qml:134
 msgid "the long localized month name (e.g. 'January' to 'December')."
-msgstr "celý název měsíce v daném jazyce (např. „Leden“ až „Prosinec“)."
+msgstr "celý název měsíce v daném jazyce (např. „leden“ až „prosinec“)."
 
 #: ../AdvancedOptions.qml:135
 msgid "the year as two digit number (00 to 99)"
@@ -78,7 +78,7 @@ msgid ""
 "the year as four digit number. If the year is negative, a minus sign is "
 "prepended in addition."
 msgstr ""
-"rok jako čtyřmístné číslo. Je-li rok záporný, je navíc doplněn o znaménko "
+"rok jako čtyřmístné číslo. Pokud je rok záporný, je navíc doplněn o znaménko "
 "mínus."
 
 #: ../AdvancedOptions.qml:137
@@ -127,11 +127,11 @@ msgstr "milisekundy s nulou na začátku (000 až 999)"
 
 #: ../AdvancedOptions.qml:147
 msgid "use AM/PM display. AP will be replaced by either 'AM' or 'PM'."
-msgstr "použít dop./odp. zobrazení. AP bude nahrazeno buď „dop.“ nebo „odp.“."
+msgstr "zobrazovat DOP./ODP. AP bude nahrazeno buď „DOP.“ nebo „ODP.“."
 
 #: ../AdvancedOptions.qml:148
 msgid "use am/pm display. ap will be replaced by either 'am' or 'pm'."
-msgstr "použijte zobrazení dop./odp. ap bude nahrazeno buď „dop.“ nebo „odp.“."
+msgstr "zobrazovat dop./odp. ap bude nahrazeno buď „dop.“ nebo „odp.“."
 
 #: ../AdvancedOptions.qml:149
 msgid "the timezone (for example 'CEST')"
@@ -196,7 +196,7 @@ msgstr "O aplikaci"
 
 #: ../Information.qml:82
 msgid "Get the source"
-msgstr "Získat zdrojový kód"
+msgstr "Získat zdrojové kódy"
 
 #: ../Information.qml:83
 msgid "Report issues"
@@ -307,7 +307,7 @@ msgstr "15 sekund"
 
 #: ../ViewFinderOverlay.qml:493
 msgid "Fine Quality"
-msgstr "Dobrá kvalita"
+msgstr "Velmi vysoká kvalita"
 
 #: ../ViewFinderOverlay.qml:498
 msgid "High Quality"
@@ -361,7 +361,7 @@ msgid ""
 "it."
 msgstr ""
 "Zdá se, že nelze zapisovat na externí úložiště. Jeho vyjmutní a zasunutí "
-"nazpět může problém vyřešit, případně ho budete třeba naformátovat."
+"nazpět může problém vyřešit, případně ho bude třeba naformátovat."
 
 #: ../ViewFinderOverlay.qml:1172
 msgid "Cannot access camera"
@@ -392,7 +392,7 @@ msgid ""
 "Replacing your external media, formatting it, or restarting the device might "
 "fix the problem."
 msgstr ""
-"Výměna externího média, jeho formátování nebo restartování zařízení může "
+"Výměna externího média, jeho naformátování nebo restartování zařízení může "
 "problém vyřešit."
 
 #: ../ViewFinderView.qml:491
