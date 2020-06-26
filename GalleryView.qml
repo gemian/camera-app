@@ -69,7 +69,7 @@ Item {
         photogridView.exit();
         galleryPageStack.clear();
     }
-    
+
     Component {
         id:advancedOptionsComponent
         AdvancedOptions {
@@ -102,6 +102,7 @@ Item {
     }
 
     OrientationHelper {
+        id: orientHelper
         visible: inView
 
         PageStack {
@@ -110,7 +111,7 @@ Item {
             anchors.topMargin:header.height+header.y
             anchors.fill:parent
         }
-        
+
         SlideshowView {
             id: slideshowView
             anchors.fill: parent
@@ -215,7 +216,7 @@ Item {
                 model.clearSelection();
                 main.exportContent(urls);
             }
-            
+
             onAdvanceSettingsToggle:{
                 galleryPageStack.push(advancedOptionsComponent)
             }
