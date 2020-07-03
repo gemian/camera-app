@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
 "PO-Revision-Date: 2020-07-03 21:08+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"Last-Translator: Tigran Khachatryan <tigrankhachatryan2008@gmail.com>\n"
 "Language-Team: Armenian <https://translate.ubports.com/projects/ubports/"
 "camera-app/hy/>\n"
 "Language: hy\n"
@@ -47,19 +47,19 @@ msgstr "օրը որպես թիվ սկզբում 0-ով (01-ից 31)"
 
 #: ../AdvancedOptions.qml:129
 msgid "the abbreviated localized day name (e.g. 'Mon' to 'Sun')."
-msgstr ""
+msgstr "կրճատված շաբաթվա օրվա անուն (օրինակ \"Երկ\"-ից \"Ուրբ\")։"
 
 #: ../AdvancedOptions.qml:130
 msgid "the long localized day name (e.g. 'Monday' to 'Sunday')."
-msgstr ""
+msgstr "Շաբաթվա օր (օրինակ \"Երկուշաբթի\"-ից \"Կիրակի\"։"
 
 #: ../AdvancedOptions.qml:131
 msgid "the month as number without a leading zero (1 to 12)"
-msgstr ""
+msgstr "ամսաթիվը առանց 0-ի (1-ից 12)"
 
 #: ../AdvancedOptions.qml:132
 msgid "the month as number with a leading zero (01 to 12)"
-msgstr ""
+msgstr "ամսաթիվը 0-ով (01-ից 12)"
 
 #: ../AdvancedOptions.qml:133
 msgid "the abbreviated localized month name (e.g. 'Jan' to 'Dec')."
