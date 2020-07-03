@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2020-01-21 17:20+0000\n"
-"Last-Translator: Alexander Dzyuba <alexander.dzyuba@gmail.com>\n"
+"PO-Revision-Date: 2020-07-03 12:42+0000\n"
+"Last-Translator: Stoian Minaiev <stoyan.minaev@gmail.com>\n"
 "Language-Team: Ukrainian <https://translate.ubports.com/projects/ubports/"
 "camera-app/uk/>\n"
 "Language: uk\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
 "4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.8\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: ../AdvancedOptions.qml:16
@@ -181,7 +181,7 @@ msgstr "Сканування вмісту..."
 
 #: ../GalleryViewHeader.qml:82 ../SlideshowView.qml:45
 msgid "Select"
-msgstr "Вибрати"
+msgstr "Обрати"
 
 #: ../GalleryViewHeader.qml:83
 msgid "Edit Photo"
@@ -270,7 +270,7 @@ msgstr ""
 
 #: ../UnableShareDialog.qml:30
 msgid "Ok"
-msgstr ""
+msgstr "Добре"
 
 #: ../ViewFinderOverlay.qml:367 ../ViewFinderOverlay.qml:390
 #: ../ViewFinderOverlay.qml:418 ../ViewFinderOverlay.qml:441
