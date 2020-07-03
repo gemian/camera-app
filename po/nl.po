@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2020-07-03 12:42+0000\n"
+"PO-Revision-Date: 2020-07-03 18:52+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <https://translate.ubports.com/projects/ubports/"
 "camera-app/nl/>\n"
@@ -257,15 +257,15 @@ msgstr "Bewerken"
 
 #: ../SlideshowView.qml:441
 msgid "Back to Photo roll"
-msgstr "Terug naar Fotorol"
+msgstr "Terug naar fotorol"
 
 #: ../UnableShareDialog.qml:25
 msgid "Unable to share"
-msgstr "Delen niet mogelijk"
+msgstr "Delen is niet mogelijk"
 
 #: ../UnableShareDialog.qml:26
 msgid "Unable to share photos and videos at the same time"
-msgstr "Het tegelijkertijd delen van foto's en video's is niet mogelijk"
+msgstr "Foto's en video's kunnen niet tegelijk worden gedeeld"
 
 #: ../UnableShareDialog.qml:30
 msgid "Ok"
@@ -329,7 +329,7 @@ msgstr "SD"
 
 #: ../ViewFinderOverlay.qml:549
 msgid "Save to SD Card"
-msgstr "Opslaan op SD-kaart"
+msgstr "Opslaan op sd-kaart"
 
 #: ../ViewFinderOverlay.qml:554
 msgid "Save internally"
@@ -376,7 +376,7 @@ msgid ""
 "\n"
 "If granting permission does not resolve this problem, reboot your device."
 msgstr ""
-"De Camera-app is niet gemachtigd om de camerahardware te mogen gebruiken of "
+"De camera-app is niet gemachtigd om de camerahardware te mogen gebruiken, of "
 "er is een andere fout opgetreden.\n"
 "\n"
 "Als het verlenen van de juiste machtiging dit probleem niet oplost, start "
