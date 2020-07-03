@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2020-07-03 21:08+0000\n"
+"PO-Revision-Date: 2020-07-03 21:42+0000\n"
 "Last-Translator: Tigran Khachatryan <tigrankhachatryan2008@gmail.com>\n"
 "Language-Team: Armenian <https://translate.ubports.com/projects/ubports/"
 "camera-app/hy/>\n"
@@ -63,33 +63,37 @@ msgstr "ամսաթիվը 0-ով (01-ից 12)"
 
 #: ../AdvancedOptions.qml:133
 msgid "the abbreviated localized month name (e.g. 'Jan' to 'Dec')."
-msgstr ""
+msgstr "ամսվա կրճատ անվանումը (օրինակ՝ \"Հուն\"-ից \"Դեկ\"):"
 
 #: ../AdvancedOptions.qml:134
 msgid "the long localized month name (e.g. 'January' to 'December')."
-msgstr ""
+msgstr "Ամսվա անունը (օրինակ՝ \"Հունվար\"-ից \"Փետրվար\")։"
 
 #: ../AdvancedOptions.qml:135
 msgid "the year as two digit number (00 to 99)"
-msgstr ""
+msgstr "տարեթիվը կրճատ (00-ից 99)"
 
 #: ../AdvancedOptions.qml:136
 msgid ""
 "the year as four digit number. If the year is negative, a minus sign is "
 "prepended in addition."
-msgstr ""
+msgstr "տարեթիվ։ Եթե տարին բացասական է, սկզմում ավելանում է մինուս նշանը։"
 
 #: ../AdvancedOptions.qml:137
 msgid "the hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)"
 msgstr ""
+"ժամ առանց սկզբի զրոյի (0-ից 23 կամ 1-ից 12 եթե AM/PM-ով է ժամանակը "
+"ներկայացված)"
 
 #: ../AdvancedOptions.qml:138
 msgid "the hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)"
 msgstr ""
+"ժամ սկզբի զրոյով (00-ից 23 կամ 01-ից 12 եթե AM/PM-ով է ժամանակը ներկայացված)"
 
 #: ../AdvancedOptions.qml:139
 msgid "the hour without a leading zero (0 to 23, even with AM/PM display)"
 msgstr ""
+"ժամը առանց սկզբի 0-ով (0-ից 23, նույնիսկ երբժամը ներկայացված է AM/PM-ով)"
 
 #: ../AdvancedOptions.qml:140
 msgid "the hour with a leading zero (00 to 23, even with AM/PM display)"
