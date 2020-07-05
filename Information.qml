@@ -14,7 +14,7 @@ Page {
         id:infoHeader
         StyleHints {
             backgroundColor:"transparent"
-            foregroundColor: theme.palette.normal.backgroudText
+            foregroundColor: theme.palette.normal.backgroundText
         }
 
         title: i18n.tr("About")
@@ -130,10 +130,10 @@ Page {
 
          model :infoModel
          delegate: ListItem {
-             highlightColor:theme.palette.highlighted.backgroudText
+             highlightColor:theme.palette.highlighted.backgroundText
              ListItemLayout {
                 title.text : model.name
-                title.color: theme.palette.normal.backgroudText
+                title.color: theme.palette.normal.backgroundText
                 Icon {
                    width:units.gu(2)
                    name:"go-next"
