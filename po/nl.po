@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2020-07-04 19:31+0000\n"
+"PO-Revision-Date: 2020-07-06 18:41+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <https://translate.ubports.com/projects/ubports/"
 "camera-app/nl/>\n"
@@ -197,7 +197,7 @@ msgstr "Over"
 
 #: ../Information.qml:82
 msgid "Get the source"
-msgstr "Broncode verkrijgen"
+msgstr "Broncode bekijken"
 
 #: ../Information.qml:83
 msgid "Report issues"
