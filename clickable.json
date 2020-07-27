@@ -1,4 +1,5 @@
 {
-  "template": "cmake",
+  "builder": "cmake",
+  "clickable_minimum_required": "6.12.2",
   "dependencies_target" : ["libexiv2-dev"]
 }
