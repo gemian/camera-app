@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2020-07-30 23:33+0000\n"
+"PO-Revision-Date: 2020-07-31 03:56+0000\n"
 "Last-Translator: Young Kim <rsyh93@gmail.com>\n"
 "Language-Team: Korean <https://translate.ubports.com/projects/ubports/"
 "camera-app/ko/>\n"
@@ -178,7 +178,7 @@ msgstr "선택"
 
 #: ../GalleryViewHeader.qml:83
 msgid "Edit Photo"
-msgstr ""
+msgstr "사진 편집"
 
 #: ../GalleryViewHeader.qml:83
 msgid "Photo Roll"
