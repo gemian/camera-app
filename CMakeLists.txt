@@ -37,8 +37,10 @@ if(CLICK_MODE)
     set(PLUGIN_BASE lib/${CMAKE_LIBRARY_ARCHITECTURE})
     set(PLUGIN_DIR ${PLUGIN_BASE}/CameraApp)
     set(DESKTOP_EXEC "./${CAMERA_APP}")
-  	set(CAMERA_ICON "${CMAKE_INSTALL_DATADIR}/icons/camera-app.png")
-  	install(FILES camera-app.png DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
+  	set(CAMERA_ICON "${CMAKE_INSTALL_DATADIR}/icons/camera-app.svg")
+    set(CAMERA_SPLASH "${CMAKE_INSTALL_DATADIR}/icons/camera-app-splash.svg")
+  	install(FILES camera-app.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
+  	install(FILES camera-app-splash.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
     add_definitions("-DCLICK_MODE=1")
 
     if(NOT SOURCE)
@@ -63,6 +65,7 @@ if(CLICK_MODE)
 else(CLICK_MODE)
     set(CAMERA_APP_DIR ${CMAKE_INSTALL_DATADIR}/${CAMERA_APP})
     set(CAMERA_ICON ${CMAKE_INSTALL_PREFIX}/${CAMERA_APP_DIR}/camera-app.png)
+    set(CAMERA_SPLASH ${CMAKE_INSTALL_PREFIX}/${CAMERA_APP_DIR}/camera-app-splash.svg)
     set(PLUGIN_BASE ${CMAKE_INSTALL_LIBDIR}/${CAMERA_APP})
     set(PLUGIN_DIR ${PLUGIN_BASE}/CameraApp)
     set(DESKTOP_EXEC ${CAMERA_APP})
@@ -105,7 +108,7 @@ install(TARGETS ${CAMERA_APP}
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
 
-file(GLOB QML_JS_FILES *.qml *.js *.png)
+file(GLOB QML_JS_FILES *.qml *.js *.png *.svg)
 
 install(FILES ${QML_JS_FILES}
     DESTINATION ${CAMERA_APP_DIR}
