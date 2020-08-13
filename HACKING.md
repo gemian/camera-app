@@ -31,7 +31,7 @@ We are using [clickable](https://clickable.bhdouglass.com/en/latest/install.html
 1. `cd <Project Root directory>`
 1. `clickable`
 
-package should be under `<Project Root directory>/build/<device architecture>/` and the application shuld be installed to the device if it`s connected and has the Developer mode enabled.
+package should be under `<Project Root directory>/build/<device architecture>/` and the application should be installed to the device if it`s connected and has the Developer mode enabled.
 
 *Building the snap package*
 **Currently still under development**
