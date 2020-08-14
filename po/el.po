@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2019-01-27 00:00+0000\n"
-"Last-Translator: Anastopoulos Theocharis <harris.anastopoulos@gmail.com>\n"
+"PO-Revision-Date: 2020-08-15 00:04+0000\n"
+"Last-Translator: Efstathios Iosifidis <iefstathios@gmail.com>\n"
 "Language-Team: Greek <https://translate.ubports.com/projects/ubports/"
 "camera-app/el/>\n"
 "Language: el\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: ../AdvancedOptions.qml:16
@@ -35,120 +35,122 @@ msgstr "Διαμόρφωση"
 
 #: ../AdvancedOptions.qml:122
 msgid "Date formatting keywords"
-msgstr ""
+msgstr "Λέξεις-κλειδιά μορφοποίησης ημερομηνίας"
 
 #: ../AdvancedOptions.qml:127
 msgid "the day as number without a leading zero (1 to 31)"
-msgstr ""
+msgstr "η ημέρα ως αριθμός χωρίς μηδέν μπροστά (1 έως 31)"
 
 #: ../AdvancedOptions.qml:128
 msgid "the day as number with a leading zero (01 to 31)"
-msgstr ""
+msgstr "η ημέρα ως αριθμός με το μηδέν μπροστά (01 έως 31)"
 
 #: ../AdvancedOptions.qml:129
 msgid "the abbreviated localized day name (e.g. 'Mon' to 'Sun')."
-msgstr ""
+msgstr "το συντομευμένο τοπικό όνομα ημέρας (π.χ. «Δευ» έως «Κυρ»)."
 
 #: ../AdvancedOptions.qml:130
 msgid "the long localized day name (e.g. 'Monday' to 'Sunday')."
-msgstr ""
+msgstr "το μακρύ τοπικό όνομα ημέρας (π.χ. «Δευτέρα» έως «Κυριακή»)."
 
 #: ../AdvancedOptions.qml:131
 msgid "the month as number without a leading zero (1 to 12)"
-msgstr ""
+msgstr "ο μήνας ως αριθμός χωρίς μηδέν μπροστά (1 έως 12)"
 
 #: ../AdvancedOptions.qml:132
 msgid "the month as number with a leading zero (01 to 12)"
-msgstr ""
+msgstr "ο μήνας ως αριθμός με μηδέν μπροστά (01 έως 12)"
 
 #: ../AdvancedOptions.qml:133
 msgid "the abbreviated localized month name (e.g. 'Jan' to 'Dec')."
-msgstr ""
+msgstr "το συντομευμένο τοπικό όνομα μήνα (π.χ. «Ιαν» έως «Δεκ»)."
 
 #: ../AdvancedOptions.qml:134
 msgid "the long localized month name (e.g. 'January' to 'December')."
-msgstr ""
+msgstr "το μακρύ τοπικό όνομα μήνα (π.χ. «Ιανουάριος» έως «Δεκέμβριος»)."
 
 #: ../AdvancedOptions.qml:135
 msgid "the year as two digit number (00 to 99)"
-msgstr "Η χρονιά με δύο ψηφιακούς αριθμούς (00 εώς 99)"
+msgstr "η χρονιά με δύο ψηφία (00 εώς 99)"
 
 #: ../AdvancedOptions.qml:136
 msgid ""
 "the year as four digit number. If the year is negative, a minus sign is "
 "prepended in addition."
 msgstr ""
+"το έτος ως τετραψήφιος αριθμό. Εάν το έτος είναι αρνητικό, προστίθεται ένα "
+"σύμβολο μείον."
 
 #: ../AdvancedOptions.qml:137
 msgid "the hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)"
-msgstr ""
+msgstr "η ώρα χωρίς μηδέν μπροστά (0 έως 23 ή 1 έως 12 εάν εμφανίζεται ΠΜ/ΜΜ)"
 
 #: ../AdvancedOptions.qml:138
 msgid "the hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)"
-msgstr ""
+msgstr "η ώρα με μηδενικό μπροστά (00 έως 23 ή 01 έως 12 εάν εμφανίζεται ΠΜ/ΜΜ)"
 
 #: ../AdvancedOptions.qml:139
 msgid "the hour without a leading zero (0 to 23, even with AM/PM display)"
-msgstr ""
+msgstr "η ώρα χωρίς μηδέν μπροστά (0 έως 23, ακόμη και εάν εμφανίζεται ΠΜ/ΜΜ)"
 
 #: ../AdvancedOptions.qml:140
 msgid "the hour with a leading zero (00 to 23, even with AM/PM display)"
-msgstr ""
+msgstr "ηωώρα με μηδενικό μπροστά (00 έως 23, ακόμη και εμφανίζεται ΠΜ/ΜΜ)"
 
 #: ../AdvancedOptions.qml:141
 msgid "the minute without a leading zero (0 to 59)"
-msgstr ""
+msgstr "το λεπτό χωρίς μηδέν μπροστά (0 έως 59)"
 
 #: ../AdvancedOptions.qml:142
 msgid "the minute with a leading zero (00 to 59)"
-msgstr ""
+msgstr "το λεπτό με το μηδέν μπροστά (00 έως 59)"
 
 #: ../AdvancedOptions.qml:143
 msgid "the second without a leading zero (0 to 59)"
-msgstr ""
+msgstr "το δεύτερο χωρίς μηδέν μπροστά (0 έως 59)"
 
 #: ../AdvancedOptions.qml:144
 msgid "the second with a leading zero (00 to 59)"
-msgstr ""
+msgstr "το δεύτερο με μηδέν μπροστά (00 έως 59)"
 
 #: ../AdvancedOptions.qml:145
 msgid "the milliseconds without leading zeroes (0 to 999)"
-msgstr ""
+msgstr "τα χιλιοστά του δευτερολέπτου χωρίς αρχικά μηδενικά (0 έως 999)"
 
 #: ../AdvancedOptions.qml:146
 msgid "the milliseconds with leading zeroes (000 to 999)"
-msgstr ""
+msgstr "τα χιλιοστά του δευτερολέπτου με κορυφαία μηδενικά (000 έως 999)"
 
 #: ../AdvancedOptions.qml:147
 msgid "use AM/PM display. AP will be replaced by either 'AM' or 'PM'."
-msgstr ""
+msgstr "χρήση εμφάνισης ΠΜ/ΜΜ. Το ΠΜ θα αντικατασταθεί από «ΠΜ» ή «ΜΜ»."
 
 #: ../AdvancedOptions.qml:148
 msgid "use am/pm display. ap will be replaced by either 'am' or 'pm'."
-msgstr ""
+msgstr "χρήση εμφάνισης πμ/μμ. Το πμ θα αντικατασταθεί από «πμ» ή «μμ»."
 
 #: ../AdvancedOptions.qml:149
 msgid "the timezone (for example 'CEST')"
-msgstr ""
+msgstr "ζώνη ώρας (για παράδειγμα 'CEST')"
 
 #: ../AdvancedOptions.qml:158
 msgid "Add to Format"
-msgstr ""
+msgstr "Προσθήκη στη μορφορποίηση"
 
 #. TRANSLATORS: this refers to the color of date stamp added to captured images
 #: ../AdvancedOptions.qml:189
 msgid "Color"
-msgstr ""
+msgstr "Χρώμα"
 
 #. TRANSLATORS: this refers to the alignment of date stamp within captured images (bottom left, top right,etc..)
 #: ../AdvancedOptions.qml:257
 msgid "Alignment"
-msgstr ""
+msgstr "Στοίχιση"
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: ../AdvancedOptions.qml:303
 msgid "Opacity"
-msgstr ""
+msgstr "Διαφάνεια"
 
 #: ../DeleteDialog.qml:24
 msgid "Delete media?"
@@ -186,43 +188,43 @@ msgstr "Φωτογραφικό ρολό"
 
 #: ../Information.qml:20
 msgid "About"
-msgstr ""
+msgstr "Περί"
 
 #: ../Information.qml:82
 msgid "Get the source"
-msgstr ""
+msgstr "Λήψη πηγής"
 
 #: ../Information.qml:83
 msgid "Report issues"
-msgstr ""
+msgstr "Αναφορά σφαλμάτων"
 
 #: ../Information.qml:84
 msgid "Help translate"
-msgstr ""
+msgstr "Βοήθεια μετάφρασης"
 
 #: ../MediaInfoPopover.qml:25
 msgid "Media Information"
-msgstr ""
+msgstr "Πληροφορίες μέσου"
 
 #: ../MediaInfoPopover.qml:30
 #, qt-format
 msgid "Name : %1"
-msgstr ""
+msgstr "Όνομα : %1"
 
 #: ../MediaInfoPopover.qml:33
 #, qt-format
 msgid "Type : %1"
-msgstr ""
+msgstr "Τύπος : %1"
 
 #: ../MediaInfoPopover.qml:37
 #, qt-format
 msgid "Width : %1"
-msgstr ""
+msgstr "Πλάτος : %1"
 
 #: ../MediaInfoPopover.qml:41
 #, qt-format
 msgid "Height : %1"
-msgstr ""
+msgstr "Ύψος : %1"
 
 #: ../NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
@@ -239,32 +241,31 @@ msgstr "Κοινοποίηση"
 
 #: ../PhotogridView.qml:69 ../SlideshowView.qml:53
 msgid "Gallery"
-msgstr ""
+msgstr "Συλλογή"
 
 #: ../SlideshowView.qml:68
 msgid "Image Info"
-msgstr ""
+msgstr "Πληροφορίες εικόνας"
 
 #: ../SlideshowView.qml:86
 msgid "Edit"
 msgstr "Επεξεργασία"
 
 #: ../SlideshowView.qml:441
-#, fuzzy
 msgid "Back to Photo roll"
-msgstr "Φωτογραφικό ρολό"
+msgstr "Πίσω στο φωτογραφικό ρολό"
 
 #: ../UnableShareDialog.qml:25
 msgid "Unable to share"
-msgstr ""
+msgstr "Αδυναμία διαμοιρασμού"
 
 #: ../UnableShareDialog.qml:26
 msgid "Unable to share photos and videos at the same time"
-msgstr ""
+msgstr "Αδυναμία διαμοιρασμού φωτογραφιών και βίντεο την ίδια στιγμή"
 
 #: ../UnableShareDialog.qml:30
 msgid "Ok"
-msgstr ""
+msgstr "ΟΚ"
 
 #: ../ViewFinderOverlay.qml:367 ../ViewFinderOverlay.qml:390
 #: ../ViewFinderOverlay.qml:418 ../ViewFinderOverlay.qml:441
@@ -306,9 +307,8 @@ msgid "Fine Quality"
 msgstr "Βέλτιστη ποιότητα"
 
 #: ../ViewFinderOverlay.qml:498
-#, fuzzy
 msgid "High Quality"
-msgstr "Βέλτιστη ποιότητα"
+msgstr "Υψηλή ποιότητα"
 
 #: ../ViewFinderOverlay.qml:503
 msgid "Normal Quality"
@@ -333,7 +333,7 @@ msgstr "Αποθήκευση σε εσωτερική μνήμη"
 
 #: ../ViewFinderOverlay.qml:594
 msgid "Vibrate"
-msgstr ""
+msgstr "Δόνηση"
 
 #: ../ViewFinderOverlay.qml:1119
 msgid "Low storage space"
@@ -349,7 +349,7 @@ msgstr ""
 
 #: ../ViewFinderOverlay.qml:1133
 msgid "External storage not writeable"
-msgstr ""
+msgstr "Ο εξωτερικός χώρος αποθήκευσης δεν είναι εγγράψιμος"
 
 #: ../ViewFinderOverlay.qml:1134
 msgid ""
@@ -357,23 +357,25 @@ msgid ""
 "eject and insert it again might solve the issue, or you might need to format "
 "it."
 msgstr ""
+"Δεν φαίνεται να γράφετε στα εξωτερικά μέσα αποθήκευσης. Η προσπάθεια "
+"εξαγωγής και εισαγωγής του ξανά μπορεί να λύσει το πρόβλημα ή ίσως χρειαστεί "
+"να το μορφοποιήσετε."
 
 #: ../ViewFinderOverlay.qml:1172
 msgid "Cannot access camera"
 msgstr "Αδύνατη η πρόσβαση κάμερας"
 
 #: ../ViewFinderOverlay.qml:1173
-#, fuzzy
 msgid ""
 "Camera app doesn't have permission to access the camera hardware or another "
 "error occurred.\n"
 "\n"
 "If granting permission does not resolve this problem, reboot your device."
 msgstr ""
-"Η εφαρμογή κάμερας δεν έχει δικαίωμα στην πρόσβαση στο υλικό κάμερας ή "
-"κάποιο άλλο λάθος συνέβη.\n"
+"Η εφαρμογή κάμερας δεν έχει δικαίωμα στην πρόσβαση στην κάμερα ή συνέβη "
+"κάποιο άλλο λάθος.\n"
 "\n"
-"Αν η απόκτηση δικαίωματος δεν λύσει το πρόβλημα, επανεκκινήστε το τηλέφωνό "
+"Αν η απόκτηση δικαιώματος δεν λύσει το πρόβλημα, επανεκκινήστε το τηλέφωνό "
 "σας."
 
 #: ../ViewFinderOverlay.qml:1182
@@ -382,17 +384,19 @@ msgstr "Επεξεργασία δικαιωμάτων"
 
 #: ../ViewFinderView.qml:485
 msgid "Capture failed"
-msgstr ""
+msgstr "Αποτυχία λήψης"
 
 #: ../ViewFinderView.qml:490
 msgid ""
 "Replacing your external media, formatting it, or restarting the device might "
 "fix the problem."
 msgstr ""
+"Η αντικατάσταση του εξωτερικού σας μέσου, η μορφοποίησή του ή η επανεκκίνηση "
+"της συσκευής ενδέχεται να διορθώσει το πρόβλημα."
 
 #: ../ViewFinderView.qml:491
 msgid "Restarting your device might fix the problem."
-msgstr ""
+msgstr "Η επανεκκίνηση της συσκευής σας ενδέχεται να διορθώσει το πρόβλημα."
 
 #: ../camera-app.qml:57
 msgid "Flash"
@@ -432,7 +436,7 @@ msgstr "Ισορροπία λευκού"
 
 #: ../camera-app.qml:75
 msgid "Lighting Condition;Day;Cloudy;Inside"
-msgstr "Φωτεισμός;Μέρα;Συννεφιά;Εσωτερικός Χώρος"
+msgstr "Φωτισμός;Μέρα;Συννεφιά;Εσωτερικός Χώρος"
 
 #: ../camera-app.qml:380
 #, qt-format
