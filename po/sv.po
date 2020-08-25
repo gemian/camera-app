@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2020-02-18 17:21+0000\n"
-"Last-Translator: Rondy Andersson <rondarius@vivaldi.net>\n"
+"PO-Revision-Date: 2020-08-26 00:00+0000\n"
+"Last-Translator: Arvid Brodin <arvidb@fripost.org>\n"
 "Language-Team: Swedish <https://translate.ubports.com/projects/ubports/"
 "camera-app/sv/>\n"
 "Language: sv\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.8\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: ../AdvancedOptions.qml:16
@@ -161,7 +161,7 @@ msgstr "Ta bort media?"
 
 #: ../DeleteDialog.qml:34 ../PhotogridView.qml:56 ../SlideshowView.qml:75
 msgid "Delete"
-msgstr "Ta bort"
+msgstr "Radera"
 
 #: ../DeleteDialog.qml:40 ../ViewFinderOverlay.qml:1122
 #: ../ViewFinderOverlay.qml:1136 ../ViewFinderOverlay.qml:1175
@@ -199,11 +199,11 @@ msgstr ""
 
 #: ../Information.qml:83
 msgid "Report issues"
-msgstr ""
+msgstr "Rapportera problem"
 
 #: ../Information.qml:84
 msgid "Help translate"
-msgstr ""
+msgstr "Hjälp till med översättning"
 
 #: ../MediaInfoPopover.qml:25
 msgid "Media Information"
