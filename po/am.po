@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2020-07-30 10:03+0000\n"
+"PO-Revision-Date: 2020-08-30 00:27+0000\n"
 "Last-Translator: Samson <sambelet@yahoo.com>\n"
 "Language-Team: Amharic <https://translate.ubports.com/projects/ubports/"
 "camera-app/am/>\n"
@@ -148,7 +148,7 @@ msgstr "ማሰለፊያ"
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: ../AdvancedOptions.qml:303
 msgid "Opacity"
-msgstr ""
+msgstr "በ ውስጡ የማያሳልፍ"
 
 #: ../DeleteDialog.qml:24
 msgid "Delete media?"
@@ -166,7 +166,7 @@ msgstr "መሰረዣ"
 
 #: ../GalleryView.qml:200
 msgid "No media available."
-msgstr "ምንም መገናኛ አልተገኘም:"
+msgstr "ምንም መገናኛ አልተገኘም"
 
 #: ../GalleryView.qml:235
 msgid "Scanning for content..."
@@ -330,7 +330,7 @@ msgstr "በ አካሉ ውስጥ ማስቀመጫ"
 
 #: ../ViewFinderOverlay.qml:594
 msgid "Vibrate"
-msgstr ""
+msgstr "ማንቀጥቀጫ"
 
 #: ../ViewFinderOverlay.qml:1119
 msgid "Low storage space"
