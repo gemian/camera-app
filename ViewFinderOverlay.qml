@@ -54,7 +54,7 @@ Item {
         property bool preferRemovableStorage: false
         property string videoResolution: "1920x1080"
         property bool playShutterSound: true
-        property bool shutterVibration: true
+        property bool shutterVibration: false
         property var photoResolutions
         property bool dateStampImages: false
         property string dateStampFormat: Qt.locale().dateFormat(Locale.ShortFormat)
