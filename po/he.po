@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2020-09-05 00:00+0000\n"
+"PO-Revision-Date: 2020-09-05 14:38+0000\n"
 "Last-Translator: tamer dab <dabsantamer@yahoo.com>\n"
 "Language-Team: Hebrew <https://translate.ubports.com/projects/ubports/"
 "camera-app/he/>\n"
@@ -48,7 +48,7 @@ msgstr "מספר היום בחודש עם אפס מוביל (01 עד 31)"
 
 #: ../AdvancedOptions.qml:129
 msgid "the abbreviated localized day name (e.g. 'Mon' to 'Sun')."
-msgstr "שם מקוצר ליום בשבוע (א' עד ש')."
+msgstr "שם מקוצר ליום בשבוע (למשל א' עד ש')."
 
 #: ../AdvancedOptions.qml:130
 msgid "the long localized day name (e.g. 'Monday' to 'Sunday')."
@@ -122,11 +122,11 @@ msgstr "המילי שנייה בשעה עם אפסים מובילים (000 עד 
 
 #: ../AdvancedOptions.qml:147
 msgid "use AM/PM display. AP will be replaced by either 'AM' or 'PM'."
-msgstr ""
+msgstr "השתמש בתצוגת AM/PM. AP יוחלף ב- 'AM' או 'PM'."
 
 #: ../AdvancedOptions.qml:148
 msgid "use am/pm display. ap will be replaced by either 'am' or 'pm'."
-msgstr ""
+msgstr "השתמש בתצוגת am/pm. ap יוחלף ב- 'am' או 'pm'."
 
 #: ../AdvancedOptions.qml:149
 msgid "the timezone (for example 'CEST')"
@@ -175,7 +175,7 @@ msgstr "סריקת תוכן מתבצעת…"
 
 #: ../GalleryViewHeader.qml:82 ../SlideshowView.qml:45
 msgid "Select"
-msgstr "בחירה"
+msgstr "בחר"
 
 #: ../GalleryViewHeader.qml:83
 msgid "Edit Photo"
