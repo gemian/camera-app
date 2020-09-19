@@ -11,3 +11,5 @@ X-Ubuntu-Touch=true
 X-Ubuntu-Single-Instance=true
 X-Ubuntu-Default-Department-ID=accessories
 X-Ubuntu-Rotates-Window-Contents=true
+X-Ubuntu-Splash-Image=@CAMERA_SPLASH@
+X-Ubuntu-Splash-Color=#eeecea
