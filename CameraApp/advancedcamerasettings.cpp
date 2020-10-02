@@ -379,7 +379,11 @@ QStringList AdvancedCameraSettings::imageSupportedResolutions()
 QSize AdvancedCameraSettings::fittingResolution() const
 {
     QList<float> prioritizedAspectRatios;
-    prioritizedAspectRatios.append(getScreenAspectRatio());
+    const float screenAspectRatio = getScreenAspectRatio();
+    if (screenAspectRatio < 16.0f/9.0f) {
+        // Prefer screen aspect ratio on devices without vertically stretched out displays
+        prioritizedAspectRatios.append(screenAspectRatio);
+    }
     const float backAspectRatios[4] = { 16.0f/9.0f, 3.0f/2.0f, 4.0f/3.0f, 5.0f/4.0f };
     for (int i=0; i<4; ++i) {
         if (!prioritizedAspectRatios.contains(backAspectRatios[i])) {
