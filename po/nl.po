@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2020-07-07 16:32+0000\n"
+"PO-Revision-Date: 2020-10-18 17:35+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <https://translate.ubports.com/projects/ubports/"
 "camera-app/nl/>\n"
@@ -35,7 +35,7 @@ msgstr "Formatteren"
 
 #: ../AdvancedOptions.qml:122
 msgid "Date formatting keywords"
-msgstr "Datumopmaak - Sleutelwoorden"
+msgstr "Trefwoorden bij datumopmaak"
 
 #: ../AdvancedOptions.qml:127
 msgid "the day as number without a leading zero (1 to 31)"
@@ -308,7 +308,7 @@ msgstr "15 seconden"
 
 #: ../ViewFinderOverlay.qml:493
 msgid "Fine Quality"
-msgstr "Goede kwaliteit"
+msgstr "Beste kwaliteit"
 
 #: ../ViewFinderOverlay.qml:498
 msgid "High Quality"
@@ -361,13 +361,13 @@ msgid ""
 "eject and insert it again might solve the issue, or you might need to format "
 "it."
 msgstr ""
-"Het lijkt er op dat het niet mogelijk is je uw externe opslag te "
-"beschrijven. Dit kun je wellicht oplossen door de opslag te ontkoppelen en "
-"opnieuw aan te koppelen of door de opslag te formatteren."
+"Het lijkt er op dat het niet mogelijk is je externe opslag te beschrijven. "
+"Dit kun je wellicht oplossen door de opslag te ontkoppelen en opnieuw aan te "
+"koppelen of door de opslag te formatteren."
 
 #: ../ViewFinderOverlay.qml:1172
 msgid "Cannot access camera"
-msgstr "Kan geen toegang krijgen tot camera"
+msgstr "Geen toegang tot camera"
 
 #: ../ViewFinderOverlay.qml:1173
 msgid ""
@@ -396,7 +396,7 @@ msgid ""
 "fix the problem."
 msgstr ""
 "Dit kun je wellicht oplossen door je externe opslag te vervangen of "
-"formatteren of door apparaat opnieuw op te starten."
+"formatteren of door je apparaat opnieuw op te starten."
 
 #: ../ViewFinderView.qml:491
 msgid "Restarting your device might fix the problem."
