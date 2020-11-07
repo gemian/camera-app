@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2020-08-31 13:14+0000\n"
+"PO-Revision-Date: 2020-11-01 12:03+0000\n"
 "Last-Translator: Milan Korecký <milan.korecky@gmail.com>\n"
 "Language-Team: Czech <https://translate.ubports.com/projects/ubports/"
 "camera-app/cs/>\n"
@@ -168,7 +168,7 @@ msgstr "Smazat"
 #: ../ViewFinderOverlay.qml:1136 ../ViewFinderOverlay.qml:1175
 #: ../ViewFinderView.qml:494
 msgid "Cancel"
-msgstr "Storno"
+msgstr "Zrušit"
 
 #: ../GalleryView.qml:200
 msgid "No media available."
