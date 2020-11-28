@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2020-11-10 07:42+0000\n"
+"PO-Revision-Date: 2020-11-26 15:47+0000\n"
 "Last-Translator: Zmicer <nashtlumach@gmail.com>\n"
 "Language-Team: Belarusian <https://translate.ubports.com/projects/ubports/"
 "camera-app/be/>\n"
@@ -27,114 +27,116 @@ msgstr "Налады"
 
 #: ../AdvancedOptions.qml:48
 msgid "Add date stamp on captured images"
-msgstr ""
+msgstr "Дадаваць на выявы час фатаграфавання"
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: ../AdvancedOptions.qml:70
 msgid "Format"
-msgstr ""
+msgstr "Фарматаваць"
 
 #: ../AdvancedOptions.qml:122
 msgid "Date formatting keywords"
-msgstr ""
+msgstr "Ключавыя словы фарматавання даты"
 
 #: ../AdvancedOptions.qml:127
 msgid "the day as number without a leading zero (1 to 31)"
-msgstr ""
+msgstr "дзень без нуля (ад 1 да 31)"
 
 #: ../AdvancedOptions.qml:128
 msgid "the day as number with a leading zero (01 to 31)"
-msgstr ""
+msgstr "дзень з нулём (ад 01 да 31)"
 
 #: ../AdvancedOptions.qml:129
 msgid "the abbreviated localized day name (e.g. 'Mon' to 'Sun')."
-msgstr ""
+msgstr "скарочаныя назвы дзён тыдня."
 
 #: ../AdvancedOptions.qml:130
 msgid "the long localized day name (e.g. 'Monday' to 'Sunday')."
-msgstr ""
+msgstr "поўныя назвы дзён тыдня."
 
 #: ../AdvancedOptions.qml:131
 msgid "the month as number without a leading zero (1 to 12)"
-msgstr ""
+msgstr "месяц без нуля (ад 1 да 12)"
 
 #: ../AdvancedOptions.qml:132
 msgid "the month as number with a leading zero (01 to 12)"
-msgstr ""
+msgstr "месяц з нулём (ад 01 да 12)"
 
 #: ../AdvancedOptions.qml:133
 msgid "the abbreviated localized month name (e.g. 'Jan' to 'Dec')."
-msgstr ""
+msgstr "скарочаныя назвы месяцаў."
 
 #: ../AdvancedOptions.qml:134
 msgid "the long localized month name (e.g. 'January' to 'December')."
-msgstr ""
+msgstr "поўныя назвы месяцаў."
 
 #: ../AdvancedOptions.qml:135
 msgid "the year as two digit number (00 to 99)"
-msgstr ""
+msgstr "год дзвюма лічбамі (ад 00 да 99)"
 
 #: ../AdvancedOptions.qml:136
 msgid ""
 "the year as four digit number. If the year is negative, a minus sign is "
 "prepended in addition."
-msgstr ""
+msgstr "год чатырма лічбамі. Калі год адмоўны, у пачатку дадаецца мінус."
 
 #: ../AdvancedOptions.qml:137
 msgid "the hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)"
-msgstr ""
+msgstr "гадзіны без нуля (ад 0 да 23; ад 1 да 12 )"
 
 #: ../AdvancedOptions.qml:138
 msgid "the hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)"
-msgstr ""
+msgstr "гадзіны з нулём (ад 00 да 23; ад 01 да 12)"
 
 #: ../AdvancedOptions.qml:139
 msgid "the hour without a leading zero (0 to 23, even with AM/PM display)"
 msgstr ""
+"гадзіны без нуля (ад 0 да 23, нават з адзнакай \"да поўдня; пасля поўдня\")"
 
 #: ../AdvancedOptions.qml:140
 msgid "the hour with a leading zero (00 to 23, even with AM/PM display)"
 msgstr ""
+"гадзіны з нулём (ад 00 да 23, нават з адзнакай \"да поўдня; пасля поўдня\")"
 
 #: ../AdvancedOptions.qml:141
 msgid "the minute without a leading zero (0 to 59)"
-msgstr ""
+msgstr "хвіліны без нуля (ад 0 да 59)"
 
 #: ../AdvancedOptions.qml:142
 msgid "the minute with a leading zero (00 to 59)"
-msgstr ""
+msgstr "хвіліны з нулём (ад 00 да 59)"
 
 #: ../AdvancedOptions.qml:143
 msgid "the second without a leading zero (0 to 59)"
-msgstr ""
+msgstr "секунды без нуля (ад 0 да 59)"
 
 #: ../AdvancedOptions.qml:144
 msgid "the second with a leading zero (00 to 59)"
-msgstr ""
+msgstr "секунды з нулём (ад 00 да 59)"
 
 #: ../AdvancedOptions.qml:145
 msgid "the milliseconds without leading zeroes (0 to 999)"
-msgstr ""
+msgstr "мілісекунды без нуля (ад 0 да 999)"
 
 #: ../AdvancedOptions.qml:146
 msgid "the milliseconds with leading zeroes (000 to 999)"
-msgstr ""
+msgstr "мілісекунды з нулём (ад 000 да 999)"
 
 #: ../AdvancedOptions.qml:147
 msgid "use AM/PM display. AP will be replaced by either 'AM' or 'PM'."
-msgstr ""
+msgstr "паказваць адзнаку \"да поўдня; пасля поўдня\"."
 
 #: ../AdvancedOptions.qml:148
 msgid "use am/pm display. ap will be replaced by either 'am' or 'pm'."
-msgstr ""
+msgstr "паказваць адзнаку \"да поўдня; пасля поўдня\"."
 
 #: ../AdvancedOptions.qml:149
 msgid "the timezone (for example 'CEST')"
-msgstr ""
+msgstr "часавы пояс (напрыклад, \"CEST\")"
 
 #: ../AdvancedOptions.qml:158
 msgid "Add to Format"
-msgstr ""
+msgstr "Дадаць у фармат"
 
 #. TRANSLATORS: this refers to the color of date stamp added to captured images
 #: ../AdvancedOptions.qml:189
@@ -144,12 +146,12 @@ msgstr "Колер"
 #. TRANSLATORS: this refers to the alignment of date stamp within captured images (bottom left, top right,etc..)
 #: ../AdvancedOptions.qml:257
 msgid "Alignment"
-msgstr ""
+msgstr "Выраўноўванне"
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: ../AdvancedOptions.qml:303
 msgid "Opacity"
-msgstr ""
+msgstr "Непразрыстасць"
 
 #: ../DeleteDialog.qml:24
 msgid "Delete media?"
@@ -167,11 +169,11 @@ msgstr "Скасаваць"
 
 #: ../GalleryView.qml:200
 msgid "No media available."
-msgstr "Адсутнічаюць медыяфайлы"
+msgstr "Няма медыяфайлаў."
 
 #: ../GalleryView.qml:235
 msgid "Scanning for content..."
-msgstr "Сканаваньне..."
+msgstr "Сканаванне..."
 
 #: ../GalleryViewHeader.qml:82 ../SlideshowView.qml:45
 msgid "Select"
@@ -187,51 +189,51 @@ msgstr "Фотастужка"
 
 #: ../Information.qml:20
 msgid "About"
-msgstr ""
+msgstr "Звесткі"
 
 #: ../Information.qml:82
 msgid "Get the source"
-msgstr ""
+msgstr "Атрымаць зыходны код"
 
 #: ../Information.qml:83
 msgid "Report issues"
-msgstr ""
+msgstr "Паведаміць пра праблему"
 
 #: ../Information.qml:84
 msgid "Help translate"
-msgstr ""
+msgstr "Дапамагчы з перакладам"
 
 #: ../MediaInfoPopover.qml:25
 msgid "Media Information"
-msgstr ""
+msgstr "Звесткі"
 
 #: ../MediaInfoPopover.qml:30
 #, qt-format
 msgid "Name : %1"
-msgstr ""
+msgstr "Назва : %1"
 
 #: ../MediaInfoPopover.qml:33
 #, qt-format
 msgid "Type : %1"
-msgstr ""
+msgstr "Тып : %1"
 
 #: ../MediaInfoPopover.qml:37
 #, qt-format
 msgid "Width : %1"
-msgstr ""
+msgstr "Шырыня : %1"
 
 #: ../MediaInfoPopover.qml:41
 #, qt-format
 msgid "Height : %1"
-msgstr ""
+msgstr "Вышыня : %1"
 
 #: ../NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
-msgstr "Бракуе вольнага месца; вызваліце месца, каб працягнуць."
+msgstr "Не стае вольнага месца; вызваліце месца, каб працягнуць."
 
 #: ../PhotoRollHint.qml:69
 msgid "Swipe left for photo roll"
-msgstr "Націсьніце і цягніце налева для пераходу да фотастужкі"
+msgstr "Правядзіце ўлева, каб перайсці да фотастужкі"
 
 #: ../PhotogridView.qml:42 ../SlideshowView.qml:60
 msgid "Share"
@@ -239,20 +241,19 @@ msgstr "Падзяліцца"
 
 #: ../PhotogridView.qml:69 ../SlideshowView.qml:53
 msgid "Gallery"
-msgstr ""
+msgstr "Галерэя"
 
 #: ../SlideshowView.qml:68
 msgid "Image Info"
-msgstr ""
+msgstr "Звесткі пра выяву"
 
 #: ../SlideshowView.qml:86
 msgid "Edit"
 msgstr "Рэдагаваць"
 
 #: ../SlideshowView.qml:441
-#, fuzzy
 msgid "Back to Photo roll"
-msgstr "Фотастужка"
+msgstr "Вярнуцца да фота"
 
 #: ../UnableShareDialog.qml:25
 msgid "Unable to share"
@@ -273,7 +274,7 @@ msgstr "Добра"
 #: ../tests/unittests/tst_BottomEdgeIndicators.qml:65
 #: ../tests/unittests/tst_BottomEdgeIndicators.qml:86
 msgid "On"
-msgstr "Укл."
+msgstr "Укл"
 
 #: ../ViewFinderOverlay.qml:372 ../ViewFinderOverlay.qml:400
 #: ../ViewFinderOverlay.qml:423 ../ViewFinderOverlay.qml:446
@@ -283,7 +284,7 @@ msgstr "Укл."
 #: ../tests/unittests/tst_BottomEdgeIndicators.qml:70
 #: ../tests/unittests/tst_BottomEdgeIndicators.qml:91
 msgid "Off"
-msgstr "Выключыць"
+msgstr "Выкл"
 
 #: ../ViewFinderOverlay.qml:395
 msgid "Auto"
@@ -303,20 +304,19 @@ msgstr "15 секунд"
 
 #: ../ViewFinderOverlay.qml:493
 msgid "Fine Quality"
-msgstr "Высокая якасьць"
+msgstr "Высокая якасць"
 
 #: ../ViewFinderOverlay.qml:498
-#, fuzzy
 msgid "High Quality"
-msgstr "Высокая якасьць"
+msgstr "Высокая якасць"
 
 #: ../ViewFinderOverlay.qml:503
 msgid "Normal Quality"
-msgstr "Звычайная якасьць"
+msgstr "Звычайная якасць"
 
 #: ../ViewFinderOverlay.qml:508
 msgid "Basic Quality"
-msgstr "Пачатковая якасьць"
+msgstr "Нізкая якасць"
 
 #. TRANSLATORS: this will be displayed on an small button so for it to fit it should be less then 3 characters long.
 #: ../ViewFinderOverlay.qml:541
@@ -333,23 +333,21 @@ msgstr "Захаваць на прыладзе"
 
 #: ../ViewFinderOverlay.qml:594
 msgid "Vibrate"
-msgstr ""
+msgstr "Вібраваць"
 
 #: ../ViewFinderOverlay.qml:1119
 msgid "Low storage space"
-msgstr "Бракуе вольнага месца"
+msgstr "Не стае вольнага месца"
 
 #: ../ViewFinderOverlay.qml:1120
 msgid ""
 "You are running out of storage space. To continue without interruptions, "
 "free up storage space now."
-msgstr ""
-"Скончваецца вольнае месца для захоўваньня дадзеных. Каб пазьбегнуць гэтага - "
-"вызваліце месца."
+msgstr "Сканчаецца вольнае месца. Каб пазбегнуць памылак, вызваліцца месца."
 
 #: ../ViewFinderOverlay.qml:1133
 msgid "External storage not writeable"
-msgstr ""
+msgstr "Нельга запісваць на вонкавае сховішча"
 
 #: ../ViewFinderOverlay.qml:1134
 msgid ""
@@ -357,10 +355,12 @@ msgid ""
 "eject and insert it again might solve the issue, or you might need to format "
 "it."
 msgstr ""
+"Немагчыма выканаць запіс на вонкавае сховішча. Паспрабуйце выняць яго і зноў "
+"уставіць. Магчыма, давядзецца адфарматаваць носьбіт."
 
 #: ../ViewFinderOverlay.qml:1172
 msgid "Cannot access camera"
-msgstr ""
+msgstr "Няма доступу да камеры"
 
 #: ../ViewFinderOverlay.qml:1173
 msgid ""
@@ -369,24 +369,31 @@ msgid ""
 "\n"
 "If granting permission does not resolve this problem, reboot your device."
 msgstr ""
+"Праграма камеры не можа атрымаць доступ да самой камеры, альбо адбылася "
+"іншая памылка.\n"
+"\n"
+"Паспрабуйце даць праграме дазвол на доступ. Калі праблема не вырашылася, "
+"перазапусціце прыладу."
 
 #: ../ViewFinderOverlay.qml:1182
 msgid "Edit Permissions"
-msgstr ""
+msgstr "Змяніць правы доступу"
 
 #: ../ViewFinderView.qml:485
 msgid "Capture failed"
-msgstr ""
+msgstr "Не атрымалася сфатаграфаваць"
 
 #: ../ViewFinderView.qml:490
 msgid ""
 "Replacing your external media, formatting it, or restarting the device might "
 "fix the problem."
 msgstr ""
+"Мажліва, праблему атрымаецца вырашыць заменай носьбіта, яго фарматаваннем ці "
+"перазапускам прылады."
 
 #: ../ViewFinderView.qml:491
 msgid "Restarting your device might fix the problem."
-msgstr ""
+msgstr "Мажліва, праблему атрымаецца вырашыць перазапускам прылады."
 
 #: ../camera-app.qml:57
 msgid "Flash"
@@ -406,11 +413,11 @@ msgstr "Пярэдняя камера;Задняя камера"
 
 #: ../camera-app.qml:65
 msgid "Shutter"
-msgstr "Затвор"
+msgstr "Засаўка"
 
 #: ../camera-app.qml:66
 msgid "Take a Photo;Snap;Record"
-msgstr "Зрабіць фота;Імгненны здымак;Запісаць"
+msgstr "Зрабіць фота;Імгненны здымак;Запіс"
 
 #: ../camera-app.qml:69
 msgid "Mode"
@@ -426,25 +433,25 @@ msgstr "Баланс белага"
 
 #: ../camera-app.qml:75
 msgid "Lighting Condition;Day;Cloudy;Inside"
-msgstr "Умовы асьвятленьня;Ясна;Пахмурна;Памяшканьне"
+msgstr "Умовы асвятлення;Ясна;Пахмурна;Памяшканне"
 
 #: ../camera-app.qml:380
 #, qt-format
 msgid "<b>%1</b> photos taken today"
-msgstr "<b>%1</b> фотаздымкаў  на сёньня"
+msgstr "<b>%1</b> фотаздымкаў за сёння"
 
 #: ../camera-app.qml:381
 msgid "No photos taken today"
-msgstr "Няма сёньняшніх фатаздымкаў"
+msgstr "Сёння не было фотаздымкаў"
 
 #: ../camera-app.qml:391
 #, qt-format
 msgid "<b>%1</b> videos recorded today"
-msgstr "<b>%1</b> відэазапісаў на сёньня"
+msgstr "<b>%1</b> відэазапісаў за сёння"
 
 #: ../camera-app.qml:392
 msgid "No videos recorded today"
-msgstr "Няма сёньняшніх відэазапісаў"
+msgstr "Сёння не было відэазапісаў"
 
 #: camera-app.desktop.in.in.h:1
 msgid "Camera"
