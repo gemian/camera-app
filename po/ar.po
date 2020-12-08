@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2020-11-19 21:06+0000\n"
+"PO-Revision-Date: 2020-12-08 00:42+0000\n"
 "Last-Translator: abidin <abidin24@tutanota.com>\n"
 "Language-Team: Arabic <https://translate.ubports.com/projects/ubports/"
 "camera-app/ar/>\n"
@@ -179,7 +179,7 @@ msgstr "حدد"
 
 #: ../GalleryViewHeader.qml:83
 msgid "Edit Photo"
-msgstr "حرر الصورة"
+msgstr "حرر صورة"
 
 #: ../GalleryViewHeader.qml:83
 msgid "Photo Roll"
