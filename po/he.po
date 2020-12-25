@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2020-12-17 14:38+0000\n"
+"PO-Revision-Date: 2020-12-24 08:57+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://translate.ubports.com/projects/ubports/"
 "camera-app/he/>\n"
@@ -157,7 +157,7 @@ msgstr "האם למחוק את המדיה?"
 
 #: ../DeleteDialog.qml:34 ../PhotogridView.qml:56 ../SlideshowView.qml:75
 msgid "Delete"
-msgstr "מחק"
+msgstr "מחיקה"
 
 #: ../DeleteDialog.qml:40 ../ViewFinderOverlay.qml:1122
 #: ../ViewFinderOverlay.qml:1136 ../ViewFinderOverlay.qml:1175
@@ -247,7 +247,7 @@ msgstr "פרטי תמונה"
 
 #: ../SlideshowView.qml:86
 msgid "Edit"
-msgstr "ערוך"
+msgstr "עריכה"
 
 #: ../SlideshowView.qml:441
 msgid "Back to Photo roll"
