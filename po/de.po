@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2018-12-26 10:49+0000\n"
+"PO-Revision-Date: 2020-09-05 20:02+0000\n"
 "Last-Translator: Rüdiger Kupper <ruediger.kupper+launchpad@gmail.com>\n"
 "Language-Team: German <https://translate.ubports.com/projects/ubports/"
 "camera-app/de/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: ../AdvancedOptions.qml:16
@@ -192,7 +192,7 @@ msgstr "Fotoliste"
 
 #: ../Information.qml:20
 msgid "About"
-msgstr "Über"
+msgstr "Info"
 
 #: ../Information.qml:82
 msgid "Get the source"
@@ -270,7 +270,7 @@ msgstr "Kann Fotos und Videos nicht gleichzeitig teilen"
 
 #: ../UnableShareDialog.qml:30
 msgid "Ok"
-msgstr "Ok"
+msgstr "OK"
 
 #: ../ViewFinderOverlay.qml:367 ../ViewFinderOverlay.qml:390
 #: ../ViewFinderOverlay.qml:418 ../ViewFinderOverlay.qml:441
@@ -279,7 +279,7 @@ msgstr "Ok"
 #: ../tests/unittests/tst_BottomEdgeIndicators.qml:65
 #: ../tests/unittests/tst_BottomEdgeIndicators.qml:86
 msgid "On"
-msgstr "An"
+msgstr "Ein"
 
 #: ../ViewFinderOverlay.qml:372 ../ViewFinderOverlay.qml:400
 #: ../ViewFinderOverlay.qml:423 ../ViewFinderOverlay.qml:446
@@ -413,7 +413,7 @@ msgstr "Hell;Dunkel"
 
 #: ../camera-app.qml:61
 msgid "Flip Camera"
-msgstr "Kamera kippen"
+msgstr "Kamera wechseln"
 
 #: ../camera-app.qml:62
 msgid "Front Facing;Back Facing"

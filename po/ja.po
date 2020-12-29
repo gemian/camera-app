@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2019-04-24 21:36+0000\n"
+"PO-Revision-Date: 2020-11-28 09:25+0000\n"
 "Last-Translator: M.Sugahara <equaaqua@hotmail.com>\n"
 "Language-Team: Japanese <https://translate.ubports.com/projects/ubports/"
 "camera-app/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.2.2\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: ../AdvancedOptions.qml:16
@@ -63,7 +63,7 @@ msgstr "月の頭にゼロをつける (01～12)"
 
 #: ../AdvancedOptions.qml:133
 msgid "the abbreviated localized month name (e.g. 'Jan' to 'Dec')."
-msgstr ""
+msgstr "短い月の名前 （「1月」…「12月」）。"
 
 #: ../AdvancedOptions.qml:134
 msgid "the long localized month name (e.g. 'January' to 'December')."
@@ -81,59 +81,59 @@ msgstr "4桁の年。年が負の場合、頭にマイナス記号がつきま�
 
 #: ../AdvancedOptions.qml:137
 msgid "the hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)"
-msgstr "時間の頭にゼロを付けない (24時間制の場合0～23、12時間制の場合1～12)"
+msgstr "頭にゼロを付けない時間 (24時間制の場合0～23、12時間制の場合1～12)"
 
 #: ../AdvancedOptions.qml:138
 msgid "the hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)"
-msgstr "時間の頭にゼロをつける(24時間制の場合00～23、12時間制の場合01～12)"
+msgstr "頭にゼロをつける時間(24時間制の場合00～23、12時間制の場合01～12)"
 
 #: ../AdvancedOptions.qml:139
 msgid "the hour without a leading zero (0 to 23, even with AM/PM display)"
-msgstr ""
+msgstr "頭にゼロを付けない時間 (0〜23、常に AM/PM をつける)"
 
 #: ../AdvancedOptions.qml:140
 msgid "the hour with a leading zero (00 to 23, even with AM/PM display)"
-msgstr ""
+msgstr "頭にゼロをつける時間 (0〜23、常に AM/PM をつける)"
 
 #: ../AdvancedOptions.qml:141
 msgid "the minute without a leading zero (0 to 59)"
-msgstr ""
+msgstr "頭にゼロを付けない分数 (0〜59)"
 
 #: ../AdvancedOptions.qml:142
 msgid "the minute with a leading zero (00 to 59)"
-msgstr ""
+msgstr "頭にゼロをつける分数 (00〜59)"
 
 #: ../AdvancedOptions.qml:143
 msgid "the second without a leading zero (0 to 59)"
-msgstr ""
+msgstr "頭にゼロを付けない秒数 (0〜59)"
 
 #: ../AdvancedOptions.qml:144
 msgid "the second with a leading zero (00 to 59)"
-msgstr ""
+msgstr "頭にゼロをつける秒数 (00〜59)"
 
 #: ../AdvancedOptions.qml:145
 msgid "the milliseconds without leading zeroes (0 to 999)"
-msgstr ""
+msgstr "頭にゼロを付けないミリ秒 (0〜999)"
 
 #: ../AdvancedOptions.qml:146
 msgid "the milliseconds with leading zeroes (000 to 999)"
-msgstr ""
+msgstr "頭にゼロをつけるミリ秒 (000〜999)"
 
 #: ../AdvancedOptions.qml:147
 msgid "use AM/PM display. AP will be replaced by either 'AM' or 'PM'."
-msgstr ""
+msgstr "AM/PM 表示を使用します。AP は AM または PM と表示されます。"
 
 #: ../AdvancedOptions.qml:148
 msgid "use am/pm display. ap will be replaced by either 'am' or 'pm'."
-msgstr ""
+msgstr "am/pm 表示を使用します。ap は am または pm と表示されます。"
 
 #: ../AdvancedOptions.qml:149
 msgid "the timezone (for example 'CEST')"
-msgstr ""
+msgstr "タイムゾーン (例: CEST)"
 
 #: ../AdvancedOptions.qml:158
 msgid "Add to Format"
-msgstr ""
+msgstr "フォーマットに追加"
 
 #. TRANSLATORS: this refers to the color of date stamp added to captured images
 #: ../AdvancedOptions.qml:189
@@ -143,16 +143,16 @@ msgstr "カラー"
 #. TRANSLATORS: this refers to the alignment of date stamp within captured images (bottom left, top right,etc..)
 #: ../AdvancedOptions.qml:257
 msgid "Alignment"
-msgstr ""
+msgstr "配置"
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: ../AdvancedOptions.qml:303
 msgid "Opacity"
-msgstr ""
+msgstr "透明度"
 
 #: ../DeleteDialog.qml:24
 msgid "Delete media?"
-msgstr "データを削除しますか？"
+msgstr "メディアを削除しますか？"
 
 #: ../DeleteDialog.qml:34 ../PhotogridView.qml:56 ../SlideshowView.qml:75
 msgid "Delete"
@@ -170,7 +170,7 @@ msgstr "利用可能なメディアがありません。"
 
 #: ../GalleryView.qml:235
 msgid "Scanning for content..."
-msgstr ""
+msgstr "コンテンツをスキャン中..."
 
 #: ../GalleryViewHeader.qml:82 ../SlideshowView.qml:45
 msgid "Select"
@@ -178,7 +178,7 @@ msgstr "選択"
 
 #: ../GalleryViewHeader.qml:83
 msgid "Edit Photo"
-msgstr ""
+msgstr "写真を編集"
 
 #: ../GalleryViewHeader.qml:83
 msgid "Photo Roll"
@@ -202,31 +202,31 @@ msgstr "翻訳に貢献"
 
 #: ../MediaInfoPopover.qml:25
 msgid "Media Information"
-msgstr ""
+msgstr "メディア情報"
 
 #: ../MediaInfoPopover.qml:30
 #, qt-format
 msgid "Name : %1"
-msgstr ""
+msgstr "名前: ％1"
 
 #: ../MediaInfoPopover.qml:33
 #, qt-format
 msgid "Type : %1"
-msgstr ""
+msgstr "タイプ :%1"
 
 #: ../MediaInfoPopover.qml:37
 #, qt-format
 msgid "Width : %1"
-msgstr ""
+msgstr "幅: ％1"
 
 #: ../MediaInfoPopover.qml:41
 #, qt-format
 msgid "Height : %1"
-msgstr ""
+msgstr "高さ: %1"
 
 #: ../NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
-msgstr ""
+msgstr "デバイスに空き容量がありません。続行するには空き容量を確保してください。"
 
 #: ../PhotoRollHint.qml:69
 msgid "Swipe left for photo roll"
@@ -242,7 +242,7 @@ msgstr "ギャラリー"
 
 #: ../SlideshowView.qml:68
 msgid "Image Info"
-msgstr ""
+msgstr "画像情報"
 
 #: ../SlideshowView.qml:86
 msgid "Edit"
@@ -259,7 +259,7 @@ msgstr ""
 
 #: ../UnableShareDialog.qml:26
 msgid "Unable to share photos and videos at the same time"
-msgstr ""
+msgstr "画像と動画を同時に共有することはできません"
 
 #: ../UnableShareDialog.qml:30
 msgid "Ok"
@@ -294,69 +294,69 @@ msgstr "HDR"
 
 #: ../ViewFinderOverlay.qml:470
 msgid "5 seconds"
-msgstr ""
+msgstr "5秒"
 
 #: ../ViewFinderOverlay.qml:475
 msgid "15 seconds"
-msgstr ""
+msgstr "15秒"
 
 #: ../ViewFinderOverlay.qml:493
 msgid "Fine Quality"
-msgstr ""
+msgstr "最高画質"
 
 #: ../ViewFinderOverlay.qml:498
 msgid "High Quality"
-msgstr ""
+msgstr "高画質"
 
 #: ../ViewFinderOverlay.qml:503
 msgid "Normal Quality"
-msgstr ""
+msgstr "標準画質"
 
 #: ../ViewFinderOverlay.qml:508
 msgid "Basic Quality"
-msgstr ""
+msgstr "低画質"
 
 #. TRANSLATORS: this will be displayed on an small button so for it to fit it should be less then 3 characters long.
 #: ../ViewFinderOverlay.qml:541
 msgid "SD"
-msgstr ""
+msgstr "SD"
 
 #: ../ViewFinderOverlay.qml:549
 msgid "Save to SD Card"
-msgstr ""
+msgstr "SDカードに保存"
 
 #: ../ViewFinderOverlay.qml:554
 msgid "Save internally"
-msgstr ""
+msgstr "内蔵ストレージに保存"
 
 #: ../ViewFinderOverlay.qml:594
 msgid "Vibrate"
-msgstr ""
+msgstr "バイブレーション"
 
 #: ../ViewFinderOverlay.qml:1119
 msgid "Low storage space"
-msgstr ""
+msgstr "容量不足です"
 
 #: ../ViewFinderOverlay.qml:1120
 msgid ""
 "You are running out of storage space. To continue without interruptions, "
 "free up storage space now."
-msgstr ""
+msgstr "保存容量がありません。続行するには、保存容量を確保してください。"
 
 #: ../ViewFinderOverlay.qml:1133
 msgid "External storage not writeable"
-msgstr ""
+msgstr "外部ストレージに書き込めません"
 
 #: ../ViewFinderOverlay.qml:1134
 msgid ""
 "It does not seem possible to write to your external storage media. Trying to "
 "eject and insert it again might solve the issue, or you might need to format "
 "it."
-msgstr ""
+msgstr "外部ストレージメディアに書き込めませんでした。一度取り出して再度挿入してみてください。フォーマットが必要かもしれません。"
 
 #: ../ViewFinderOverlay.qml:1172
 msgid "Cannot access camera"
-msgstr ""
+msgstr "カメラにアクセスできません"
 
 #: ../ViewFinderOverlay.qml:1173
 msgid ""
@@ -365,24 +365,27 @@ msgid ""
 "\n"
 "If granting permission does not resolve this problem, reboot your device."
 msgstr ""
+"アプリがカメラにアクセスする権限がないか、他のエラーが起きています。\n"
+"\n"
+"権限を取得しても問題が解決しない場合は、デバイスを再起動してください。"
 
 #: ../ViewFinderOverlay.qml:1182
 msgid "Edit Permissions"
-msgstr ""
+msgstr "権限を編集"
 
 #: ../ViewFinderView.qml:485
 msgid "Capture failed"
-msgstr ""
+msgstr "撮影に失敗しました"
 
 #: ../ViewFinderView.qml:490
 msgid ""
 "Replacing your external media, formatting it, or restarting the device might "
 "fix the problem."
-msgstr ""
+msgstr "外部メディアを交換するか、フォーマットするか、端末を再起動すると問題が解消するかもしれません。"
 
 #: ../ViewFinderView.qml:491
 msgid "Restarting your device might fix the problem."
-msgstr ""
+msgstr "端末を再起動してみてください。"
 
 #: ../camera-app.qml:57
 msgid "Flash"
@@ -390,15 +393,15 @@ msgstr "フラッシュ"
 
 #: ../camera-app.qml:58
 msgid "Light;Dark"
-msgstr "Light;Dark;明るく;暗く"
+msgstr "明るく;暗く"
 
 #: ../camera-app.qml:61
 msgid "Flip Camera"
-msgstr "カメラを反転"
+msgstr "カメラを切り替え"
 
 #: ../camera-app.qml:62
 msgid "Front Facing;Back Facing"
-msgstr "Front Facing;Back Facing;前面カメラ;背面カメラ"
+msgstr "前面カメラ;背面カメラ"
 
 #: ../camera-app.qml:65
 msgid "Shutter"
@@ -406,7 +409,7 @@ msgstr "シャッター"
 
 #: ../camera-app.qml:66
 msgid "Take a Photo;Snap;Record"
-msgstr "Take a Photo;Snap;Record;写真;撮影;録画"
+msgstr "撮影;スナップ;録画"
 
 #: ../camera-app.qml:69
 msgid "Mode"
@@ -414,7 +417,7 @@ msgstr "モード"
 
 #: ../camera-app.qml:70
 msgid "Stills;Video"
-msgstr "Still;Video;写真;動画"
+msgstr "写真;動画"
 
 #: ../camera-app.qml:74
 msgid "White Balance"
@@ -422,12 +425,12 @@ msgstr "ホワイトバランス"
 
 #: ../camera-app.qml:75
 msgid "Lighting Condition;Day;Cloudy;Inside"
-msgstr "Lighting Condition;Day;Cloudy;Inside;照明状態;晴天;くもり;室内"
+msgstr "照明下;晴天;くもり;室内"
 
 #: ../camera-app.qml:380
 #, qt-format
 msgid "<b>%1</b> photos taken today"
-msgstr "本日は<b>%1</b>枚の写真を撮影しました"
+msgstr "今日は<b>%1</b>枚の写真を撮影しました"
 
 #: ../camera-app.qml:381
 msgid "No photos taken today"
@@ -452,6 +455,4 @@ msgstr "カメラアプリ"
 
 #: camera-app.desktop.in.in.h:3
 msgid "Photos;Videos;Capture;Shoot;Snapshot;Record"
-msgstr ""
-"Photos;Videos;Capture;Shoot;Snapshot;Record;写真;ビデオ;キャプチャ;撮影;ス"
-"ナップショット;録画"
+msgstr "写真;ビデオ;キャプチャ;撮影;スナップショット;録画"

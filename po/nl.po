@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2019-04-07 00:00+0000\n"
-"Last-Translator: Tom Dom <thomas@patoel.nl>\n"
+"PO-Revision-Date: 2020-11-07 13:28+0000\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <https://translate.ubports.com/projects/ubports/"
 "camera-app/nl/>\n"
 "Language: nl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: ../AdvancedOptions.qml:16
@@ -35,7 +35,7 @@ msgstr "Formatteren"
 
 #: ../AdvancedOptions.qml:122
 msgid "Date formatting keywords"
-msgstr "Datumopmaak - Sleutelwoorden"
+msgstr "Trefwoorden bij datumopmaak"
 
 #: ../AdvancedOptions.qml:127
 msgid "the day as number without a leading zero (1 to 31)"
@@ -163,7 +163,7 @@ msgstr "Media verwijderen?"
 
 #: ../DeleteDialog.qml:34 ../PhotogridView.qml:56 ../SlideshowView.qml:75
 msgid "Delete"
-msgstr "Verwijder"
+msgstr "Verwijderen"
 
 #: ../DeleteDialog.qml:40 ../ViewFinderOverlay.qml:1122
 #: ../ViewFinderOverlay.qml:1136 ../ViewFinderOverlay.qml:1175
@@ -181,7 +181,7 @@ msgstr "Bezig met doorzoeken op inhoud…"
 
 #: ../GalleryViewHeader.qml:82 ../SlideshowView.qml:45
 msgid "Select"
-msgstr "Selecteren"
+msgstr "Kiezen"
 
 #: ../GalleryViewHeader.qml:83
 msgid "Edit Photo"
@@ -197,7 +197,7 @@ msgstr "Over"
 
 #: ../Information.qml:82
 msgid "Get the source"
-msgstr "Broncode verkrijgen"
+msgstr "Broncode bekijken"
 
 #: ../Information.qml:83
 msgid "Report issues"
@@ -233,7 +233,7 @@ msgstr "Hoogte : %1"
 
 #: ../NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
-msgstr "Geen ruimte meer op apparaat; maak ruimte vrij om door te gaan."
+msgstr "Geen ruimte meer op apparaat. Maak ruimte vrij om door te gaan."
 
 #: ../PhotoRollHint.qml:69
 msgid "Swipe left for photo roll"
@@ -253,19 +253,19 @@ msgstr "Afbeeldingsinformatie"
 
 #: ../SlideshowView.qml:86
 msgid "Edit"
-msgstr "Bewerken"
+msgstr "Aanpassen"
 
 #: ../SlideshowView.qml:441
 msgid "Back to Photo roll"
-msgstr "Terug naar Fotorol"
+msgstr "Terug naar fotorol"
 
 #: ../UnableShareDialog.qml:25
 msgid "Unable to share"
-msgstr "Delen niet mogelijk"
+msgstr "Delen is niet mogelijk"
 
 #: ../UnableShareDialog.qml:26
 msgid "Unable to share photos and videos at the same time"
-msgstr "Het tegelijkertijd delen van foto's en video's is niet mogelijk"
+msgstr "Foto's en video's kunnen niet tegelijk worden gedeeld"
 
 #: ../UnableShareDialog.qml:30
 msgid "Ok"
@@ -308,7 +308,7 @@ msgstr "15 seconden"
 
 #: ../ViewFinderOverlay.qml:493
 msgid "Fine Quality"
-msgstr "Goede kwaliteit"
+msgstr "Beste kwaliteit"
 
 #: ../ViewFinderOverlay.qml:498
 msgid "High Quality"
@@ -329,7 +329,7 @@ msgstr "SD"
 
 #: ../ViewFinderOverlay.qml:549
 msgid "Save to SD Card"
-msgstr "Opslaan op SD-kaart"
+msgstr "Opslaan op sd-kaart"
 
 #: ../ViewFinderOverlay.qml:554
 msgid "Save internally"
@@ -361,13 +361,13 @@ msgid ""
 "eject and insert it again might solve the issue, or you might need to format "
 "it."
 msgstr ""
-"Het lijkt er op dat het niet mogelijk is je uw externe opslag te "
-"beschrijven. Dit kun je wellicht oplossen door de opslag te ontkoppelen en "
-"opnieuw aan te koppelen of door de opslag te formatteren."
+"Het lijkt er op dat het niet mogelijk is je externe opslag te beschrijven. "
+"Dit kun je wellicht oplossen door de opslag te ontkoppelen en opnieuw aan te "
+"koppelen of door de opslag te formatteren."
 
 #: ../ViewFinderOverlay.qml:1172
 msgid "Cannot access camera"
-msgstr "Kan geen toegang krijgen tot camera"
+msgstr "Geen toegang tot camera"
 
 #: ../ViewFinderOverlay.qml:1173
 msgid ""
@@ -376,7 +376,7 @@ msgid ""
 "\n"
 "If granting permission does not resolve this problem, reboot your device."
 msgstr ""
-"De Camera-app is niet gemachtigd om de camerahardware te mogen gebruiken of "
+"De camera-app is niet gemachtigd om de camerahardware te mogen gebruiken, of "
 "er is een andere fout opgetreden.\n"
 "\n"
 "Als het verlenen van de juiste machtiging dit probleem niet oplost, start "
@@ -396,7 +396,7 @@ msgid ""
 "fix the problem."
 msgstr ""
 "Dit kun je wellicht oplossen door je externe opslag te vervangen of "
-"formatteren of door apparaat opnieuw op te starten."
+"formatteren of door je apparaat opnieuw op te starten."
 
 #: ../ViewFinderView.qml:491
 msgid "Restarting your device might fix the problem."

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2018-11-18 18:13+0000\n"
+"PO-Revision-Date: 2019-07-07 09:48+0000\n"
 "Last-Translator: Aitzol Berasategi <aitzol@disroot.org>\n"
 "Language-Team: Basque <https://translate.ubports.com/projects/ubports/"
 "camera-app/eu/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 3.6.1\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: ../AdvancedOptions.qml:16
@@ -162,7 +162,7 @@ msgstr "Ezabatu"
 #: ../ViewFinderOverlay.qml:1136 ../ViewFinderOverlay.qml:1175
 #: ../ViewFinderView.qml:494
 msgid "Cancel"
-msgstr "Ezeztatu"
+msgstr "Utzi"
 
 #: ../GalleryView.qml:200
 msgid "No media available."
@@ -186,11 +186,11 @@ msgstr "Argazki-filma"
 
 #: ../Information.qml:20
 msgid "About"
-msgstr ""
+msgstr "Honi buruz"
 
 #: ../Information.qml:82
 msgid "Get the source"
-msgstr "Kode iturrira jo"
+msgstr "Iturburu kodea eskuratu"
 
 #: ../Information.qml:83
 msgid "Report issues"

@@ -22,6 +22,7 @@ import Ubuntu.Components 1.3
 //import UserMetrics 0.1
 //import Ubuntu.Content 1.3
 import CameraApp 0.1
+import Qt.labs.settings 1.0
 
 Window {
     id: main
@@ -33,6 +34,13 @@ Window {
     // special flag only supported by Unity8/MIR so far that hides the shell's
     // top panel in Staged mode
     flags: Qt.Window | 0x00800000
+
+      Settings {
+        id: appSettings
+
+        property bool blurEffects:true
+        property bool blurEffectsPreviewOnly: true
+      }
 
     property int preFullScreenVisibility
 
@@ -180,7 +188,6 @@ Window {
         interactive: !viewFinderView.touchAcquired && !galleryView.touchAcquired
                      && !viewFinderView.camera.photoCaptureInProgress
                      && !viewFinderView.camera.timedCaptureInProgress
-                     && !(viewFinderView.overlayPageVisible)
 
         Component.onCompleted: {
             // FIXME: workaround for qtubuntu not returning values depending on the grid unit definition

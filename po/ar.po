@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2018-12-23 00:00+0000\n"
-"Last-Translator: Hussain Hashem Aljafri <baddea14@gmail.com>\n"
+"PO-Revision-Date: 2020-12-08 00:42+0000\n"
+"Last-Translator: abidin <abidin24@tutanota.com>\n"
 "Language-Team: Arabic <https://translate.ubports.com/projects/ubports/"
 "camera-app/ar/>\n"
 "Language: ar\n"
@@ -18,61 +18,61 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: ../AdvancedOptions.qml:16
 msgid "Settings"
-msgstr ""
+msgstr "الإعدادات"
 
 #: ../AdvancedOptions.qml:48
 msgid "Add date stamp on captured images"
-msgstr "إضافة ختم التاريخ على الصور الملتقطة"
+msgstr "أضف ختم التاريخ على الصور الملتقطة"
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: ../AdvancedOptions.qml:70
 msgid "Format"
-msgstr ""
+msgstr "هيّء"
 
 #: ../AdvancedOptions.qml:122
 msgid "Date formatting keywords"
-msgstr ""
+msgstr "الكلمات المفتاحية لنسق التاريخ"
 
 #: ../AdvancedOptions.qml:127
 msgid "the day as number without a leading zero (1 to 31)"
-msgstr ""
+msgstr "الأيام كأرقام بدون الأصفار البادئة (من 1 حتى 31)"
 
 #: ../AdvancedOptions.qml:128
 msgid "the day as number with a leading zero (01 to 31)"
-msgstr ""
+msgstr "الأيام كأرقام بالأصفار البادئة (من 01 حتى 31)"
 
 #: ../AdvancedOptions.qml:129
 msgid "the abbreviated localized day name (e.g. 'Mon' to 'Sun')."
-msgstr ""
+msgstr "اختصارات أسماء الأيام (مثل 'سبت' حتى 'جمع')."
 
 #: ../AdvancedOptions.qml:130
 msgid "the long localized day name (e.g. 'Monday' to 'Sunday')."
-msgstr ""
+msgstr "أسماء الأيام الكاملة (مثل 'السبت' حتى 'الجمعة')."
 
 #: ../AdvancedOptions.qml:131
 msgid "the month as number without a leading zero (1 to 12)"
-msgstr ""
+msgstr "الأشهر كأرقام بدون الأصفار البادئة (من 1 حتى 12)"
 
 #: ../AdvancedOptions.qml:132
 msgid "the month as number with a leading zero (01 to 12)"
-msgstr ""
+msgstr "الأشهر كأرقام بالأصفار البادئة (من 01 حتى 12)"
 
 #: ../AdvancedOptions.qml:133
 msgid "the abbreviated localized month name (e.g. 'Jan' to 'Dec')."
-msgstr ""
+msgstr "اختصارات أسماء الأشهر (مثل 'جان' حتى 'ديس')."
 
 #: ../AdvancedOptions.qml:134
 msgid "the long localized month name (e.g. 'January' to 'December')."
-msgstr ""
+msgstr "أسماء الأشهر كاملة (مثل 'جانفي' حتى 'ديسمبر')."
 
 #: ../AdvancedOptions.qml:135
 msgid "the year as two digit number (00 to 99)"
-msgstr ""
+msgstr "السنة كرقمين (00 حتى 99)"
 
 #: ../AdvancedOptions.qml:136
 msgid ""
@@ -98,43 +98,43 @@ msgstr ""
 
 #: ../AdvancedOptions.qml:141
 msgid "the minute without a leading zero (0 to 59)"
-msgstr ""
+msgstr "الدقائق بدون الأصفار البادئة (من 0 حتى 59)"
 
 #: ../AdvancedOptions.qml:142
 msgid "the minute with a leading zero (00 to 59)"
-msgstr ""
+msgstr "الدقائق بالأصفار البادئة (من 00 حتى 59)"
 
 #: ../AdvancedOptions.qml:143
 msgid "the second without a leading zero (0 to 59)"
-msgstr ""
+msgstr "الثواني بدون الأصفار البادئة (من 0 حتى 59)"
 
 #: ../AdvancedOptions.qml:144
 msgid "the second with a leading zero (00 to 59)"
-msgstr ""
+msgstr "الثواني بالأصفار البادئة (من 00 حتى 59)"
 
 #: ../AdvancedOptions.qml:145
 msgid "the milliseconds without leading zeroes (0 to 999)"
-msgstr ""
+msgstr "الملي ثانية بدون الأصفار البادئة (0 حتى 999)"
 
 #: ../AdvancedOptions.qml:146
 msgid "the milliseconds with leading zeroes (000 to 999)"
-msgstr ""
+msgstr "الملي ثانية بالأصفار البادئة (000 حتى 999)"
 
 #: ../AdvancedOptions.qml:147
 msgid "use AM/PM display. AP will be replaced by either 'AM' or 'PM'."
-msgstr ""
+msgstr "استخدم نسق 12 ساعة. ستتم إضافة 'ص' أو 'م' حسب الوقت."
 
 #: ../AdvancedOptions.qml:148
 msgid "use am/pm display. ap will be replaced by either 'am' or 'pm'."
-msgstr ""
+msgstr "استخدم نسق 12 ساعة. ستتم إضافة 'ص' أو 'م' حسب الوقت."
 
 #: ../AdvancedOptions.qml:149
 msgid "the timezone (for example 'CEST')"
-msgstr ""
+msgstr "المنطقة الزمنية (مثل 'CEST')"
 
 #: ../AdvancedOptions.qml:158
 msgid "Add to Format"
-msgstr ""
+msgstr "أضف الى النسق"
 
 #. TRANSLATORS: this refers to the color of date stamp added to captured images
 #: ../AdvancedOptions.qml:189
@@ -144,30 +144,30 @@ msgstr "اللون"
 #. TRANSLATORS: this refers to the alignment of date stamp within captured images (bottom left, top right,etc..)
 #: ../AdvancedOptions.qml:257
 msgid "Alignment"
-msgstr ""
+msgstr "المحاذاة"
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: ../AdvancedOptions.qml:303
 msgid "Opacity"
-msgstr ""
+msgstr "العتمة"
 
 #: ../DeleteDialog.qml:24
 msgid "Delete media?"
-msgstr "حذف الملف؟"
+msgstr "أتريد حذف الملف؟"
 
 #: ../DeleteDialog.qml:34 ../PhotogridView.qml:56 ../SlideshowView.qml:75
 msgid "Delete"
-msgstr "حذف"
+msgstr "احذف"
 
 #: ../DeleteDialog.qml:40 ../ViewFinderOverlay.qml:1122
 #: ../ViewFinderOverlay.qml:1136 ../ViewFinderOverlay.qml:1175
 #: ../ViewFinderView.qml:494
 msgid "Cancel"
-msgstr "إلغاء;الإلغاء"
+msgstr "ألغ"
 
 #: ../GalleryView.qml:200
 msgid "No media available."
-msgstr "لا توجد وسائط متاحة."
+msgstr "لا تتوفر وسائط."
 
 #: ../GalleryView.qml:235
 msgid "Scanning for content..."
@@ -175,11 +175,11 @@ msgstr "يبحث عن محتوى..."
 
 #: ../GalleryViewHeader.qml:82 ../SlideshowView.qml:45
 msgid "Select"
-msgstr "تحديد"
+msgstr "حدد"
 
 #: ../GalleryViewHeader.qml:83
 msgid "Edit Photo"
-msgstr "تحرير الصورة"
+msgstr "حرر صورة"
 
 #: ../GalleryViewHeader.qml:83
 msgid "Photo Roll"
@@ -187,48 +187,47 @@ msgstr "لف الصورة"
 
 #: ../Information.qml:20
 msgid "About"
-msgstr ""
+msgstr "حول"
 
 #: ../Information.qml:82
 msgid "Get the source"
-msgstr "الحصول على المصدر"
+msgstr "احصل على المصدر"
 
 #: ../Information.qml:83
 msgid "Report issues"
-msgstr "الإبلاغ عن المشكلات"
+msgstr "أبلغ عن علل"
 
 #: ../Information.qml:84
 msgid "Help translate"
-msgstr "مساعدة الترجمة"
+msgstr "ساعد في الترجمة"
 
 #: ../MediaInfoPopover.qml:25
-#, fuzzy
 msgid "Media Information"
-msgstr "معلومات التطبيق"
+msgstr "معلومات الوسائط"
 
 #: ../MediaInfoPopover.qml:30
 #, qt-format
 msgid "Name : %1"
-msgstr ""
+msgstr "الاسم: %1"
 
 #: ../MediaInfoPopover.qml:33
 #, qt-format
 msgid "Type : %1"
-msgstr ""
+msgstr "النوع: %1"
 
 #: ../MediaInfoPopover.qml:37
 #, qt-format
 msgid "Width : %1"
-msgstr ""
+msgstr "العرض: %1"
 
 #: ../MediaInfoPopover.qml:41
 #, qt-format
 msgid "Height : %1"
-msgstr ""
+msgstr "الارتفاع: %1"
 
 #: ../NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
-msgstr "لا توجد مساحة كافية في الجهاز، برجاء توفير بعض المساحة للمتابعة."
+msgstr "لا توجد مساحة كافية في الجهاز، رجاء حرر مساحة للمتابعة."
 
 #: ../PhotoRollHint.qml:69
 msgid "Swipe left for photo roll"
@@ -236,7 +235,7 @@ msgstr "اسحب لليسار للف الصورة"
 
 #: ../PhotogridView.qml:42 ../SlideshowView.qml:60
 msgid "Share"
-msgstr "مشاركة"
+msgstr "شارك"
 
 #: ../PhotogridView.qml:69 ../SlideshowView.qml:53
 msgid "Gallery"
@@ -244,11 +243,11 @@ msgstr "المعرض"
 
 #: ../SlideshowView.qml:68
 msgid "Image Info"
-msgstr ""
+msgstr "معلومات الصورة"
 
 #: ../SlideshowView.qml:86
 msgid "Edit"
-msgstr "تحرير"
+msgstr "حرر"
 
 #: ../SlideshowView.qml:441
 #, fuzzy
@@ -257,11 +256,11 @@ msgstr "لف الصورة"
 
 #: ../UnableShareDialog.qml:25
 msgid "Unable to share"
-msgstr "تعذر المشاركة"
+msgstr "تعذرت المشاركة"
 
 #: ../UnableShareDialog.qml:26
 msgid "Unable to share photos and videos at the same time"
-msgstr "يتعذر مشاركة الصور ومقاطع الفيديو في الوقت نفسه"
+msgstr "تتعذر مشاركة الصور ومقاطع الفيديو في نفس الوقت"
 
 #: ../UnableShareDialog.qml:30
 msgid "Ok"
@@ -274,7 +273,7 @@ msgstr "موافق"
 #: ../tests/unittests/tst_BottomEdgeIndicators.qml:65
 #: ../tests/unittests/tst_BottomEdgeIndicators.qml:86
 msgid "On"
-msgstr "يعمل"
+msgstr "مفتوح"
 
 #: ../ViewFinderOverlay.qml:372 ../ViewFinderOverlay.qml:400
 #: ../ViewFinderOverlay.qml:423 ../ViewFinderOverlay.qml:446
@@ -284,7 +283,7 @@ msgstr "يعمل"
 #: ../tests/unittests/tst_BottomEdgeIndicators.qml:70
 #: ../tests/unittests/tst_BottomEdgeIndicators.qml:91
 msgid "Off"
-msgstr "متوقف"
+msgstr "مغلق"
 
 #: ../ViewFinderOverlay.qml:395
 msgid "Auto"
@@ -296,18 +295,17 @@ msgstr "HDR"
 
 #: ../ViewFinderOverlay.qml:470
 msgid "5 seconds"
-msgstr "٥ ثواني"
+msgstr "5 ثوان"
 
 #: ../ViewFinderOverlay.qml:475
 msgid "15 seconds"
-msgstr "١٥ ثانية"
+msgstr "15 ثانية"
 
 #: ../ViewFinderOverlay.qml:493
 msgid "Fine Quality"
-msgstr "جودة عالية"
+msgstr "جودة جيدة"
 
 #: ../ViewFinderOverlay.qml:498
-#, fuzzy
 msgid "High Quality"
 msgstr "جودة عالية"
 
@@ -322,19 +320,19 @@ msgstr "جودة أساسية"
 #. TRANSLATORS: this will be displayed on an small button so for it to fit it should be less then 3 characters long.
 #: ../ViewFinderOverlay.qml:541
 msgid "SD"
-msgstr "SD"
+msgstr "بطاقة الذاكرة"
 
 #: ../ViewFinderOverlay.qml:549
 msgid "Save to SD Card"
-msgstr "حفظ إلى بطاقة SD"
+msgstr "حفظ إلى بطاقة الذاكرة"
 
 #: ../ViewFinderOverlay.qml:554
 msgid "Save internally"
-msgstr "حفظ داخليا"
+msgstr "احفظ داخليا"
 
 #: ../ViewFinderOverlay.qml:594
 msgid "Vibrate"
-msgstr ""
+msgstr "اهتز"
 
 #: ../ViewFinderOverlay.qml:1119
 msgid "Low storage space"
@@ -345,8 +343,7 @@ msgid ""
 "You are running out of storage space. To continue without interruptions, "
 "free up storage space now."
 msgstr ""
-"مساحة التخزين على وشك النفاذ. للمتابعة دون انقطاع، برجاء توفير بعض المساحة "
-"الآن."
+"مساحة التخزين على وشك النفاذ. للمتابعة دون انقطاع، رجاء حرر بعض المساحة الآن."
 
 #: ../ViewFinderOverlay.qml:1133
 msgid "External storage not writeable"
@@ -358,45 +355,42 @@ msgid ""
 "eject and insert it again might solve the issue, or you might need to format "
 "it."
 msgstr ""
-"لا يبدو من الممكن الكتابة إلى وسائط التخزين الخارجية. قد يؤدي محاولة إخراجه "
-"وإضافته مرة أخرى إلى حل المشكلة، أو قد تحتاج إلى تنسيقه."
+"يبدو انه لا يمكن الكتابة إلى وسائط التخزين الخارجية. قد يحل إخراجها وإعادة "
+"إدخالها المشكلة، أو قد تحتاج إلى تهيئته."
 
 #: ../ViewFinderOverlay.qml:1172
 msgid "Cannot access camera"
 msgstr "لا يمكن الوصول للكاميرا"
 
 #: ../ViewFinderOverlay.qml:1173
-#, fuzzy
 msgid ""
 "Camera app doesn't have permission to access the camera hardware or another "
 "error occurred.\n"
 "\n"
 "If granting permission does not resolve this problem, reboot your device."
 msgstr ""
-"تطبيق الكاميرا ليس لديه الإذن للوصول إلى جهاز الكاميرا بالهاتف أو أنه حدث "
-"خطأ آخر.\n"
+"تطبيق الكاميرا ليس لديه الإذن للنفاذ إلى جهاز الكاميرا أو أن خطأ آخر حدث.\n"
 "\n"
-"إذا تم منح الصلاحيات للتطبيق واستمرت المشكلة، برجاء إعادة تشغل الهاتف."
+"إذا لم يحل منح الأذون للتطبيق المشكلة، رجاء أعد تشغل الهاتف."
 
 #: ../ViewFinderOverlay.qml:1182
 msgid "Edit Permissions"
-msgstr "تعديل الأذونات"
+msgstr "حرر الأذون"
 
 #: ../ViewFinderView.qml:485
 msgid "Capture failed"
-msgstr "أخفق الالتقاط"
+msgstr "فشل الالتقاط"
 
 #: ../ViewFinderView.qml:490
 msgid ""
 "Replacing your external media, formatting it, or restarting the device might "
 "fix the problem."
 msgstr ""
-"قد يؤدي استبدال الوسائط الخارجية أو تنسيقها أو إعادة تشغيل الجهاز إلى حل "
-"المشكلة."
+"قد يحل استبدال الوسائط الخارجية أو تهيئتها أو إعادة تشغيل الجهاز المشكلة."
 
 #: ../ViewFinderView.qml:491
 msgid "Restarting your device might fix the problem."
-msgstr "قد تؤدي إعادة تشغيل الجهاز إلى حل المشكلة."
+msgstr "قد يحل إعادة تشغيل الجهاز المشكلة."
 
 #: ../camera-app.qml:57
 msgid "Flash"
@@ -408,13 +402,14 @@ msgstr "الإضاءة;الظلمة"
 
 #: ../camera-app.qml:61
 msgid "Flip Camera"
-msgstr "قلب الكاميرا"
+msgstr "اقلب الكاميرا"
 
 #: ../camera-app.qml:62
 msgid "Front Facing;Back Facing"
 msgstr "المواجهة الأمامية;المواجهة الخلفية"
 
 #: ../camera-app.qml:65
+#, fuzzy
 msgid "Shutter"
 msgstr "إلتقاط"
 
@@ -441,20 +436,20 @@ msgstr "حالة الإضاءة;نهار;قاتم;في الداخل"
 #: ../camera-app.qml:380
 #, qt-format
 msgid "<b>%1</b> photos taken today"
-msgstr "<b>%1</b> صور(ة) التُقطت اليوم"
+msgstr "صور <b>%1</b> الملتقطة اليوم"
 
 #: ../camera-app.qml:381
 msgid "No photos taken today"
-msgstr "لا صور تم إلتقاطها اليوم"
+msgstr "لم تلتقط صور اليوم"
 
 #: ../camera-app.qml:391
 #, qt-format
 msgid "<b>%1</b> videos recorded today"
-msgstr "<b>%1</b> فيديو(هات) تم تسجيلها اليوم"
+msgstr "فيديوهات <b>%1</b> المسجلة اليوم"
 
 #: ../camera-app.qml:392
 msgid "No videos recorded today"
-msgstr "لا فيديوهات تم تسجيلها اليوم"
+msgstr "لم تسجل فيديوهات اليوم"
 
 #: camera-app.desktop.in.in.h:1
 msgid "Camera"

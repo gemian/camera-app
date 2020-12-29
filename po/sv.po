@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2018-12-26 10:49+0000\n"
-"Last-Translator: Rondy Andersson <rondarius@gmail.com>\n"
+"PO-Revision-Date: 2020-08-26 00:00+0000\n"
+"Last-Translator: Arvid Brodin <arvidb@fripost.org>\n"
 "Language-Team: Swedish <https://translate.ubports.com/projects/ubports/"
 "camera-app/sv/>\n"
 "Language: sv\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: ../AdvancedOptions.qml:16
@@ -35,105 +35,110 @@ msgstr "Format"
 
 #: ../AdvancedOptions.qml:122
 msgid "Date formatting keywords"
-msgstr ""
+msgstr "Nyckelord för datum format"
 
 #: ../AdvancedOptions.qml:127
 msgid "the day as number without a leading zero (1 to 31)"
-msgstr ""
+msgstr "Ange dagen som ett nummer utan en nolla i början (1 till 31)"
 
 #: ../AdvancedOptions.qml:128
 msgid "the day as number with a leading zero (01 to 31)"
-msgstr ""
+msgstr "ange dagen som ett nummer med en nolla i början (01 till 31)"
 
 #: ../AdvancedOptions.qml:129
 msgid "the abbreviated localized day name (e.g. 'Mon' to 'Sun')."
-msgstr ""
+msgstr "Begränsat lokaliserat namn på dagen (t. ex. 'Mån' till 'Sön')."
 
 #: ../AdvancedOptions.qml:130
 msgid "the long localized day name (e.g. 'Monday' to 'Sunday')."
-msgstr ""
+msgstr "långt lokaliserat namn på dagens namn (t. ex. 'Måndag' till 'Söndag')."
 
 #: ../AdvancedOptions.qml:131
 msgid "the month as number without a leading zero (1 to 12)"
-msgstr ""
+msgstr "månaden som nummer utan en nolla i början (1 till 12)"
 
 #: ../AdvancedOptions.qml:132
 msgid "the month as number with a leading zero (01 to 12)"
-msgstr ""
+msgstr "månaden som ett nummer med en nolla i början (01 till 12)"
 
 #: ../AdvancedOptions.qml:133
 msgid "the abbreviated localized month name (e.g. 'Jan' to 'Dec')."
-msgstr ""
+msgstr "begränsat lokaliserat namn på månadens namn (t. ex. 'Jan' till 'Dec')."
 
 #: ../AdvancedOptions.qml:134
 msgid "the long localized month name (e.g. 'January' to 'December')."
 msgstr ""
+"långt lokaliserat namn på månadens namn(t. ex. 'Januari' till 'December')."
 
 #: ../AdvancedOptions.qml:135
 msgid "the year as two digit number (00 to 99)"
-msgstr ""
+msgstr "året som ett tvåsiffrigt nummer (00 till 99)"
 
 #: ../AdvancedOptions.qml:136
 msgid ""
 "the year as four digit number. If the year is negative, a minus sign is "
 "prepended in addition."
 msgstr ""
+"året som ett fyrsiffrigt nummer. Om året är negativt, så ska det föregås med "
+"ett minus tecken."
 
 #: ../AdvancedOptions.qml:137
 msgid "the hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)"
 msgstr ""
+"timmarna utan en nolla i början (0 till 23 eller 1 till 12 om AM/PM visas)"
 
 #: ../AdvancedOptions.qml:138
 msgid "the hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)"
 msgstr ""
+"timmarna med en nolla i början (00 till 23 eller 01 till 12 om AM/PM visas)"
 
 #: ../AdvancedOptions.qml:139
 msgid "the hour without a leading zero (0 to 23, even with AM/PM display)"
-msgstr ""
+msgstr "timmarna utan en nolla i början (0 till 23, även om AM/PM visas)"
 
 #: ../AdvancedOptions.qml:140
 msgid "the hour with a leading zero (00 to 23, even with AM/PM display)"
-msgstr ""
+msgstr "timmarna med en nolla i början (00 till 23, även om AM/PM visas)"
 
 #: ../AdvancedOptions.qml:141
 msgid "the minute without a leading zero (0 to 59)"
-msgstr ""
+msgstr "minuterna utan en nolla i början (0 till 59)"
 
 #: ../AdvancedOptions.qml:142
 msgid "the minute with a leading zero (00 to 59)"
-msgstr ""
+msgstr "minuterna med en nolla i början (00 till 59)"
 
 #: ../AdvancedOptions.qml:143
 msgid "the second without a leading zero (0 to 59)"
-msgstr ""
+msgstr "sekunderna utan en nolla i början (0 till 59)"
 
 #: ../AdvancedOptions.qml:144
 msgid "the second with a leading zero (00 to 59)"
-msgstr ""
+msgstr "sekunderna med en en nolla i början (0 till 59)"
 
 #: ../AdvancedOptions.qml:145
 msgid "the milliseconds without leading zeroes (0 to 999)"
-msgstr ""
+msgstr "millisekunderna utan nollor i början (0 till 999)"
 
 #: ../AdvancedOptions.qml:146
 msgid "the milliseconds with leading zeroes (000 to 999)"
-msgstr ""
+msgstr "millisekunderna med nollor i början (000 till 999)"
 
 #: ../AdvancedOptions.qml:147
 msgid "use AM/PM display. AP will be replaced by either 'AM' or 'PM'."
-msgstr ""
+msgstr "visa AM/PM. AP ersätts med antingen 'AM' eller 'PM'."
 
 #: ../AdvancedOptions.qml:148
 msgid "use am/pm display. ap will be replaced by either 'am' or 'pm'."
-msgstr ""
+msgstr "visa am/pm. ap ersätts med antingen 'am' eller 'pm'."
 
 #: ../AdvancedOptions.qml:149
 msgid "the timezone (for example 'CEST')"
-msgstr ""
+msgstr "tidszonen (till exempel 'CEST')"
 
 #: ../AdvancedOptions.qml:158
 msgid "Add to Format"
-msgstr ""
+msgstr "Lägg till i Format"
 
 #. TRANSLATORS: this refers to the color of date stamp added to captured images
 #: ../AdvancedOptions.qml:189
@@ -143,12 +148,12 @@ msgstr "Färg"
 #. TRANSLATORS: this refers to the alignment of date stamp within captured images (bottom left, top right,etc..)
 #: ../AdvancedOptions.qml:257
 msgid "Alignment"
-msgstr ""
+msgstr "Placering"
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: ../AdvancedOptions.qml:303
 msgid "Opacity"
-msgstr ""
+msgstr "Opacitet"
 
 #: ../DeleteDialog.qml:24
 msgid "Delete media?"
@@ -156,7 +161,7 @@ msgstr "Ta bort media?"
 
 #: ../DeleteDialog.qml:34 ../PhotogridView.qml:56 ../SlideshowView.qml:75
 msgid "Delete"
-msgstr "Ta bort"
+msgstr "Radera"
 
 #: ../DeleteDialog.qml:40 ../ViewFinderOverlay.qml:1122
 #: ../ViewFinderOverlay.qml:1136 ../ViewFinderOverlay.qml:1175
@@ -186,7 +191,7 @@ msgstr "Fotovisare"
 
 #: ../Information.qml:20
 msgid "About"
-msgstr ""
+msgstr "Om"
 
 #: ../Information.qml:82
 msgid "Get the source"
@@ -194,11 +199,11 @@ msgstr ""
 
 #: ../Information.qml:83
 msgid "Report issues"
-msgstr ""
+msgstr "Rapportera problem"
 
 #: ../Information.qml:84
 msgid "Help translate"
-msgstr ""
+msgstr "Hjälp till med översättning"
 
 #: ../MediaInfoPopover.qml:25
 msgid "Media Information"

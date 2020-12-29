@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2018-11-18 18:13+0000\n"
+"PO-Revision-Date: 2020-08-30 00:27+0000\n"
 "Last-Translator: Samson <sambelet@yahoo.com>\n"
 "Language-Team: Amharic <https://translate.ubports.com/projects/ubports/"
 "camera-app/am/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: ../AdvancedOptions.qml:16
@@ -77,23 +77,23 @@ msgstr "አመት እንደ ሁለት አሀዝ ቁጥር (00 እስከ 99)"
 msgid ""
 "the year as four digit number. If the year is negative, a minus sign is "
 "prepended in addition."
-msgstr ""
+msgstr "አመት እንደ አራት አሀዝ ቁጥር: አመት አሉታዊ ከሆነ: የ መቀነስ ምልክት ይጨመርበታል:"
 
 #: ../AdvancedOptions.qml:137
 msgid "the hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)"
-msgstr ""
+msgstr "ሰአት ያለ ቀዳሚ ዜሮ ከ (0 እስከ 23 ወይንም ከ 1 እስከ 12 ጠዋት/ከሰአት በሚታይ ጊዜ)"
 
 #: ../AdvancedOptions.qml:138
 msgid "the hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)"
-msgstr ""
+msgstr "ሰአት ከ ቀዳሚ ዜሮ ጋር ከ (00 እስከ 23 ወይንም ከ 01 እስከ 12 ጠዋት/ከሰአት በሚታይ ጊዜ)"
 
 #: ../AdvancedOptions.qml:139
 msgid "the hour without a leading zero (0 to 23, even with AM/PM display)"
-msgstr ""
+msgstr "ሰአት ያለ ቀዳሚ ዜሮ ከ (0 እስከ 23 ወይንም ከ 0 እስከ 12 ጠዋት/ከሰአት በሚታይ ጊዜ)"
 
 #: ../AdvancedOptions.qml:140
 msgid "the hour with a leading zero (00 to 23, even with AM/PM display)"
-msgstr ""
+msgstr "ሰአት ከ ቀዳሚ ዜሮ ጋር ከ (00 እስከ 23: ጠዋት/ከሰአት በሚታይ ጊዜ)"
 
 #: ../AdvancedOptions.qml:141
 msgid "the minute without a leading zero (0 to 59)"
@@ -121,11 +121,11 @@ msgstr "ሚሊ ሰከንድ ከ ቀዳሚ ዜሮ ጋር ከ (0 እስከ 999)"
 
 #: ../AdvancedOptions.qml:147
 msgid "use AM/PM display. AP will be replaced by either 'AM' or 'PM'."
-msgstr ""
+msgstr "ይጠቀሙ ጠዋት/ከሰአት ማሳያ: AP ይቀየራል በ አንዱ 'ጠዋት' ወይንም 'ከሰአት'."
 
 #: ../AdvancedOptions.qml:148
 msgid "use am/pm display. ap will be replaced by either 'am' or 'pm'."
-msgstr ""
+msgstr "ይጠቀሙ ጠዋት/ከሰአት ማሳያ: AP ይቀየራል በ አንዱ 'ጠዋት' ወይንም 'ከሰአት'."
 
 #: ../AdvancedOptions.qml:149
 msgid "the timezone (for example 'CEST')"
@@ -148,7 +148,7 @@ msgstr "ማሰለፊያ"
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: ../AdvancedOptions.qml:303
 msgid "Opacity"
-msgstr ""
+msgstr "በ ውስጡ የማያሳልፍ"
 
 #: ../DeleteDialog.qml:24
 msgid "Delete media?"
@@ -166,7 +166,7 @@ msgstr "መሰረዣ"
 
 #: ../GalleryView.qml:200
 msgid "No media available."
-msgstr "ምንም መገናኛ አልተገኘም:"
+msgstr "ምንም መገናኛ አልተገኘም"
 
 #: ../GalleryView.qml:235
 msgid "Scanning for content..."
@@ -194,7 +194,7 @@ msgstr "ምንጩን ያግኙ"
 
 #: ../Information.qml:83
 msgid "Report issues"
-msgstr "ችግሩን ያመልክቱ"
+msgstr "ችግሩን ያሳውቁን"
 
 #: ../Information.qml:84
 msgid "Help translate"
@@ -330,7 +330,7 @@ msgstr "በ አካሉ ውስጥ ማስቀመጫ"
 
 #: ../ViewFinderOverlay.qml:594
 msgid "Vibrate"
-msgstr ""
+msgstr "ማንቀጥቀጫ"
 
 #: ../ViewFinderOverlay.qml:1119
 msgid "Low storage space"

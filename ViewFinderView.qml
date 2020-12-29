@@ -20,18 +20,20 @@ import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 import QtMultimedia 5.0
 import CameraApp 0.1
-import QtGraphicalEffects 1.0
+//import QtGraphicalEffects 1.0
 //import Ubuntu.Content 1.3
+
+import "qml/Viewfinder"
 
 FocusScope {
     id: viewFinderView
 
     property bool overlayVisible: true
-    property bool overlayPageVisible: false
     property bool optionValueSelectorVisible: false
     property bool touchAcquired: viewFinderOverlay.touchAcquired || camera.videoRecorder.recorderState == CameraRecorder.RecordingState
     property bool inView
     property alias captureMode: camera.captureMode
+    property alias finderOverlay: viewFinderOverlay
     property real aspectRatio: viewFinder.sourceRect.height != 0 ? viewFinder.sourceRect.width / viewFinder.sourceRect.height : 1.0
     signal photoTaken(string filePath)
     signal videoShot(string filePath)
@@ -155,7 +157,7 @@ FocusScope {
     Item {
         id: viewFinderSwitcher
         anchors.fill: parent
-        visible: !viewFinderSwitcherBlurred.visible
+        visible: true //!viewFinderSwitcherBlurred.visible
 
         ShaderEffectSource {
             id: viewFinderGrab
@@ -257,6 +259,15 @@ FocusScope {
                     return (camera.orientation + 270) % 360;
                 }
 
+//Upstream has this:
+//                // Camera-app uses X-Ubuntu-Rotates-Window-Contents, which means we're always in
+//                // native orientation. Thus, Screen.orientation isn't used here.
+//                if (camera.position === Camera.FrontFace) {
+//                    // Front facing cameras are flipped horizontally, compensate the mirror
+//                    return (360 - camera.orientation) % 360;
+//                } else {
+//                    return camera.orientation;
+//                }
             }
 
             transform: Rotation {
@@ -284,44 +295,13 @@ FocusScope {
             viewFinderOrientation: viewFinder.orientation
         }
 
-        Item {
-            id: gridlines
-            objectName: "gridlines"
+        Loader {
             anchors.horizontalCenter: parent.horizontalCenter
             width: viewFinderGeometry.width
             height: viewFinderGeometry.height
             visible: viewFinderOverlay.settings != undefined && viewFinderOverlay.settings.gridEnabled
-
-            property color color: Qt.rgba(0.8, 0.8, 0.8, 0.8)
-            property real thickness: units.dp(1)
-
-            Rectangle {
-                y: parent.height / 3
-                width: parent.width
-                height: gridlines.thickness
-                color: gridlines.color
-            }
-
-            Rectangle {
-                y: 2 * parent.height / 3
-                width: parent.width
-                height: gridlines.thickness
-                color: gridlines.color
-            }
-
-            Rectangle {
-                x: parent.width / 3
-                width: gridlines.thickness
-                height: parent.height
-                color: gridlines.color
-            }
-
-            Rectangle {
-                x: 2 * parent.width / 3
-                width: gridlines.thickness
-                height: parent.height
-                color: gridlines.color
-            }
+            source: "qml/Viewfinder/GridLines.qml"
+            asynchronous: true
         }
 
         Connections {
@@ -329,88 +309,17 @@ FocusScope {
             onInViewChanged: if (!viewFinderView.inView) viewFinderOverlay.controls.cancelTimedShoot()
         }
 
-        OrientationHelper {
+        TimedShootFeedback {
             id: timedShootFeedback
             anchors.fill: parent
-
-            function start() {
-            }
-
-            function stop() {
-                remainingSecsLabel.text = "";
-            }
-
-            function showRemainingSecs(secs) {
-                remainingSecsLabel.text = secs;
-                remainingSecsLabel.opacity = 1.0;
-                remainingSecsLabelAnimation.restart();
-            }
-
-            Label {
-                id: remainingSecsLabel
-                anchors.fill: parent
-                font.pixelSize: units.gu(6)
-                font.bold: true
-                color: "white"
-                style: Text.Outline;
-                styleColor: "black"
-                verticalAlignment: Text.AlignVCenter
-                horizontalAlignment: Text.AlignHCenter
-                visible: opacity != 0.0
-                opacity: 0.0
-
-                OpacityAnimator {
-                    id: remainingSecsLabelAnimation
-                    target: remainingSecsLabel
-                    from: 1.0
-                    to: 0.0
-                    duration: 750
-                    easing: UbuntuAnimation.StandardEasing
-                }
-            }
-
-            // tapping anywhere on the screen while a timed shoot is ongoing cancels it
-            MouseArea {
-                anchors.fill: parent
-                onClicked: viewFinderOverlay.controls.cancelTimedShoot()
-                enabled: remainingSecsLabel.visible
-            }
         }
 
-        Rectangle {
+        ShootFeedback {
             id: shootFeedback
             anchors.fill: parent
-            color: "black"
-            visible: opacity != 0.0
-            opacity: 0.0
-
-            function start() {
-                shootFeedback.opacity = 1.0;
-                shootFeedbackAnimation.restart();
-            }
-
-            OpacityAnimator {
-                id: shootFeedbackAnimation
-                target: shootFeedback
-                from: 1.0
-                to: 0.0
-                duration: UbuntuAnimation.SnapDuration
-                easing: UbuntuAnimation.StandardEasing
-            }
         }
     }
 
-    FastBlur {
-        id: viewFinderSwitcherBlurred
-        anchors.fill: viewFinderSwitcher
-        property real finalRadius: 64
-        property real finalOpacity: 0.7
-        radius: photoRollHint.visible ? finalRadius : viewFinderOverlay.revealProgress * finalRadius
-        opacity: photoRollHint.visible ? finalOpacity : (1.0 - viewFinderOverlay.revealProgress) * finalOpacity + finalOpacity
-        source: viewFinderSwitcher !== null ? viewFinderSwitcher : null
-        visible: radius !== 0
-        Behavior on radius { UbuntuNumberAnimation { duration: UbuntuAnimation.SnapDuration} }
-    }
 
     PhotoRollHint {
         id: photoRollHint
@@ -424,10 +333,12 @@ FocusScope {
         }
     }
 
+
     ViewFinderOverlayLoader {
         id: viewFinderOverlay
 
         anchors.fill: parent
+        asynchronous: true
         camera: camera
         opacity: status == Loader.Ready && overlayVisible && !photoRollHint.enabled ? 1.0 : 0.0
         readyForCapture: main.contentExportMode &&
@@ -444,28 +355,37 @@ FocusScope {
             anchors.fill: parent
             enabled: photoRollHint.visible
         }
-        onLoaded: {
-            viewFinderView.overlayPageVisible = Qt.binding(function() { return item.overlayPageVisible;})
-        }
     }
 
-    ViewFinderExportConfirmation {
-        id: viewFinderExportConfirmation
+    Loader {
+        id: viewFinderExportConfirmationLoader
+        asynchronous: true
         anchors.fill: parent
+        sourceComponent: viewFinderExportConfirmationComp
+    }
 
-        isVideo: main.transfer && main.transfer.contentType == ContentType.Videos
-        viewFinderGeometry: viewFinderGeometry
+    property alias viewFinderExportConfirmation: viewFinderExportConfirmationLoader.item
 
-        onShowRequested: {
-            viewFinder.visible = false;
-            viewFinderOverlay.visible = false;
-            visible = true;
-        }
+    Component {
+        id: viewFinderExportConfirmationComp
+        ViewFinderExportConfirmation {
+            id: viewFinderExportConfirmation
+            anchors.fill: parent
 
-        onHideRequested: {
-            viewFinder.visible = true;
-            viewFinderOverlay.visible = true;
-            visible = false;
+            isVideo: main.transfer && main.transfer.contentType == ContentType.Videos
+            geometry: viewFinderGeometry
+
+            onShowRequested: {
+                viewFinder.visible = false;
+                viewFinderOverlay.visible = false;
+                visible = true;
+            }
+
+            onHideRequested: {
+                viewFinder.visible = true;
+                viewFinderOverlay.visible = true;
+                visible = false;
+            }
         }
     }
 

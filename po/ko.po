@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2018-10-14 18:56+0000\n"
-"Last-Translator: SongInseo <andra123438@gmail.com>\n"
+"PO-Revision-Date: 2020-07-31 03:56+0000\n"
+"Last-Translator: Young Kim <rsyh93@gmail.com>\n"
 "Language-Team: Korean <https://translate.ubports.com/projects/ubports/"
 "camera-app/ko/>\n"
 "Language: ko\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.0\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2016-12-01 04:53+0000\n"
 
 #: ../AdvancedOptions.qml:16
@@ -156,7 +156,7 @@ msgstr "미디어를 삭제할까요?"
 
 #: ../DeleteDialog.qml:34 ../PhotogridView.qml:56 ../SlideshowView.qml:75
 msgid "Delete"
-msgstr "지우기"
+msgstr "삭제"
 
 #: ../DeleteDialog.qml:40 ../ViewFinderOverlay.qml:1122
 #: ../ViewFinderOverlay.qml:1136 ../ViewFinderOverlay.qml:1175
@@ -174,11 +174,11 @@ msgstr ""
 
 #: ../GalleryViewHeader.qml:82 ../SlideshowView.qml:45
 msgid "Select"
-msgstr ""
+msgstr "선택"
 
 #: ../GalleryViewHeader.qml:83
 msgid "Edit Photo"
-msgstr ""
+msgstr "사진 편집"
 
 #: ../GalleryViewHeader.qml:83
 msgid "Photo Roll"
@@ -186,7 +186,7 @@ msgstr "사진 롤"
 
 #: ../Information.qml:20
 msgid "About"
-msgstr ""
+msgstr "정보"
 
 #: ../Information.qml:82
 msgid "Get the source"
@@ -263,7 +263,7 @@ msgstr ""
 
 #: ../UnableShareDialog.qml:30
 msgid "Ok"
-msgstr ""
+msgstr "확인"
 
 #: ../ViewFinderOverlay.qml:367 ../ViewFinderOverlay.qml:390
 #: ../ViewFinderOverlay.qml:418 ../ViewFinderOverlay.qml:441

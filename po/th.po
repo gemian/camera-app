@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: camera-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-23 17:57+0000\n"
-"PO-Revision-Date: 2018-08-05 14:58+0000\n"
-"Last-Translator: thanakit srisearmpok <thanakit.ssp@gmail.com>\n"
+"PO-Revision-Date: 2020-06-29 14:52+0000\n"
+"Last-Translator: PPNplus <ppnplus@protonmail.com>\n"
 "Language-Team: Thai <https://translate.ubports.com/projects/ubports/"
 "camera-app/th/>\n"
 "Language: th\n"
@@ -17,82 +17,82 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.20\n"
+"X-Generator: Weblate 3.11.3\n"
 
 #: ../AdvancedOptions.qml:16
 msgid "Settings"
-msgstr ""
+msgstr "ตั้งค่า"
 
 #: ../AdvancedOptions.qml:48
 msgid "Add date stamp on captured images"
-msgstr ""
+msgstr "ประทับวันที่ลงในภาพถ่าย"
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: ../AdvancedOptions.qml:70
 msgid "Format"
-msgstr ""
+msgstr "รูปแบบ"
 
 #: ../AdvancedOptions.qml:122
 msgid "Date formatting keywords"
-msgstr ""
+msgstr "คำสำคัญของรูปแบบวันที่"
 
 #: ../AdvancedOptions.qml:127
 msgid "the day as number without a leading zero (1 to 31)"
-msgstr ""
+msgstr "เลขวันโดยไม่มีเลขศูนย์นำ (1 ถึง 31)"
 
 #: ../AdvancedOptions.qml:128
 msgid "the day as number with a leading zero (01 to 31)"
-msgstr ""
+msgstr "เลขวันโดยมีเลขศูนย์นำ (01 ถึง 31)"
 
 #: ../AdvancedOptions.qml:129
 msgid "the abbreviated localized day name (e.g. 'Mon' to 'Sun')."
-msgstr ""
+msgstr "ตัวย่อของวันในสัปดาห์ (เช่น ‘จ.’ ถึง ‘อา’)"
 
 #: ../AdvancedOptions.qml:130
 msgid "the long localized day name (e.g. 'Monday' to 'Sunday')."
-msgstr ""
+msgstr "ชื่อวันในสัปดาห์แบบเต็ม (เช่น ‘จันทร์’ ถึง ‘อาทิตย์’)"
 
 #: ../AdvancedOptions.qml:131
 msgid "the month as number without a leading zero (1 to 12)"
-msgstr ""
+msgstr "เลขเดือนแบบตัวเลขที่ไม่มีศูนย์นำ (1 ถึง 12)"
 
 #: ../AdvancedOptions.qml:132
 msgid "the month as number with a leading zero (01 to 12)"
-msgstr ""
+msgstr "เลขเดือนแบบตัวเลขที่มีศูนย์นำ (01 ถึง 12)"
 
 #: ../AdvancedOptions.qml:133
 msgid "the abbreviated localized month name (e.g. 'Jan' to 'Dec')."
-msgstr ""
+msgstr "ตัวย่อของเดือน (เช่น ‘ม.ค.’ ถึง ‘ธ.ค.’)"
 
 #: ../AdvancedOptions.qml:134
 msgid "the long localized month name (e.g. 'January' to 'December')."
-msgstr ""
+msgstr "ชื่อเต็มของเดือน (เช่น ‘มกราคม’ ถึง ‘ธันวาคม’)"
 
 #: ../AdvancedOptions.qml:135
 msgid "the year as two digit number (00 to 99)"
-msgstr ""
+msgstr "ปี เป็นเลขสองหลัก (00 ถึง 99)"
 
 #: ../AdvancedOptions.qml:136
 msgid ""
 "the year as four digit number. If the year is negative, a minus sign is "
 "prepended in addition."
-msgstr ""
+msgstr "ปี เป็นเลขสี่หลัก ถ้าปีเป็นลบ จะมีเครื่องหมายลบนำหน้า"
 
 #: ../AdvancedOptions.qml:137
 msgid "the hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)"
-msgstr ""
+msgstr "ชั่วโมง โดยไม่มีเลขศูนย์นำหน้า (0 ถึง 23 หรือ 1 ถึง 12 ถ้าใช้แบบ AM/PM)"
 
 #: ../AdvancedOptions.qml:138
 msgid "the hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)"
-msgstr ""
+msgstr "ชั่วโมง โดยมีเลขศูนย์นำ (00 ถึง 23 หรือ 01 ถึง 12 ถ้าใช้แบบ AM/PM)"
 
 #: ../AdvancedOptions.qml:139
 msgid "the hour without a leading zero (0 to 23, even with AM/PM display)"
-msgstr ""
+msgstr "ชั่วโมงโดยไม่มีเลขศูนย์นำ (0 ถึง 23 ถึงแม้จะใช้แบบ AM/PM)"
 
 #: ../AdvancedOptions.qml:140
 msgid "the hour with a leading zero (00 to 23, even with AM/PM display)"
-msgstr ""
+msgstr "ชั่วโมงแบบมีเลขศูนย์นำ (00 ถึง 23 ถึงแม้จะใช้แบบ AM/PM)"
 
 #: ../AdvancedOptions.qml:141
 msgid "the minute without a leading zero (0 to 59)"
@@ -137,12 +137,12 @@ msgstr ""
 #. TRANSLATORS: this refers to the color of date stamp added to captured images
 #: ../AdvancedOptions.qml:189
 msgid "Color"
-msgstr ""
+msgstr "สี"
 
 #. TRANSLATORS: this refers to the alignment of date stamp within captured images (bottom left, top right,etc..)
 #: ../AdvancedOptions.qml:257
 msgid "Alignment"
-msgstr ""
+msgstr "การจัดวาง"
 
 #. TRANSLATORS: this refers to the opacity  of date stamp added to captured images
 #: ../AdvancedOptions.qml:303
@@ -151,7 +151,7 @@ msgstr ""
 
 #: ../DeleteDialog.qml:24
 msgid "Delete media?"
-msgstr ""
+msgstr "ลบสื่อหรือไม่?"
 
 #: ../DeleteDialog.qml:34 ../PhotogridView.qml:56 ../SlideshowView.qml:75
 msgid "Delete"
@@ -165,19 +165,19 @@ msgstr "ยกเลิก"
 
 #: ../GalleryView.qml:200
 msgid "No media available."
-msgstr ""
+msgstr "ไม่มีสื่อ"
 
 #: ../GalleryView.qml:235
 msgid "Scanning for content..."
-msgstr ""
+msgstr "กำลังสแกนเนื้อหา..."
 
 #: ../GalleryViewHeader.qml:82 ../SlideshowView.qml:45
 msgid "Select"
-msgstr ""
+msgstr "เลือก"
 
 #: ../GalleryViewHeader.qml:83
 msgid "Edit Photo"
-msgstr ""
+msgstr "แก้ไขภาพ"
 
 #: ../GalleryViewHeader.qml:83
 msgid "Photo Roll"
@@ -185,33 +185,33 @@ msgstr ""
 
 #: ../Information.qml:20
 msgid "About"
-msgstr ""
+msgstr "เกี่ยวกับ"
 
 #: ../Information.qml:82
 msgid "Get the source"
-msgstr ""
+msgstr "รับต้นฉบับ"
 
 #: ../Information.qml:83
 msgid "Report issues"
-msgstr ""
+msgstr "รายงานปัญหา"
 
 #: ../Information.qml:84
 msgid "Help translate"
-msgstr ""
+msgstr "ช่วยแปล"
 
 #: ../MediaInfoPopover.qml:25
 msgid "Media Information"
-msgstr ""
+msgstr "ข้อมูลสื่อ"
 
 #: ../MediaInfoPopover.qml:30
 #, qt-format
 msgid "Name : %1"
-msgstr ""
+msgstr "ชื่อ : %1"
 
 #: ../MediaInfoPopover.qml:33
 #, qt-format
 msgid "Type : %1"
-msgstr ""
+msgstr "ประเภท : %1"
 
 #: ../MediaInfoPopover.qml:37
 #, qt-format
@@ -225,7 +225,7 @@ msgstr ""
 
 #: ../NoSpaceHint.qml:33
 msgid "No space left on device, free up space to continue."
-msgstr ""
+msgstr "ไม่มีพื้นที่ว่างในอุปกรณ์ เพิ่มพื้นที่ว่างเพื่อดำเนินการต่อ"
 
 #: ../PhotoRollHint.qml:69
 msgid "Swipe left for photo roll"
@@ -233,7 +233,7 @@ msgstr ""
 
 #: ../PhotogridView.qml:42 ../SlideshowView.qml:60
 msgid "Share"
-msgstr ""
+msgstr "แชร์"
 
 #: ../PhotogridView.qml:69 ../SlideshowView.qml:53
 msgid "Gallery"
@@ -241,7 +241,7 @@ msgstr ""
 
 #: ../SlideshowView.qml:68
 msgid "Image Info"
-msgstr ""
+msgstr "ข้อมูลภาพ"
 
 #: ../SlideshowView.qml:86
 msgid "Edit"
@@ -261,7 +261,7 @@ msgstr ""
 
 #: ../UnableShareDialog.qml:30
 msgid "Ok"
-msgstr ""
+msgstr "ตกลง"
 
 #: ../ViewFinderOverlay.qml:367 ../ViewFinderOverlay.qml:390
 #: ../ViewFinderOverlay.qml:418 ../ViewFinderOverlay.qml:441
@@ -270,7 +270,7 @@ msgstr ""
 #: ../tests/unittests/tst_BottomEdgeIndicators.qml:65
 #: ../tests/unittests/tst_BottomEdgeIndicators.qml:86
 msgid "On"
-msgstr ""
+msgstr "เปิด"
 
 #: ../ViewFinderOverlay.qml:372 ../ViewFinderOverlay.qml:400
 #: ../ViewFinderOverlay.qml:423 ../ViewFinderOverlay.qml:446
@@ -280,23 +280,23 @@ msgstr ""
 #: ../tests/unittests/tst_BottomEdgeIndicators.qml:70
 #: ../tests/unittests/tst_BottomEdgeIndicators.qml:91
 msgid "Off"
-msgstr ""
+msgstr "ปิด"
 
 #: ../ViewFinderOverlay.qml:395
 msgid "Auto"
-msgstr ""
+msgstr "อัตโนมัติ"
 
 #: ../ViewFinderOverlay.qml:432
 msgid "HDR"
-msgstr ""
+msgstr "HDR"
 
 #: ../ViewFinderOverlay.qml:470
 msgid "5 seconds"
-msgstr ""
+msgstr "5 วินาที"
 
 #: ../ViewFinderOverlay.qml:475
 msgid "15 seconds"
-msgstr ""
+msgstr "15 วินาที"
 
 #: ../ViewFinderOverlay.qml:493
 msgid "Fine Quality"
@@ -329,11 +329,11 @@ msgstr ""
 
 #: ../ViewFinderOverlay.qml:594
 msgid "Vibrate"
-msgstr ""
+msgstr "สั่น"
 
 #: ../ViewFinderOverlay.qml:1119
 msgid "Low storage space"
-msgstr ""
+msgstr "พื้นที่จัดเก็บเหลือน้อย"
 
 #: ../ViewFinderOverlay.qml:1120
 msgid ""

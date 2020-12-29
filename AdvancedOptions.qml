@@ -1,26 +1,43 @@
-import QtQuick 2.0
+import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Qt.labs.settings 1.0
 import Ubuntu.Components.ListItems 1.3 as ListItems
 
+import "qml/components"
+
+
 Page {
     id:_advancedOptionsPage
-    signal back();
 
+    
+    signal back();
+    
+    property Settings settings: viewFinderView.finderOverlay.settings    
+    
     header: PageHeader {
         id:_advancedOptionsPageHeader
         StyleHints {
             backgroundColor:"transparent"
-            foregroundColor:"white"
+            foregroundColor: theme.palette.normal.backgroudText
         }
         title: i18n.tr("Settings")
         leadingActionBar.actions: [
                Action {
-                   iconName: "down"
-                   text: "Back"
+                   iconName: "close"
+                   text: i18n.tr("Close")
                    onTriggered: _advancedOptionsPage.back();
                }
            ]
+           
+       trailingActionBar.actions: [
+                Action {
+                   iconName: "info"
+                   text: i18n.tr("About")
+                   onTriggered: { 
+                       galleryPageStack.push(infoPageComponent)
+                   }
+               }
+        ]
     }
 
     Flickable {
@@ -37,6 +54,7 @@ Page {
         }
 
         interactive: true
+        flickableDirection: Flickable.VerticalFlick
 
         Column {
 
@@ -46,17 +64,18 @@ Page {
                 ListItemLayout {
                     id: datestampSwitchLayout
                     title.text: i18n.tr("Add date stamp on captured images")
-                    title.color: "white"
+                    title.color: theme.palette.normal.backgroudText
+                    title.horizontalAlignment:Text.AlignLeft
                     Switch {
                         SlotsLayout.position: SlotsLayout.Last
-                        checked: advancedOptions.settings.dateStampImages
-                        onClicked: advancedOptions.settings.dateStampImages = checked
+                        checked: settings.dateStampImages
+                        onClicked: settings.dateStampImages = checked
                     }
                 }
             }
             ListItems.Expandable {
                 id:dateStampExpand
-                expanded: advancedOptions.settings.dateStampImages
+                expanded: settings.dateStampImages
                 collapsedHeight: 0
                 expandedHeight: units.gu(27)
                 collapseOnClick: false
@@ -68,17 +87,18 @@ Page {
                     ListItemLayout {
                         // TRANSLATORS: this refers to the opacity  of date stamp added to captured images
                         title.text: i18n.tr("Format")
-                        title.color: "white"
+                        title.horizontalAlignment:Text.AlignLeft
+                        title.color: theme.palette.normal.backgroudText
                         TextField {
                             id:dateFormatText
                             SlotsLayout.position: SlotsLayout.Last
                             focus: true
                             width:datestampFormatItem.width - units.gu(18)
-                            text: advancedOptions.settings.dateStampFormat
+                            text: settings.dateStampFormat
                             placeholderText:  Qt.locale().dateFormat(Locale.ShortFormat)
                             onActiveFocusChanged: if(!text) {text = Qt.locale().dateFormat(Locale.ShortFormat);}
                             onTextChanged: {
-                                advancedOptions.settings.dateStampFormat = text;
+                                settings.dateStampFormat = text;
                             }
                         }
                     }
@@ -184,9 +204,10 @@ Page {
                     ListItemLayout {
                         id:  dateStampColorItemLayout
 
-                        title.color: "white"
+                        title.color:  theme.palette.normal.backgroudText
                         // TRANSLATORS: this refers to the color of date stamp added to captured images
                         title.text:i18n.tr("Color")
+                        title.horizontalAlignment:Text.AlignLeft
 
                         ListView {
                             id:dateStampColor
@@ -222,7 +243,7 @@ Page {
                                     }
                                 }
                                 model = newColors;
-                                currentIndex = dateStampColor.getItemIdx( advancedOptions.settings.dateStampColor);
+                                currentIndex = dateStampColor.getItemIdx( settings.dateStampColor);
                                 positionViewAtIndex(currentIndex, ListView.Center);
                             }
 
@@ -232,12 +253,12 @@ Page {
                                 height:dateStampColorItem.height - units.gu(1)
                                 width:height
                                 color: modelData
-                                iconName: advancedOptions.settings.dateStampColor == modelData ? "tick" : ""
+                                iconName: settings.dateStampColor == modelData ? "tick" : ""
                                 onClicked: {
                                     dateStampColor.currentIndex = index;
-                                    advancedOptions.settings.dateStampColor = modelData;
+                                    settings.dateStampColor = modelData;
                                 }
-                                Component.onCompleted: if( advancedOptions.settings.dateStampColor == modelData) {dateStampColor.positionViewAtIndex(index, ListView.Center);  }
+                                Component.onCompleted: if( settings.dateStampColor == modelData) {dateStampColor.positionViewAtIndex(index, ListView.Center);  }
                             }
                         }
                     }
@@ -252,10 +273,11 @@ Page {
                     divider.visible: false
                     ListItemLayout {
                         id:  dateStampAlignmentItemLayout
-                        title.color: "white"
+                        title.color:  theme.palette.normal.backgroudText
                         // TRANSLATORS: this refers to the alignment of date stamp within captured images (bottom left, top right,etc..)
                         title.text:i18n.tr("Alignment")
-                        Row {
+                        title.horizontalAlignment:Text.AlignLeft
+                        ListView {
                             id:dateStampAlignment
                             anchors.topMargin:units.gu(1)
                             SlotsLayout.position: SlotsLayout.Last
@@ -263,27 +285,25 @@ Page {
                             height:dateStampAlignmentItem.height
                             spacing:units.gu(0.5)
                             layoutDirection: Qt.RightToLeft
+                            clip:true
+                            orientation: Qt.Horizontal
 
-                            Repeater {
-                                height:dateStampAlignmentItem.height
-
-                                model:[
-                                    {"value" :Qt.AlignBottom | Qt.AlignRight,"icon":"assets/align_bottom_right.png"},
-                                    {"value" :Qt.AlignBottom | Qt.AlignLeft,"icon":"assets/align_bottom_left.png"},
-                                    {"value" :Qt.AlignTop | Qt.AlignRight,"icon":"assets/align_top_right.png"},
-                                    {"value" :Qt.AlignTop | Qt.AlignLeft,"icon":"assets/align_top_left.png"},
-                                ]
-                                delegate: CircleButton {
-                                    height:dateStampAlignmentItem.height - units.gu(1)
-                                    width:height
-                                    automaticOrientation:false
-                                    iconSource: Qt.resolvedUrl( modelData.icon )
-                                    on:(modelData.value == advancedOptions.settings.dateStampAlign)
-                                    onClicked: {
-                                        advancedOptions.settings.dateStampAlign = modelData.value;
-                                    }
-                                }
-                            }
+		             model:[
+		                {"value" :Qt.AlignBottom | Qt.AlignRight,"icon":"assets/align_bottom_right.png"},
+		                {"value" :Qt.AlignBottom | Qt.AlignLeft,"icon":"assets/align_bottom_left.png"},
+		                {"value" :Qt.AlignTop | Qt.AlignRight,"icon":"assets/align_top_right.png"},
+		                {"value" :Qt.AlignTop | Qt.AlignLeft,"icon":"assets/align_top_left.png"},
+		             ]
+		             delegate: CircleButton {
+		                height:dateStampAlignmentItem.height - units.gu(1)
+		                width:height
+		                automaticOrientation:false
+		                iconSource: Qt.resolvedUrl( modelData.icon )
+		                on:(modelData.value == settings.dateStampAlign)
+		                onClicked: {
+		                   settings.dateStampAlign = modelData.value;
+		                }
+		             }
                         }
                     }
                 }
@@ -298,28 +318,64 @@ Page {
                     ListItemLayout {
                         id:  dateStampOpacityItemLayout
                         height: dateStampOpacityItem.height
-                        title.color: "white"
+                        title.color:  theme.palette.normal.backgroudText
                         // TRANSLATORS: this refers to the opacity  of date stamp added to captured images
                         title.text:i18n.tr("Opacity")
+                        title.horizontalAlignment:Text.AlignLeft
 
                         Slider {
                             id: dateStampOpacity
                             width:dateFormatText.width
                             height:dateStampOpacityItem.height
-                            value:advancedOptions.settings.dateStampOpacity
+                            value:settings.dateStampOpacity
                             SlotsLayout.position: SlotsLayout.Last
                             maximumValue: 1.0
                             minimumValue: 0.25
                             stepSize: 0.1
                             live:true
                             onValueChanged: {
-                                 advancedOptions.settings.dateStampOpacity = dateStampColor.opacity = value;
+                                 settings.dateStampOpacity = dateStampColor.opacity = value;
                             }
                         }
                     }
                 }
             }
+            ListItem {
+                ListItemLayout {
+                    id: blurEffectSwitch
+                    title.text: i18n.tr("Blurred Overlay")
+                    title.horizontalAlignment:Text.AlignLeft
+                    title.color: theme.palette.normal.backgroudText
+                    Switch {
+                        SlotsLayout.position: SlotsLayout.Last
+                        checked: appSettings.blurEffects
+                        onClicked: appSettings.blurEffects = checked
+                    }
+                }
+            }
+            ListItems.Expandable {
+                id:dblurEffectExpand
+                expanded: appSettings.blurEffects
+                collapsedHeight: 0
+                expandedHeight: units.gu(6)
+                collapseOnClick: false
+                highlightWhenPressed: false
 
+                ListItem {
+			ListItemLayout {
+			  id: blurEffectsPreviewOnlySwitch
+			  title.text: i18n.tr("Only Blur Preview overlay")
+				title.horizontalAlignment:Text.AlignLeft
+			  title.color: theme.palette.normal.backgroudText
+			  Switch {
+			     SlotsLayout.position: SlotsLayout.Last
+			     checked: appSettings.blurEffectsPreviewOnly
+			     onClicked: appSettings.blurEffectsPreviewOnly = checked
+			  }
+		     }
+	        }
+            }
         }
     }
+
 }

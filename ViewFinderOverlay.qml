@@ -23,6 +23,7 @@ import QtPositioning 5.2
 import QtSensors 5.0
 import CameraApp 0.1
 import Qt.labs.settings 1.0
+import QtGraphicalEffects 1.0
 
 Item {
     id: viewFinderOverlay
@@ -33,8 +34,7 @@ Item {
     property var controls: controls
     property var settings: settings
     property bool readyForCapture
-    property int sensorOrientation
-    property bool overlayPageVisible : (advancedOptionsToggle.selected || infoPageToggle.selected);
+
 
     function showFocusRing(x, y) {
         focusRing.center = Qt.point(x, y);
@@ -54,7 +54,7 @@ Item {
         property bool preferRemovableStorage: false
         property string videoResolution: "1920x1080"
         property bool playShutterSound: true
-        property bool shutterVibration: true
+        property bool shutterVibration: false
         property var photoResolutions
         property bool dateStampImages: false
         property string dateStampFormat: Qt.locale().dateFormat(Locale.ShortFormat)
@@ -682,39 +682,6 @@ Item {
                 }
             }
         }
-
-        OptionValueButton {
-            id:advancedOptionsToggle
-            z:1
-            anchors.right: parent.right
-            anchors.top: parent.top
-            opacity: bottomEdge.progress
-            visible:opacity != 0
-            iconName:  "settings"
-            isLast: true
-            onClicked: {
-                selected = !selected;
-                infoPageToggle.selected = false;
-                bottomEdge.open()
-            }
-        }
-
-
-        OptionValueButton {
-            id:infoPageToggle
-            z:1
-            anchors.right: advancedOptionsToggle.left
-            anchors.top: parent.top
-            opacity: bottomEdge.progress
-            visible:opacity != 0
-            iconName:  "info"
-            isLast: true
-            onClicked: {
-                selected = !selected
-                advancedOptionsToggle.selected = false;
-                bottomEdge.open()
-            }
-        }
     }
 
     OrientationSensor {
@@ -753,38 +720,6 @@ Item {
         }
 
         function shoot() {
-            var orientation = 0;
-            if (orientationSensor.reading != null) {
-                switch (orientationSensor.reading.orientation) {
-                    case OrientationReading.TopUp:
-                        orientation = 0;
-                        break;
-                    case OrientationReading.TopDown:
-                        orientation = 180;
-                        break;
-                    case OrientationReading.LeftUp:
-                        orientation = 90;
-                        break;
-                    case OrientationReading.RightUp:
-                        orientation = 270;
-                        break;
-                    default:
-                        /* Workaround for OrientationSensor not setting a valid value until
-                           the device is rotated.
-                           Ref.: https://bugs.launchpad.net/qtubuntu-sensors/+bug/1429865
-
-                           Note that the value returned by Screen.angleBetween is valid if
-                           the orientation lock is not engaged.
-                           Ref.: https://bugs.launchpad.net/camera-app/+bug/1422762
-                        */
-                        orientation = Screen.angleBetween(Screen.orientation, Screen.primaryOrientation);
-                        break;
-                }
-            }
-
-            // account for the orientation of the sensor
-            orientation -= viewFinderOverlay.sensorOrientation;
-
             if (camera.captureMode == Camera.CaptureVideo) {
                 if (main.contentExportMode) {
                     camera.videoRecorder.outputLocation = StorageLocations.temporaryLocation;
@@ -795,7 +730,6 @@ Item {
                 }
 
                 if (camera.videoRecorder.recorderState == CameraRecorder.StoppedState) {
-                    camera.videoRecorder.setMetadata("Orientation", orientation);
                     camera.videoRecorder.setMetadata("Date", new Date());
                     camera.videoRecorder.record();
                 }
@@ -804,7 +738,6 @@ Item {
                     shootFeedback.start();
                 }
                 camera.photoCaptureInProgress = true;
-                camera.imageCapture.setMetadata("Orientation", orientation);
                 camera.imageCapture.setMetadata("Date", new Date());
                 var position = positionSource.position;
                 if (settings.gpsEnabled && positionSource.isPrecise) {
@@ -1022,7 +955,10 @@ Item {
                 enabled: camera.focus.isFocusPointModeSupported(Camera.FocusPointCustom) &&
                          !camera.photoCaptureInProgress && !camera.timedCaptureInProgress
                 onClicked: {
-                    camera.manualFocus(mouse.x, mouse.y);
+                    // mouse.x/y is relative to this item. Convert to be relative to the overlay,
+                    // which in turn is relative to viewFinderView, where camera's VideoOutput resides.
+                    var mappedPoint = mapToItem(viewFinderOverlay, mouse.x, mouse.y);
+                    camera.manualFocus(mappedPoint.x, mappedPoint.y);
                     mouse.accepted = false;
                 }
             }
@@ -1112,17 +1048,17 @@ Item {
     }
 
     Component {
-         id: freeSpaceLowDialogComponent
-         Dialog {
-             id: freeSpaceLowDialog
-             objectName: "lowSpaceDialog"
-             title: i18n.tr("Low storage space")
-             text: i18n.tr("You are running out of storage space. To continue without interruptions, free up storage space now.")
-             Button {
-                 text: i18n.tr("Cancel")
-                 onClicked: PopupUtils.close(freeSpaceLowDialog)
-             }
-         }
+        id: freeSpaceLowDialogComponent
+        Dialog {
+            id: freeSpaceLowDialog
+            objectName: "lowSpaceDialog"
+            title: i18n.tr("Low storage space")
+            text: i18n.tr("You are running out of storage space. To continue without interruptions, free up storage space now.")
+            Button {
+                text: i18n.tr("Cancel")
+                onClicked: PopupUtils.close(freeSpaceLowDialog)
+            }
+        }
     }
 
     Component {
@@ -1165,27 +1101,53 @@ Item {
     }
 
     Component {
-         id: noPermissionsDialogComponent
-         Dialog {
-             id: noPermissionsDialog
-             objectName: "noPermissionsDialog"
-             title: i18n.tr("Cannot access camera")
-             text: i18n.tr("Camera app doesn't have permission to access the camera hardware or another error occurred.\n\nIf granting permission does not resolve this problem, reboot your device.")
-             Button {
-                 text: i18n.tr("Cancel")
-                 onClicked: {
-                     PopupUtils.close(noPermissionsDialog);
-                     permissionErrorMonitor.currentPermissionsDialog = null;
-                 }
-             }
-             Button {
-                 text: i18n.tr("Edit Permissions")
-                 onClicked: {
-                     Qt.openUrlExternally("settings:///system/security-privacy?service=camera");
-                     PopupUtils.close(noPermissionsDialog);
-                     permissionErrorMonitor.currentPermissionsDialog = null;
-                 }
-             }
-         }
+        id: noPermissionsDialogComponent
+        Dialog {
+            id: noPermissionsDialog
+            objectName: "noPermissionsDialog"
+            title: i18n.tr("Cannot access camera")
+            text: i18n.tr("Camera app doesn't have permission to access the camera hardware or another error occurred.\n\nIf granting permission does not resolve this problem, reboot your device.")
+            Button {
+                text: i18n.tr("Edit Permissions")
+                color: theme.palette.normal.focus
+                onClicked: {
+                    Qt.openUrlExternally("settings:///system/security-privacy?service=camera");
+                    PopupUtils.close(noPermissionsDialog);
+                    permissionErrorMonitor.currentPermissionsDialog = null;
+                }
+            }
+            Button {
+                text: i18n.tr("Cancel")
+                onClicked: {
+                    PopupUtils.close(noPermissionsDialog);
+                    permissionErrorMonitor.currentPermissionsDialog = null;
+                }
+            }
+        }
+    }
+
+    FastBlur {
+        id: viewFinderSwitcherBlurred
+        anchors.fill: parent
+        property real finalRadius: 67
+        property real finalOpacity: 1.0
+        radius: photoRollHint.visible ? finalRadius : viewFinderOverlay.revealProgress * finalRadius
+        opacity: photoRollHint.visible ? finalOpacity : (1.0 - viewFinderOverlay.revealProgress) * finalOpacity + finalOpacity
+        source: viewFinderSwitcher !== null ? viewFinderSwitcher : null
+        z:-1
+        visible:  appSettings.blurEffects && radius !== 0
+        transparentBorder:false
+        Behavior on radius { UbuntuNumberAnimation { duration: UbuntuAnimation.SnapDuration} }
+    }
+
+    Rectangle {
+        id: viewFinderOverlayTint
+        anchors.fill:parent
+        property real finalOpacity: 0.25
+        property real tintOpacity : viewFinderOverlay.revealProgress * finalOpacity
+        visible: viewFinderOverlay.revealProgress > 0
+        opacity:tintOpacity
+        color: UbuntuColors.jet
+        z:-1
     }
 }

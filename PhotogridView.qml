@@ -66,10 +66,22 @@ FocusScope {
 
     property list<Action> regularModeActions: [
             Action {
-                text: i18n.tr("Gallery")
-                objectName: "galleryLink"
-                iconName: "gallery-app-symbolic"
-                onTriggered: { Qt.openUrlExternally("appid://com.ubuntu.gallery/gallery/current-user-version") }
+                text: i18n.tr("Settings")
+                objectName: "openSettingsPage"
+                iconName: "settings"
+                onTriggered: { 
+                    galleryPageStack.clear();
+                    galleryPageStack.push(advancedOptionsComponent); 
+                }
+            },
+			Action {
+                text: i18n.tr("About")
+                objectName: "openAboutPage"
+                iconName: "info"
+                onTriggered: {
+                    galleryPageStack.clear();
+                    galleryPageStack.push(infoPageComponent);
+                }
             }
     ]
 
@@ -135,8 +147,8 @@ FocusScope {
                 height: headerHeight
             }
 
-            property var baseDelegateWidth: units.gu(13)
-            property var baseDelegateHeight: units.gu(13)
+            property var baseDelegateWidth: Math.min(photogridView.width,photogridView.height)/2/2
+            property var baseDelegateHeight: baseDelegateWidth
 
             Component.onCompleted: {
                 // FIXME: workaround for qtubuntu not returning values depending on the grid unit definition
@@ -181,7 +193,7 @@ FocusScope {
                     }
 
                     asynchronous: true
-                    cache: true
+                    cache: photogridView.inView
                     // The thumbnailer does not seem to check when an image has been changed on disk,
                     // so we use this hack to force it to check and refresh if necessary.
                     source: photogridView.inView ? "image://thumbnailer/" + fileURL.toString() + "?at=" + Date.now() : ""
@@ -231,7 +243,7 @@ FocusScope {
                     }
                     width: units.gu(4)
                     height: units.gu(4)
-                    color: selected ? UbuntuColors.orange : UbuntuColors.coolGrey
+                    color: selected ? theme.palette.normal.positive : UbuntuColors.inkstone
                     radius: 10
                     opacity: selected ? 0.8 : 0.6
                     visible: inSelectionMode

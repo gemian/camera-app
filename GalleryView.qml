@@ -18,8 +18,10 @@ import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Content 1.3
 import Ubuntu.Thumbnailer 0.1
+
 import CameraApp 0.1
 import "MimeTypeMapper.js" as MimeTypeMapper
+import "qml/components"
 
 Item {
     id: galleryView
@@ -65,10 +67,50 @@ Item {
     onExit: {
         slideshowView.exit();
         photogridView.exit();
+        galleryPageStack.clear();
+    }
+
+    Component {
+        id:advancedOptionsComponent
+        AdvancedOptions {
+            id:advancedOptions
+            settings: viewFinderView.finderOverlay.settings
+
+            onBack: galleryPageStack.pop()
+
+            OverlayPanel {
+                z:-1
+                overlayItem: advancedOptions
+                blur.visible: appSettings.blurEffects && !appSettings.blurEffectsPreviewOnly
+                blur.backgroundItem: currentView
+            }
+        }
+    }
+
+     Component {
+        id:infoPageComponent
+        Information {
+            id:infoPage
+            onBack: galleryPageStack.pop()
+            OverlayPanel {
+                z:-1
+                overlayItem: infoPage
+                blur.visible: appSettings.blurEffects && !appSettings.blurEffectsPreviewOnly
+                blur.backgroundItem: currentView
+            }
+        }
     }
 
     OrientationHelper {
+        id: orientHelper
         visible: inView
+
+        PageStack {
+            id:galleryPageStack
+            z:10
+            anchors.topMargin:header.height+header.y
+            anchors.fill:parent
+        }
 
         SlideshowView {
             id: slideshowView
@@ -114,10 +156,28 @@ Item {
             onToggleHeader: header.toggle()
         }
 
+        OverlayPanel {
+            overlayItem: header
+            visible: galleryView.gridMode
+            blur.visible: appSettings.blurEffects && !appSettings.blurEffectsPreviewOnly
+            blur.transparentBorder:false
+            blur.backgroundItem:  photogridView
+        }
+
+        OverlayPanel {
+            overlayItem: header
+            visible: !galleryView.gridMode
+            blur.visible: appSettings.blurEffects && !appSettings.blurEffectsPreviewOnly
+            blur.transparentBorder:false
+            blur.backgroundItem: slideshowView
+
+        }
+
+
         // FIXME: it would be better to use the standard header from the toolkit
         GalleryViewHeader {
             id: header
-            z:1
+            z:10
             actions: currentView.actions
             gridMode: galleryView.gridMode
             validationVisible: main.contentExportMode && model.selectedFiles.length > 0 && galleryView.gridMode
@@ -156,6 +216,16 @@ Item {
                 model.clearSelection();
                 main.exportContent(urls);
             }
+
+            onAdvanceSettingsToggle:{
+                galleryPageStack.push(advancedOptionsComponent)
+            }
+
+            onDrawerToggle:{
+                    if(isOpen && galleryPageStack.depth > 0 ) {
+                        galleryPageStack.clear();
+                    }
+                }
         }
     }
 
@@ -173,7 +243,7 @@ Item {
         objectName: "noMediaHint"
         anchors.fill: parent
         visible: model.count === 0 && !model.loading
-        color: "#0F0F0F"
+        color: theme.palette.normal.base
 
         Icon {
             id: noMediaIcon
@@ -184,7 +254,7 @@ Item {
             }
             height: units.gu(9)
             width: units.gu(9)
-            color: "white"
+            color: theme.palette.normal.backgroundText
             opacity: 0.2
             name: "camera-app-symbolic"
             asynchronous: true
@@ -198,7 +268,7 @@ Item {
                 topMargin: units.gu(4)
             }
             text: i18n.tr("No media available.")
-            color: "white"
+            color: theme.palette.normal.backgroundText
             opacity: 0.2
             fontSize: "large"
         }
@@ -208,7 +278,7 @@ Item {
         objectName: "scanningMediaHint"
         anchors.fill: parent
         visible: model.count === 0 && model.loading
-        color: "#0F0F0F"
+        color:  theme.palette.normal.base
 
         Icon {
             id: scanningMediaIcon
@@ -219,7 +289,7 @@ Item {
             }
             height: units.gu(9)
             width: units.gu(9)
-            color: "white"
+            color: theme.palette.normal.backgroundText
             opacity: 0.2
             name: "camera-app-symbolic"
             asynchronous: true
@@ -233,7 +303,7 @@ Item {
                 topMargin: units.gu(4)
             }
             text: i18n.tr("Scanning for content...")
-            color: "white"
+            color: theme.palette.normal.backgroundText
             opacity: 0.2
             fontSize: "large"
         }

@@ -3,6 +3,8 @@
 #include <QPainter>
 #include <QDate>
 #include <QLocale>
+#include <QDebug>
+
 
 #include "adddatestamp.h"
 
@@ -17,14 +19,25 @@ AddDateStamp::AddDateStamp(QString inPath, QString dateFormat, QColor  stampColo
 void AddDateStamp::run() {
   try {
 
-      QImage image = QImage(path);
+      QImage image = QImage(this->path);
       QDateTime now = QDateTime::currentDateTime();
+      //Rotate image to match it`s orentation
+      long orientationFlags = this->getOrientation(this->path);
+      int rotation = this->getRotationByOrientation(orientationFlags);
+      bool isImageMirrored = this->isOrientationMirrored(orientationFlags);
+      
+      QTransform trasform = QTransform();
+      trasform.rotate(rotation);
+      trasform.scale(isImageMirrored ? -1 : 1,1);
+      image = image.transformed(trasform);
+
       QString currentDate = QString(now.toString(this->dateFormat));
       int imageHeight = std::max(image.width(),image.height());
       int imageWidth = std::min(image.width(),image.height());
       int textPixelSize = std::min( (int) ( imageHeight * MAXIMUM_TEXT_HEIGHT_PECENT_OF_IMAGE),
                                         std::max( (imageWidth / 3) / currentDate.length() ,
                                     (int) ( imageHeight * MINIMUM_TEXT_HEIGHT_PECENT_OF_IMAGE) )  );
+
       QFont font = QFont("Helvetica");
       font.setPixelSize(textPixelSize);
       QPainter* painter = new QPainter(&image);
@@ -32,12 +45,21 @@ void AddDateStamp::run() {
       painter->setOpacity(this->opacity);
       painter->setPen(this->stampColor);
       QRect imageRect = QRect(textPixelSize,textPixelSize,image.width()-textPixelSize*2,image.height()-textPixelSize*2);
-      painter->drawText(imageRect,this->alignment,currentDate);
-
+      //painter->setTransform(trasform);
+      painter->drawText(imageRect, this->alignment, currentDate);
+      
+      //Rotate image back to it`s orginal orientation
+      trasform.rotate(-rotation*2);
+      trasform.scale(isImageMirrored ? -1 : 1,1);
+      image = image.transformed(trasform);
+      
       //Save to a temporary location and preform a filename swap in order to keep the file fully rendered
       QString tmpPath = QString(path).replace(QRegExp("(\\.\\w+)$"),"_tmp\\1");
       QString backupFilePath = QString(path).replace(QRegExp("(\\.\\w+)$"),"_old\\1");
+      
       image.save(tmpPath);
+      this->copyMetadata(path, tmpPath);
+      
       bool success = QFile::rename(path,backupFilePath);
       success &= QFile::rename(tmpPath, path);
       if(success) {
@@ -45,7 +67,56 @@ void AddDateStamp::run() {
       } else { //try and move the backup file back to it original name
           QFile::rename(backupFilePath, path);
       }
-  } catch (...) {
+  } catch (const std::exception& e) {
+       qDebug() << "Failed when adding timestamp to image  : " <<  e.what();
       return ;
   }
+}
+
+int AddDateStamp::rotationToAligment(int rotation) {
+    switch(rotation % 360) {
+        case 0:
+            return Qt::AlignTop | Qt::AlignLeft;
+        case 90: 
+            return Qt::AlignTop | Qt::AlignRight;
+        case 180:
+            return Qt::AlignBottom | Qt::AlignRight;
+        case 270:
+            return Qt::AlignBottom | Qt::AlignLeft;
+    }
+    return Qt::AlignTop | Qt::AlignLeft;
+}
+
+long AddDateStamp::getOrientation(QString pathToImage) {
+     const std::string& srcExifPath = pathToImage.toStdString();
+      Exiv2::Image::AutoPtr exifImageFile;
+      exifImageFile = Exiv2::ImageFactory::open(srcExifPath);
+      exifImageFile->readMetadata();
+      Exiv2::ExifData &exifData = exifImageFile->exifData();
+      long orientationFlags  = exifData["Exif.Image.Orientation"].toLong();
+      
+      return orientationFlags;
+}
+
+int AddDateStamp::getRotationByOrientation( long orientationFlags ) {
+      return orientationFlags ? this->orientationMapping[orientationFlags] : 0;
+}
+
+bool AddDateStamp::isOrientationMirrored( long orientationFlags ) {
+      return orientationFlags ? this->mirrorMapping[orientationFlags] : false;
+}
+
+void AddDateStamp::copyMetadata(QString srcPath, QString dstPath) {
+      const std::string& srcExifPath = srcPath.toStdString();
+      Exiv2::Image::AutoPtr srcImageFile;
+      srcImageFile = Exiv2::ImageFactory::open(srcExifPath);
+      srcImageFile->readMetadata();
+
+      const std::string& dstExifPath = dstPath.toStdString();
+      Exiv2::Image::AutoPtr dstImageFile;
+      dstImageFile = Exiv2::ImageFactory::open(dstExifPath);
+      
+      dstImageFile->setMetadata(*srcImageFile);
+      dstImageFile->setExifData(srcImageFile->exifData());
+      dstImageFile->writeMetadata();
 }
