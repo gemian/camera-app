@@ -27,6 +27,7 @@ Build-Depends: cmake,
 #               dh-translations,
                intltool,
                xvfb,
+               libexiv2-dev,
 Standards-Version: 3.9.8
 Homepage: https://launchpad.net/camera-app
 # If you aren't a member of ~phablet-team but need to upload packaging changes,
