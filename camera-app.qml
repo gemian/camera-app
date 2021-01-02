@@ -14,23 +14,24 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.4
+import QtQuick 2.7
 import QtQuick.Window 2.2
 import QtMultimedia 5.0
 import Ubuntu.Components 1.3
+import QtQuick.Controls 1.4
 //import Ubuntu.Unity.Action 1.1 as UnityActions
 //import UserMetrics 0.1
 //import Ubuntu.Content 1.3
 import CameraApp 0.1
 import Qt.labs.settings 1.0
 
-Window {
+ApplicationWindow {
     id: main
     objectName: "main"
     width: Math.min(Screen.width, height * viewFinderView.aspectRatio)
     height: Math.min(Screen.height, units.gu(80))
     color: "black"
-    title: "Camera"
+    title: i18n.tr("Camera")
     // special flag only supported by Unity8/MIR so far that hides the shell's
     // top panel in Staged mode
     flags: Qt.Window | 0x00800000
@@ -58,6 +59,14 @@ Window {
             main.visibility = preFullScreenVisibility;
         }
     }
+
+    Action {
+        id: quitAction
+        text: i18n.tr("&Quit")
+        shortcut: StandardKey.Quit
+        onTriggered: Qt.quit()
+    }
+
 /*
     UnityActions.ActionManager {
         actions: [
