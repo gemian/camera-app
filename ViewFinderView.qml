@@ -252,22 +252,14 @@ FocusScope {
 
             orientation: {
 
+                // Camera-app uses X-Ubuntu-Rotates-Window-Contents, which means we're always in
+                // native orientation. Thus, Screen.orientation isn't used here.
                 if (camera.position === Camera.FrontFace) {
                     // Front facing cameras are flipped horizontally, compensate the mirror
-                    return (270 - camera.orientation) % 360;
+                    return (360 - camera.orientation) % 360;
                 } else {
-                    return (camera.orientation + 270) % 360;
+                    return camera.orientation;
                 }
-
-//Upstream has this:
-//                // Camera-app uses X-Ubuntu-Rotates-Window-Contents, which means we're always in
-//                // native orientation. Thus, Screen.orientation isn't used here.
-//                if (camera.position === Camera.FrontFace) {
-//                    // Front facing cameras are flipped horizontally, compensate the mirror
-//                    return (360 - camera.orientation) % 360;
-//                } else {
-//                    return camera.orientation;
-//                }
             }
 
             transform: Rotation {
